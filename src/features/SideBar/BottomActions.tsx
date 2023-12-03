@@ -1,22 +1,12 @@
-import { ActionIcon, DiscordIcon, Icon } from '@lobehub/ui';
+import { ActionIcon, Icon } from '@lobehub/ui';
 import { Badge, ConfigProvider, Dropdown, MenuProps } from 'antd';
-import {
-  Book,
-  Feather,
-  FileClock,
-  Github,
-  HardDriveDownload,
-  HardDriveUpload,
-  Heart,
-  Settings,
-  Settings2,
-} from 'lucide-react';
+import { Book, HardDriveDownload, HardDriveUpload, Settings, Settings2, Users } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { ABOUT, CHANGELOG, DISCORD, FEEDBACK, GITHUB, WIKI } from '@/const/url';
+import { GROUP_QRCODE_URL, MANUAL_URL } from '@/const/url';
 import DataImporter from '@/features/DataImporter';
 import { configService } from '@/services/config';
 import { GlobalStore, useGlobalStore } from '@/store/global';
@@ -77,33 +67,33 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
     {
       type: 'divider',
     },
-    {
-      icon: <Icon icon={Feather} />,
-      key: 'feedback',
-      label: t('feedback'),
-      onClick: () => window.open(FEEDBACK, '__blank'),
-    },
-    {
-      icon: <Icon icon={FileClock} />,
-      key: 'changelog',
-      label: t('changelog'),
-      onClick: () => window.open(CHANGELOG, '__blank'),
-    },
-    {
-      icon: <Icon icon={Book} />,
-      key: 'wiki',
-      label: 'WIKI',
-      onClick: () => window.open(WIKI, '__blank'),
-    },
-    {
-      icon: <Icon icon={Heart} />,
-      key: 'about',
-      label: t('about'),
-      onClick: () => window.open(ABOUT, '__blank'),
-    },
-    {
-      type: 'divider',
-    },
+    // {
+    //   icon: <Icon icon={Feather} />,
+    //   key: 'feedback',
+    //   label: t('feedback'),
+    //   onClick: () => window.open(FEEDBACK, '__blank'),
+    // },
+    // {
+    //   icon: <Icon icon={FileClock} />,
+    //   key: 'changelog',
+    //   label: t('changelog'),
+    //   onClick: () => window.open(CHANGELOG, '__blank'),
+    // },
+    // {
+    //   icon: <Icon icon={Book} />,
+    //   key: 'wiki',
+    //   label: 'WIKI',
+    //   onClick: () => window.open(WIKI, '__blank'),
+    // },
+    // {
+    //   icon: <Icon icon={Heart} />,
+    //   key: 'about',
+    //   label: t('about'),
+    //   onClick: () => window.open(ABOUT, '__blank'),
+    // },
+    // {
+    //   type: 'divider',
+    // },
     {
       icon: <Icon icon={Settings} />,
       key: 'setting',
@@ -126,16 +116,16 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
   return (
     <>
       <ActionIcon
-        icon={DiscordIcon}
-        onClick={() => window.open(DISCORD, '__blank')}
+        icon={Users}
+        onClick={() => window.open(GROUP_QRCODE_URL, '__blank')}
         placement={'right'}
-        title={'Discord'}
+        title={'Group'}
       />
       <ActionIcon
-        icon={Github}
-        onClick={() => window.open(GITHUB, '__blank')}
+        icon={Book}
+        onClick={() => window.open(MANUAL_URL, '__blank')}
         placement={'right'}
-        title={'GitHub'}
+        title={'Manual'}
       />
       <Dropdown arrow={false} menu={{ items }} trigger={['click']}>
         {hasNewVersion ? (
