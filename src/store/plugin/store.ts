@@ -46,7 +46,7 @@ const persistOptions: PersistOptions<PluginStore, SessionPersist> = {
 export const usePluginStore = createWithEqualityFn<PluginStore>()(
   persist(
     devtools(createStore, {
-      name: 'LobeChat_Plugin' + (isDev ? '_DEV' : ''),
+      name: 'PuerHub_Plugin' + (isDev ? '_DEV' : ''),
     }),
     persistOptions,
   ),

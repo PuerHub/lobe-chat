@@ -1,5 +1,5 @@
 import { Form, type ItemGroup, Markdown } from '@lobehub/ui';
-import { Form as AntForm, AutoComplete, Input, Switch } from 'antd';
+import { Form as AntForm, AutoComplete, Input } from 'antd';
 import { createStyles } from 'antd-style';
 import { debounce } from 'lodash-es';
 import { Webhook } from 'lucide-react';
@@ -58,45 +58,45 @@ const LLM = memo(() => {
         label: useAzure ? t('llm.AzureOpenAI.token.title') : t('llm.OpenAI.token.title'),
         name: [configKey, 'openAI', 'OPENAI_API_KEY'],
       },
-      {
-        children: (
-          <Input
-            allowClear
-            placeholder={
-              useAzure
-                ? t('llm.AzureOpenAI.endpoint.placeholder')
-                : t('llm.OpenAI.endpoint.placeholder')
-            }
-          />
-        ),
-        desc: useAzure ? t('llm.AzureOpenAI.endpoint.desc') : t('llm.OpenAI.endpoint.desc'),
-        label: useAzure ? t('llm.AzureOpenAI.endpoint.title') : t('llm.OpenAI.endpoint.title'),
-        name: [configKey, 'openAI', 'endpoint'],
-      },
-      {
-        children: <Input allowClear placeholder={t('llm.OpenAI.customModelName.placeholder')} />,
-        desc: t('llm.OpenAI.customModelName.desc'),
-        label: t('llm.OpenAI.customModelName.title'),
-        name: [configKey, 'openAI', 'customModelName'],
-      },
-      {
-        children: (
-          <Switch />
-          //   <Flexbox gap={4}>
-          //   <div>
-          //
-          //   </div>
-          //   {getClientConfig().USE_AZURE_OPENAI && (
-          //     <div className={styles.tip}>{t('llm.OpenAI.useAzure.serverConfig')}</div>
-          //   )}
-          // </Flexbox>
-        ),
-        desc: t('llm.OpenAI.useAzure.desc'),
-        label: t('llm.OpenAI.useAzure.title'),
-        minWidth: undefined,
-        name: [configKey, 'openAI', 'useAzure'],
-        valuePropName: 'checked',
-      },
+      // {
+      //   children: (
+      //     <Input
+      //       allowClear
+      //       placeholder={
+      //         useAzure
+      //           ? t('llm.AzureOpenAI.endpoint.placeholder')
+      //           : t('llm.OpenAI.endpoint.placeholder')
+      //       }
+      //     />
+      //   ),
+      //   desc: useAzure ? t('llm.AzureOpenAI.endpoint.desc') : t('llm.OpenAI.endpoint.desc'),
+      //   label: useAzure ? t('llm.AzureOpenAI.endpoint.title') : t('llm.OpenAI.endpoint.title'),
+      //   name: [configKey, 'openAI', 'endpoint'],
+      // },
+      // {
+      //   children: <Input allowClear placeholder={t('llm.OpenAI.customModelName.placeholder')} />,
+      //   desc: t('llm.OpenAI.customModelName.desc'),
+      //   label: t('llm.OpenAI.customModelName.title'),
+      //   name: [configKey, 'openAI', 'customModelName'],
+      // },
+      // {
+      //   children: (
+      //     <Switch />
+      //     //   <Flexbox gap={4}>
+      //     //   <div>
+      //     //
+      //     //   </div>
+      //     //   {getClientConfig().USE_AZURE_OPENAI && (
+      //     //     <div className={styles.tip}>{t('llm.OpenAI.useAzure.serverConfig')}</div>
+      //     //   )}
+      //     // </Flexbox>
+      //   ),
+      //   desc: t('llm.OpenAI.useAzure.desc'),
+      //   label: t('llm.OpenAI.useAzure.title'),
+      //   minWidth: undefined,
+      //   name: [configKey, 'openAI', 'useAzure'],
+      //   valuePropName: 'checked',
+      // },
       {
         children: (
           <AutoComplete

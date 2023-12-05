@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import pkg from '../../package.json';
 
-const title = 'LobeChat';
+const title = 'PuerHub';
 const { description, homepage } = pkg;
 const metadata: Metadata = {
   appleWebApp: {
@@ -11,11 +11,9 @@ const metadata: Metadata = {
   },
   description,
   icons: {
-    apple:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/apple-touch-icon.png',
-    icon: 'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon-32x32.png',
-    shortcut:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon.ico',
+    apple: 'https://oss.puerhub.com/hub/apple-touch-icon.png',
+    icon: 'https://oss.puerhub.com/hub/favicon-32x32.png',
+    shortcut: 'https://oss.puerhub.com/hub/favicon.ico',
   },
   manifest: '/manifest.json',
   openGraph: {
@@ -43,7 +41,7 @@ const metadata: Metadata = {
 
   title: {
     default: title,
-    template: '%s · LobeChat',
+    template: '%s · PuerHub',
   },
   twitter: {
     card: 'summary_large_image',

@@ -22,7 +22,7 @@ const createStore: StateCreator<SessionStore, [['zustand/devtools', never]]> = (
 //  ===============  persist 本地缓存中间件配置 ============ //
 
 const persistOptions: PersistOptions<SessionStore> = {
-  name: 'LOBE_CHAT',
+  name: 'PUERHUB',
 
   // 手动控制 Hydration ，避免 ssr 报错
   skipHydration: true,
@@ -47,7 +47,7 @@ export const useSessionStore = createWithEqualityFn<SessionStore>()(
   persist(
     subscribeWithSelector(
       devtools(createStore, {
-        name: 'LobeChat_Session' + (isDev ? '_DEV' : ''),
+        name: 'PuerHub_Session' + (isDev ? '_DEV' : ''),
       }),
     ),
     persistOptions,

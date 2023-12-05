@@ -1,5 +1,5 @@
 import { SiOpenai } from '@icons-pack/react-simple-icons';
-import { Avatar, ChatHeaderTitle, Logo, Markdown, Tag } from '@lobehub/ui';
+import { Avatar, ChatHeaderTitle, Markdown, Tag } from '@lobehub/ui';
 import { Button, SegmentedProps } from 'antd';
 import dayjs from 'dayjs';
 import { domToJpeg, domToPng, domToSvg, domToWebp } from 'modern-screenshot';
@@ -7,8 +7,8 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import pkg from '@/../package.json';
 import ChatList from '@/app/chat/features/Conversation/ChatList';
+import Logo from '@/components/Logo';
 import { useSessionStore } from '@/store/session';
 import { agentSelectors, sessionSelectors } from '@/store/session/selectors';
 
@@ -98,7 +98,7 @@ const Preview = memo<PreviewProps>(({ withSystemRole, imageType, withBackground,
         scale: 2,
       });
       const link = document.createElement('a');
-      link.download = `LobeChat_${title}_${dayjs().format('YYYY-MM-DD')}.${imageType}`;
+      link.download = `PuerHub_${title}_${dayjs().format('YYYY-MM-DD')}.${imageType}`;
       link.href = dataUrl;
       link.click();
       setLoading(false);
@@ -137,7 +137,7 @@ const Preview = memo<PreviewProps>(({ withSystemRole, imageType, withBackground,
             {withFooter ? (
               <Flexbox align={'center'} className={styles.footer} gap={4}>
                 <Logo extra={'chat'} type={'combine'} />
-                <div className={styles.url}>{pkg.homepage}</div>
+                <div className={styles.url}>{'https://puerhub.xyz'}</div>
               </Flexbox>
             ) : (
               <div />

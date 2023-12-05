@@ -14,8 +14,8 @@
     "502": "Sorry, the server seems to be lost and is temporarily unable to provide service. Please try again later.",
     "503": "Sorry, the server is currently unable to process your request, possibly due to overload or maintenance. Please try again later.",
     "504": "Sorry, the server did not receive a response from the upstream server. Please try again later.",
-    "InvalidAccessCode": "The password is incorrect or empty. Please enter the correct access password or add a custom OpenAI API Key.",
-    "OpenAIBizError": "Error requesting OpenAI service. Please troubleshoot or retry based on the following information.",
+    "InvalidAccessCode": "The password is incorrect or empty. Please enter the correct access password or add a custom PuerHub AI API Key.",
+    "OpenAIBizError": "Error requesting PuerHub AI service. Please troubleshoot or retry based on the following information.",
     "PluginMarketIndexNotFound": "Sorry, the server could not find the plugin index. Please check if the index address is correct",
     "PluginMarketIndexInvalid": "Sorry, the plugin index validation failed. Please check if the index file format is correct",
     "PluginMetaNotFound": "Sorry, the plugin was not found in the index. Please check the plugin's configuration information in the index",
@@ -26,7 +26,7 @@
     "PluginApiParamsError": "Sorry, the input parameter validation for the plugin request failed. Please check if the input parameters match the API description",
     "PluginSettingsInvalid": "This plugin needs to be correctly configured before it can be used. Please check if your configuration is correct",
     "PluginServerError": "Plugin server request returned an error. Please check your plugin manifest file, plugin configuration, or server implementation based on the error information below",
-    "NoAPIKey": "OpenAI API Key is empty, please add a custom OpenAI API Key"
+    "NoAPIKey": "The PuerHub AI API Key is empty. Please add it before use"
   },
   "stt": {
     "responseError": "Service request failed, please check the configuration or try again"
@@ -37,7 +37,7 @@
   "unlock": {
     "apikey": {
       "title": "Use Custom API Key",
-      "description": "Enter your OpenAI API Key to start the conversation. The application will not record your API Key.",
+      "description": "Enter your PuerHub AI API Key to start the session. You can obtain it at https://ai.puerhub.xyz.",
       "addProxyUrl": "Add OpenAI Proxy URL (optional)"
     },
     "confirm": "Confirm and Retry",

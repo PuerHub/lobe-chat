@@ -66,7 +66,7 @@ const persistOptions: PersistOptions<GlobalStore, GlobalPersist> = {
 
   storage: createHyperStorage({
     localStorage: {
-      dbName: 'LobeHub',
+      dbName: 'PuerHub',
       selectors: ['preference', 'settings'],
     },
   }),
@@ -77,7 +77,7 @@ const persistOptions: PersistOptions<GlobalStore, GlobalPersist> = {
 export const useGlobalStore = createWithEqualityFn<GlobalStore>()(
   persist(
     devtools(createStore, {
-      name: 'LobeChat_Global' + (isDev ? '_DEV' : ''),
+      name: 'PuerHub_Global' + (isDev ? '_DEV' : ''),
     }),
     persistOptions,
   ),

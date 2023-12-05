@@ -35,7 +35,7 @@ const createStore: StateCreator<ChatStore, [['zustand/devtools', never]]> = (...
 });
 
 const persistOptions: PersistOptions<ChatStore> = {
-  name: 'LobeChat_Chat',
+  name: 'PuerHub_Chat',
 
   // 手动控制 Hydration ，避免 ssr 报错
   skipHydration: true,
@@ -55,7 +55,7 @@ const persistOptions: PersistOptions<ChatStore> = {
 export const useChatStore = createWithEqualityFn<ChatStore>()(
   persist(
     devtools(createStore, {
-      name: 'LobeChat_Chat' + (isDev ? '_DEV' : ''),
+      name: 'PuerHub_Chat' + (isDev ? '_DEV' : ''),
     }),
     persistOptions,
   ),

@@ -44,6 +44,12 @@ const nextConfig = {
         port: '',
         protocol: 'https',
       },
+      {
+        hostname: 'oss.puerhub.com',
+        pathname: '/hub/**',
+        port: '',
+        protocol: 'https',
+      },
     ],
     unoptimized: !isProd,
   },

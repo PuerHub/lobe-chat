@@ -1,12 +1,12 @@
 'use client';
 
-import { ActionIcon, DiscordIcon } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
-import { Book, Github } from 'lucide-react';
+import { Book, Users } from 'lucide-react';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { DISCORD, GITHUB, WIKI } from '@/const/url';
+import { GROUP_QRCODE_URL, MANUAL_URL } from '@/const/url';
 
 const Footer = memo(() => {
   const theme = useTheme();
@@ -14,27 +14,27 @@ const Footer = memo(() => {
   return (
     <Flexbox align={'center'} horizontal justify={'space-between'} style={{ padding: 16 }}>
       <span style={{ color: theme.colorTextDescription }}>
-        ©{new Date().getFullYear()} LobeHub
+        ©{new Date().getFullYear()} PuerHub based on LobeHub under the MIT license
       </span>
       <Flexbox horizontal>
         <ActionIcon
-          icon={DiscordIcon}
-          onClick={() => window.open(DISCORD, '__blank')}
+          icon={Users}
+          onClick={() => window.open(GROUP_QRCODE_URL, '__blank')}
           size={'site'}
-          title={'Discord'}
+          title={'Group'}
         />
         <ActionIcon
           icon={Book}
-          onClick={() => window.open(WIKI, '__blank')}
+          onClick={() => window.open(MANUAL_URL, '__blank')}
           size={'site'}
-          title={'Wiki'}
+          title={'Manual'}
         />
-        <ActionIcon
-          icon={Github}
-          onClick={() => window.open(GITHUB, '__blank')}
-          size={'site'}
-          title={'GitHub'}
-        />
+        {/*<ActionIcon*/}
+        {/*  icon={Github}*/}
+        {/*  onClick={() => window.open(GITHUB, '__blank')}*/}
+        {/*  size={'site'}*/}
+        {/*  title={'GitHub'}*/}
+        {/*/>*/}
       </Flexbox>
     </Flexbox>
   );

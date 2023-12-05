@@ -18,9 +18,7 @@ interface ShareMessage {
 
 const Footer: ShareMessage = {
   from: 'gpt',
-  value: `Share from [**🤯 LobeChat**](https://github.com/lobehub/lobe-chat) - ${dayjs().format(
-    'YYYY-MM-DD',
-  )}`,
+  value: `Share from [**🤔 PuerHub AI**](https://puerhub.xyz) - ${dayjs().format('YYYY-MM-DD')}`,
 };
 
 const PLUGIN_INFO = (plugin: {

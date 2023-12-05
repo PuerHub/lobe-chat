@@ -1,10 +1,10 @@
 import Dexie from 'dexie';
 
+import { DBModel } from '@/database/core/types/db';
+import { DB_File } from '@/database/schemas/files';
 import { DB_Message } from '@/database/schemas/message';
 import { DB_Session } from '@/database/schemas/session';
 import { DB_Topic } from '@/database/schemas/topic';
-import { DBModel } from '@/database/core/types/db';
-import { DB_File } from '@/database/schemas/files';
 
 import { dbSchemaV1, dbSchemaV2 } from './schemas';
 
@@ -23,7 +23,7 @@ export class LocalDB extends Dexie {
   public topics: LobeDBTable<'topics'>;
 
   constructor() {
-    super('LOBE_CHAT_DB');
+    super('PUERHUB_DB');
     this.version(1).stores(dbSchemaV1);
 
     this.version(2).stores(dbSchemaV2);
