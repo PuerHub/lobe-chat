@@ -24,9 +24,9 @@
     "PluginApiParamsError": "죄송합니다. 플러그인 요청의 입력 매개변수 유효성 검사에 실패했습니다. 입력 매개변수와 API 설명 정보가 일치하는지 확인해주세요.",
     "PluginSettingsInvalid": "플러그인을 사용하려면 올바른 구성이 필요합니다. 구성이 올바른지 확인해주세요.",
     "PluginServerError": "플러그인 서버 요청이 오류로 반환되었습니다. 플러그인 설명 파일, 플러그인 구성 또는 서버 구현을 확인해주세요.",
-    "InvalidAccessCode": "암호가 올바르지 않거나 비어 있습니다. 올바른 액세스 암호를 입력하거나 사용자 지정 OpenAI API 키를 추가해주세요.",
-    "OpenAIBizError": "OpenAI 서비스 요청 중 오류가 발생했습니다. 아래 정보를 확인하고 문제를 해결하거나 다시 시도해주세요.",
-    "NoAPIKey": "OpenAI API 키가 비어 있습니다. 사용자 정의 OpenAI API 키를 추가해주세요."
+    "InvalidAccessCode": "암호가 올바르지 않거나 비어 있습니다. 올바른 액세스 암호를 입력하거나 사용자 지정 PuerHub AI API 키를 추가해주세요.",
+    "OpenAIBizError": "PuerHub AI 서비스 요청 중 오류가 발생했습니다. 아래 정보를 확인하고 문제를 해결하거나 다시 시도해주세요.",
+    "NoAPIKey": "PuerHub AI API Key 가 비어 있습니다. 추가한 후 사용하세요."
   },
   "stt": {
     "responseError": "서비스 요청이 실패했습니다. 구성을 확인하거나 다시 시도해주세요."
@@ -37,7 +37,7 @@
   "unlock": {
     "apikey": {
       "title": "사용자 정의 API 키 사용",
-      "description": "OpenAI API 키를 입력하면 대화를 시작할 수 있습니다. 애플리케이션은 API 키를 기록하지 않습니다.",
+      "description": "PuerHub AI API Key 를 입력하면 대화를 시작할 수 있습니다. https://ai.puerhub.xyz 에서 얻을 수 있습니다.",
       "addProxyUrl": "OpenAI 프록시 주소 추가하기 (선택 사항)"
     },
     "closeMessage": "알림 닫기",

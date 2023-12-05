@@ -1,9 +1,9 @@
-import { Logo } from '@lobehub/ui';
 import { Upload } from 'antd';
 import { createStyles } from 'antd-style';
 import Avatar from 'next/image';
 import { CSSProperties, memo } from 'react';
 
+import Logo from '@/components/Logo';
 import { useGlobalStore } from '@/store/global';
 import { imageToBase64 } from '@/utils/imageToBase64';
 import { createUploadImageHandler } from '@/utils/uploadFIle';

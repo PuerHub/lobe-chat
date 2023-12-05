@@ -20,7 +20,7 @@ const persistOptions: PersistOptions<Store> = {
 
   storage: createHyperStorage({
     localStorage: {
-      dbName: 'LobeHub',
+      dbName: 'PuerHub',
       selectors: ['agentMap'],
     },
     url: {

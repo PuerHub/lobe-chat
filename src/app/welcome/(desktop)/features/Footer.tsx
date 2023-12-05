@@ -14,7 +14,7 @@ const Footer = memo(() => {
   return (
     <Flexbox align={'center'} horizontal justify={'space-between'} style={{ padding: 16 }}>
       <span style={{ color: theme.colorTextDescription }}>
-        ©{new Date().getFullYear()} LobeHub
+        ©{new Date().getFullYear()} PuerHub based on LobeHub under the MIT license
       </span>
       <Flexbox horizontal>
         <ActionIcon
