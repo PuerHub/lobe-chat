@@ -4,6 +4,10 @@ export default {
     start: '立即开始',
   },
   header: '欢迎使用',
+  import: {
+    desc: '导入路径中包含的 API Key {{key}} ？',
+    title: '确认导入',
+  },
   pickAgent: '或从下列助手模板选择',
   skip: '跳过创建',
   slogan: {

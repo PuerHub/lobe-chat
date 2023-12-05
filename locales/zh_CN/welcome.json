@@ -4,6 +4,10 @@
     "start": "立即开始"
   },
   "header": "欢迎使用",
+  "import": {
+    "title": "确认导入",
+    "desc": "导入路径中包含的 API Key {{key}} ？"
+  },
   "pickAgent": "或从下列助手模板选择",
   "skip": "跳过创建",
   "slogan": {

@@ -1,13 +1,14 @@
 'use client';
 
 import { Icon } from '@lobehub/ui';
-import { Button } from 'antd';
+import { App, Button } from 'antd';
 import { SendHorizonal } from 'lucide-react';
-import { memo } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import DataImporter from '@/features/DataImporter';
+import { useGlobalStore } from '@/store/global';
 import { useSessionStore } from '@/store/session';
 
 import Hero from './Hero';
@@ -22,6 +23,28 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
     s.router,
     s.isMobile,
   ]);
+  const [setConfig] = useGlobalStore((s) => [s.setOpenAIConfig]);
+
+  const { modal } = App.useApp();
+
+  const query = useSearchParams();
+  const apiKey = useMemo(() => query.get('apiKey'), [query]);
+
+  useEffect(() => {
+    if (apiKey && /^sk-[\dA-Za-z]{48}$/.test(apiKey)) {
+      modal.confirm({
+        cancelText: t('cancel', { ns: 'common' }),
+        centered: true,
+        content: t('import.desc', { key: apiKey }),
+        okText: t('ok', { ns: 'common' }),
+        onOk: () => {
+          setConfig({ OPENAI_API_KEY: apiKey });
+          switchSession();
+        },
+        title: t('import.title'),
+      });
+    }
+  }, [apiKey]);
 
   return (
     <>
@@ -35,15 +58,15 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
         justify={'center'}
         width={'100%'}
       >
-        <DataImporter
-          onFinishImport={() => {
-            switchSession();
-          }}
-        >
-          <Button block={mobile} size={'large'}>
-            {t('button.import')}
-          </Button>
-        </DataImporter>
+        {/*<DataImporter*/}
+        {/*  onFinishImport={() => {*/}
+        {/*    switchSession();*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  <Button block={mobile} size={'large'}>*/}
+        {/*    {t('button.import')}*/}
+        {/*  </Button>*/}
+        {/*</DataImporter>*/}
         <Button
           block={mobile}
           onClick={() => (isMobile ? router?.push('/chat') : switchBackToChat())}

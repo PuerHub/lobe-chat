@@ -4,6 +4,10 @@
     "start": "馬上開始"
   },
   "header": "歡迎",
+  "import": {
+    "title": "確認匯入",
+    "desc": "匯入路徑中包含的 API Key {{key}} ？"
+  },
   "pickAgent": "或從以下助理範本中選擇",
   "skip": "跳過建立步驟",
   "slogan": {
