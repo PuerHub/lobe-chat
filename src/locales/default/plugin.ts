@@ -102,7 +102,7 @@ export default {
       edit: '编辑自定义插件',
     },
     type: {
-      lobe: 'LobeChat 插件',
+      lobe: 'PuerHub 插件',
       openai: 'OpenAI 插件',
     },
     update: '更新',

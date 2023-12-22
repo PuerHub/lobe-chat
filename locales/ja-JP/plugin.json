@@ -101,7 +101,7 @@
       "edit": "カスタムプラグインを編集"
     },
     "type": {
-      "lobe": "LobeChatプラグイン",
+      "lobe": "PuerHubプラグイン",
       "openai": "OpenAIプラグイン"
     },
     "update": "更新",
