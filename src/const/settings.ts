@@ -30,6 +30,8 @@ export const DEFAUTT_AGENT_TTS_CONFIG: LobeAgentTTSConfig = {
 
 export const VISION_MODEL_DEFAULT_MAX_TOKENS = 1000;
 
+export const COOKIE_CACHE_DAYS = 30;
+
 export const DEFAULT_AGENT_CONFIG: LobeAgentConfig = {
   autoCreateTopicThreshold: 2,
   displayMode: 'chat',
@@ -70,9 +72,16 @@ export const DEFAULT_TTS_CONFIG: GlobalTTSConfig = {
   sttServer: 'openai',
 };
 
+export const DEFAULT_TOOL_CONFIG = {
+  dalle: {
+    autoGenerate: false,
+  },
+};
+
 export const DEFAULT_SETTINGS: GlobalSettings = {
   defaultAgent: DEFAULT_AGENT,
   languageModel: DEFAULT_LLM_CONFIG,
+  tool: DEFAULT_TOOL_CONFIG,
   tts: DEFAULT_TTS_CONFIG,
   ...DEFAULT_BASE_SETTINGS,
 };

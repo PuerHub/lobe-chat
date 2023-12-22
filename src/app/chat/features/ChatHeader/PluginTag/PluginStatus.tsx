@@ -1,5 +1,6 @@
 import { ActionIcon } from '@lobehub/ui';
 import { Badge, Button, Tag } from 'antd';
+import isEqual from 'fast-deep-equal';
 import { LucideRotateCw, LucideTrash2, RotateCwIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +9,7 @@ import { Flexbox } from 'react-layout-kit';
 import ManifestPreviewer from '@/components/ManifestPreviewer';
 import { useSessionStore } from '@/store/session';
 import { useToolStore } from '@/store/tool';
-import { customPluginSelectors, pluginSelectors } from '@/store/tool/selectors';
+import { customPluginSelectors, toolSelectors } from '@/store/tool/selectors';
 
 interface PluginStatusProps {
   deprecated?: boolean;
@@ -17,13 +18,13 @@ interface PluginStatusProps {
 }
 const PluginStatus = memo<PluginStatusProps>(({ title, id, deprecated }) => {
   const { t } = useTranslation('common');
-  const [status, isCustom, fetchPluginManifest] = useToolStore((s) => [
-    pluginSelectors.getPluginManifestLoadingStatus(id)(s),
+  const [status, isCustom, reinstallCustomPlugin] = useToolStore((s) => [
+    toolSelectors.getManifestLoadingStatus(id)(s),
     customPluginSelectors.isCustomPlugin(id)(s),
-    s.installPlugin,
+    s.reinstallCustomPlugin,
   ]);
 
-  const manifest = useToolStore(pluginSelectors.getPluginManifestById(id));
+  const manifest = useToolStore(toolSelectors.getManifestById(id), isEqual);
 
   const removePlugin = useSessionStore((s) => s.removePlugin);
 
@@ -37,15 +38,17 @@ const PluginStatus = memo<PluginStatusProps>(({ title, id, deprecated }) => {
           <ActionIcon
             icon={LucideRotateCw}
             onClick={() => {
-              fetchPluginManifest(id);
+              reinstallCustomPlugin(id);
             }}
             size={'small'}
             title={t('retry')}
           />
         );
       }
+
+      default:
       case 'success': {
-        return <Badge status={status} />;
+        return <Badge status={'success'} />;
       }
     }
   }, [status]);
@@ -87,8 +90,7 @@ const PluginStatus = memo<PluginStatusProps>(({ title, id, deprecated }) => {
               icon={RotateCwIcon}
               onClick={(e) => {
                 e.stopPropagation();
-                fetchPluginManifest(id);
-                // form.validateFields(['manifest']);
+                reinstallCustomPlugin(id);
               }}
               size={'small'}
               title={t('dev.meta.manifest.refresh', { ns: 'plugin' })}

@@ -7,17 +7,16 @@ import { fetchPluginIndex, genLink, genTags, readReadme, updateReadme, writeRead
 const genPluginTable = (data: DataItem[], lang: string) => {
   const isCN = lang === 'zh-CN';
   const content = data
-    .filter((item) => item.author === 'LobeHub')
+    .slice(0, 4)
     .map((item) => [
       [
         genLink(item.meta.title, PLGUIN_URL),
-        `<sup>By **${item.author}** on **${item.createAt}**</sup>`,
+        `<sup>By **${item.author}** on **${item.createdAt}**</sup>`,
       ].join('<br/>'),
-      genLink(item.homepage.split('github.com/')[1], item.homepage),
       [item.meta.description, genTags(item.meta.tags)].join('<br/>'),
     ]);
   return markdownTable([
-    isCN ? ['官方插件', '仓库', '插件描述'] : ['Official Plugin', 'Repository', 'Description'],
+    isCN ? ['最近新增', '插件描述'] : ['Recent Submits', 'Description'],
     ...content,
   ]);
 };

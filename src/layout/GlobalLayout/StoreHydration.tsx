@@ -3,12 +3,7 @@ import { useRouter } from 'next/navigation';
 import { memo, useEffect } from 'react';
 
 import { useGlobalStore } from '@/store/global';
-import {
-  useEffectAfterSessionHydrated,
-  useOnFinishHydrationSession,
-  useSessionStore,
-} from '@/store/session';
-import { useToolStore } from '@/store/tool';
+import { useEffectAfterSessionHydrated, useSessionStore } from '@/store/session';
 
 const StoreHydration = memo(() => {
   const router = useRouter();
@@ -17,15 +12,7 @@ const StoreHydration = memo(() => {
     // refs: https://github.com/pmndrs/zustand/blob/main/docs/integrations/persisting-store-data.md#hashydrated
     useSessionStore.persist.rehydrate();
     useGlobalStore.persist.rehydrate();
-    useToolStore.persist.rehydrate();
   }, []);
-
-  useOnFinishHydrationSession((s, store) => {
-    useToolStore.getState().checkLocalEnabledPlugins(s.sessions);
-
-    // add router instance to store
-    store.setState({ router });
-  });
 
   const { mobile } = useResponsive();
 
@@ -35,6 +22,19 @@ const StoreHydration = memo(() => {
     },
     [mobile],
   );
+
+  useEffectAfterSessionHydrated(
+    (store) => {
+      store.setState({ router });
+    },
+    [router],
+  );
+  useEffect(() => {
+    router.prefetch('/chat');
+    router.prefetch('/market');
+    router.prefetch('/settings/common');
+    router.prefetch('/settings/agent');
+  }, [router]);
 
   return null;
 });

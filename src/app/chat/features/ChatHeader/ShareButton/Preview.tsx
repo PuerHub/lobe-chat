@@ -7,8 +7,8 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import ChatList from '@/app/chat/features/Conversation/ChatList';
 import Logo from '@/components/Logo';
+import ChatList from '@/features/Conversation/ChatList';
 import { useSessionStore } from '@/store/session';
 import { agentSelectors, sessionSelectors } from '@/store/session/selectors';
 

@@ -2,7 +2,7 @@ import { produce } from 'immer';
 import useSWR, { SWRResponse } from 'swr';
 import type { StateCreator } from 'zustand/vanilla';
 
-import { featLatestVersion } from '@/services/latestVersion';
+import { globalService } from '@/services/global';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
@@ -70,7 +70,7 @@ export const createCommonSlice: StateCreator<
     );
   },
   useCheckLatestVersion: () =>
-    useSWR('checkLatestVersion', featLatestVersion, {
+    useSWR('checkLatestVersion', globalService.getLatestVersion, {
       onSuccess: () => {
         // if (gt(data, CURRENT_VERSION))
         //   set({ hasNewVersion: true, latestVersion: data }, false, t('checkLatestVersion'));

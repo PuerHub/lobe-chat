@@ -1,21 +1,28 @@
-import { LobeChatPluginMeta } from '@lobehub/chat-plugin-sdk';
+import { PluginSchema } from '@lobehub/chat-plugin-sdk';
 
-import { CustomPlugin } from '@/types/plugin';
+import { MetaData } from '@/types/meta';
+import { LobeTool } from '@/types/tool';
 
-const getPluginFormList = (pluginList: LobeChatPluginMeta[], id: string) =>
-  pluginList?.find((p) => p.identifier === id);
+const getPluginFormList = (list: LobeTool[], id: string) => list?.find((p) => p.identifier === id);
 
-const getPluginTitle = (meta?: LobeChatPluginMeta['meta']) => meta?.title;
-const getPluginDesc = (meta?: LobeChatPluginMeta['meta']) => meta?.description;
-const getPluginAvatar = (meta?: LobeChatPluginMeta['meta']) => meta?.avatar || '🧩';
+const getPluginTitle = (meta?: MetaData) => meta?.title;
+const getPluginDesc = (meta?: MetaData) => meta?.description;
 
-const isCustomPlugin = (id: string, pluginList: CustomPlugin[]) =>
-  pluginList.some((i) => i.identifier === id);
+const getPluginTags = (meta?: MetaData) => meta?.tags;
+const getPluginAvatar = (meta?: MetaData) => meta?.avatar || '🧩';
+
+const isCustomPlugin = (id: string, pluginList: LobeTool[]) =>
+  pluginList.some((i) => i.identifier === id && i.type === 'customPlugin');
+
+const isSettingSchemaNonEmpty = (schema?: PluginSchema) =>
+  schema?.properties && Object.keys(schema.properties).length > 0;
 
 export const pluginHelpers = {
   getPluginAvatar,
   getPluginDesc,
   getPluginFormList,
+  getPluginTags,
   getPluginTitle,
   isCustomPlugin,
+  isSettingSchemaNonEmpty,
 };

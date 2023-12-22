@@ -1,9 +1,12 @@
+import { Md5 } from 'ts-md5';
 import { StateCreator } from 'zustand/vanilla';
 
-import { PLUGIN_SCHEMA_SEPARATOR } from '@/const/plugin';
+import { PLUGIN_SCHEMA_API_MD5_PREFIX, PLUGIN_SCHEMA_SEPARATOR } from '@/const/plugin';
 import { chatService } from '@/services/chat';
 import { messageService } from '@/services/message';
 import { ChatStore } from '@/store/chat/store';
+import { useToolStore } from '@/store/tool';
+import { pluginSelectors } from '@/store/tool/selectors';
 import { ChatPluginPayload } from '@/types/chatMessage';
 import { OpenAIFunctionCall } from '@/types/openai/functionCall';
 import { setNamespace } from '@/utils/storeDebug';
@@ -14,7 +17,8 @@ const n = setNamespace('plugin');
 
 export interface ChatPluginAction {
   fillPluginMessageContent: (id: string, content: string) => Promise<void>;
-  runPluginDefaultType: (id: string, payload: any) => Promise<void>;
+  invokeBuiltinTool: (id: string, payload: ChatPluginPayload) => Promise<void>;
+  invokeDefaultTypePlugin: (id: string, payload: any) => Promise<void>;
   triggerFunctionCall: (id: string) => Promise<void>;
   updatePluginState: (id: string, key: string, value: any) => Promise<void>;
 }
@@ -34,15 +38,40 @@ export const chatPlugin: StateCreator<
     const chats = chatSelectors.currentChats(get());
     await coreProcessMessage(chats, id);
   },
-  runPluginDefaultType: async (id, payload) => {
+  invokeBuiltinTool: async (id, payload) => {
+    const { toggleChatLoading, refreshMessages } = get();
+    const params = JSON.parse(payload.arguments);
+    toggleChatLoading(true, id, n('invokeBuiltinTool') as string);
+    const data = await useToolStore.getState().invokeBuiltinTool(payload.apiName, params);
+    toggleChatLoading(false);
+
+    if (data) {
+      await messageService.updateMessageContent(id, data);
+      await refreshMessages();
+    }
+
+    // postToolCalling
+    // @ts-ignore
+    const { [payload.apiName]: action } = get();
+    if (!action || !data) return;
+
+    await action(id, JSON.parse(data));
+  },
+  invokeDefaultTypePlugin: async (id, payload) => {
     const { refreshMessages, coreProcessMessage, toggleChatLoading } = get();
     let data: string;
+
     try {
       const abortController = toggleChatLoading(true, id, n('fetchPlugin') as string);
       data = await chatService.runPluginApi(payload, { signal: abortController?.signal });
     } catch (error) {
-      await messageService.updateMessageError(id, error as any);
-      await refreshMessages();
+      const err = error as Error;
+
+      // ignore the aborted request error
+      if (!err.message.includes('The user aborted a request.')) {
+        await messageService.updateMessageError(id, error as any);
+        await refreshMessages();
+      }
 
       data = '';
     }
@@ -56,8 +85,9 @@ export const chatPlugin: StateCreator<
     const chats = chatSelectors.currentChats(get());
     await coreProcessMessage(chats, id);
   },
+
   triggerFunctionCall: async (id) => {
-    const { runPluginDefaultType, refreshMessages } = get();
+    const { invokeDefaultTypePlugin, invokeBuiltinTool, refreshMessages } = get();
 
     const message = chatSelectors.getMessageById(id)(get());
     if (!message) return;
@@ -79,6 +109,16 @@ export const chatPlugin: StateCreator<
         identifier,
         type: (type ?? 'default') as any,
       };
+
+      // if the apiName is md5, try to find the correct apiName in the plugins
+      if (apiName.startsWith(PLUGIN_SCHEMA_API_MD5_PREFIX)) {
+        const md5 = apiName.replace(PLUGIN_SCHEMA_API_MD5_PREFIX, '');
+        const manifest = pluginSelectors.getPluginManifestById(identifier)(useToolStore.getState());
+
+        const api = manifest?.api.find((api) => Md5.hashStr(api.name).toString() === md5);
+        if (!api) return;
+        payload.apiName = api.name;
+      }
     } else {
       if (message.plugin) payload = message.plugin;
     }
@@ -92,10 +132,21 @@ export const chatPlugin: StateCreator<
     });
     await refreshMessages();
 
-    if (payload.type === 'standalone') {
-      // TODO: need to auth user's settings
-    } else runPluginDefaultType(id, payload);
+    switch (payload.type) {
+      case 'standalone': {
+        // TODO: need to auth user's settings
+        break;
+      }
+      case 'builtin': {
+        await invokeBuiltinTool(id, payload);
+        break;
+      }
+      default: {
+        await invokeDefaultTypePlugin(id, payload);
+      }
+    }
   },
+
   updatePluginState: async (id, key, value) => {
     const { refreshMessages } = get();
 

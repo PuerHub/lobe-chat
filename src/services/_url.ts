@@ -5,6 +5,7 @@ export const URLS = {
 
 export const OPENAI_URLS = {
   chat: '/api/openai/chat',
+  images: '/api/openai/images',
   models: '/api/openai/models',
   stt: '/api/openai/stt',
   tts: '/api/openai/tts',
@@ -14,3 +15,5 @@ export const TTS_URL = {
   edge: '/api/tts/edge-speech',
   microsoft: '/api/tts/microsoft-speech',
 };
+
+export const PROXY_URL = '/api/proxy';
