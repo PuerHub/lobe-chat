@@ -1,10 +1,10 @@
 import { VoiceList } from '@lobehub/tts';
 import { t } from 'i18next';
 
-import { DEFAULT_OPENAI_MODEL_LIST, VISION_MODEL_WHITE_LIST } from '@/const/llm';
 import { DEFAULT_AVATAR, DEFAULT_BACKGROUND_COLOR, DEFAULT_INBOX_AVATAR } from '@/const/meta';
 import { DEFAULT_AGENT_CONFIG, DEFAUTT_AGENT_TTS_CONFIG } from '@/const/settings';
-import { settingsSelectors, useGlobalStore } from '@/store/global';
+import { useGlobalStore } from '@/store/global';
+import { settingsSelectors } from '@/store/global/selectors';
 import { SessionStore } from '@/store/session';
 import { LobeAgentTTSConfig } from '@/types/agent';
 import { LanguageModel } from '@/types/llm';
@@ -33,6 +33,12 @@ const currentAgentModel = (s: SessionStore): LanguageModel | string => {
   const config = currentAgentConfig(s);
 
   return config?.model || LanguageModel.GPT3_5;
+};
+
+const currentAgentModelProvider = (s: SessionStore) => {
+  const config = currentAgentConfig(s);
+
+  return config?.provider;
 };
 
 const currentAgentPlugins = (s: SessionStore) => {
@@ -77,7 +83,9 @@ const currentAgentMeta = (s: SessionStore): MetaData => {
   const defaultMeta = {
     avatar: isInbox ? DEFAULT_INBOX_AVATAR : DEFAULT_AVATAR,
     backgroundColor: DEFAULT_BACKGROUND_COLOR,
-    description: isInbox ? t('inbox.desc') : currentAgentSystemRole(s) || t('noDescription'),
+    description: isInbox
+      ? t('inbox.desc', { ns: 'chat' })
+      : currentAgentSystemRole(s) || t('noDescription'),
     title: isInbox ? t('inbox.title', { ns: 'chat' }) : t('defaultSession'),
   };
 
@@ -96,19 +104,10 @@ const getTitle = (s: MetaData) => s.title || t('defaultSession', { ns: 'common' 
 export const getDescription = (s: MetaData) =>
   s.description || t('noDescription', { ns: 'common' });
 
-const showTokenTag = (s: SessionStore) => {
-  const model = currentAgentModel(s);
-
-  return DEFAULT_OPENAI_MODEL_LIST.includes(model);
-};
 const hasSystemRole = (s: SessionStore) => {
   const config = currentAgentConfig(s);
 
   return !!config.systemRole;
-};
-const modelHasVisionAbility = (s: SessionStore): boolean => {
-  const model = currentAgentModel(s);
-  return VISION_MODEL_WHITE_LIST.includes(model);
 };
 
 export const agentSelectors = {
@@ -118,6 +117,7 @@ export const agentSelectors = {
   currentAgentDescription,
   currentAgentMeta,
   currentAgentModel,
+  currentAgentModelProvider,
   currentAgentPlugins,
   currentAgentSystemRole,
   currentAgentTTS,
@@ -127,6 +127,4 @@ export const agentSelectors = {
   getDescription,
   getTitle,
   hasSystemRole,
-  modelHasVisionAbility,
-  showTokenTag,
 };

@@ -1,13 +1,6 @@
 import { CreateMessageParams, MessageModel } from '@/database/models/message';
 import { DB_Message } from '@/database/schemas/message';
-import {
-  ChatMessage,
-  ChatMessageError,
-  ChatPluginPayload,
-  ChatTTS,
-  ChatTranslate,
-} from '@/types/chatMessage';
-import { LLMRoleType } from '@/types/llm';
+import { ChatMessage, ChatMessageError, ChatPluginPayload } from '@/types/message';
 
 export class MessageService {
   async create(data: CreateMessageParams) {
@@ -37,20 +30,8 @@ export class MessageService {
     return MessageModel.queryBySessionId(sessionId);
   }
 
-  async updateMessageContent(id: string, content: string) {
-    return MessageModel.update(id, { content });
-  }
-
   async updateMessageError(id: string, error: ChatMessageError) {
     return MessageModel.update(id, { error });
-  }
-
-  async updateMessageTranslate(id: string, data: Partial<ChatTranslate> | null) {
-    return MessageModel.update(id, { translate: data as ChatTranslate });
-  }
-
-  async updateMessageTTS(id: string, data: Partial<ChatTTS> | null) {
-    return MessageModel.update(id, { tts: data as ChatTTS });
   }
 
   async removeMessages(assistantId: string, topicId?: string) {
@@ -69,15 +50,12 @@ export class MessageService {
     return MessageModel.update(id, message);
   }
 
-  async updateMessageRole(id: string, role: LLMRoleType) {
-    return MessageModel.update(id, { role });
-  }
-
   async updateMessagePlugin(id: string, plugin: ChatPluginPayload) {
     return MessageModel.update(id, { plugin });
   }
+
   async updateMessagePluginState(id: string, key: string, value: any) {
-    return MessageModel.update(id, { pluginState: { [key]: value } });
+    return MessageModel.updatePluginState(id, key, value);
   }
 
   async getAllMessages() {

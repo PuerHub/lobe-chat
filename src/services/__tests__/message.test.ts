@@ -7,7 +7,7 @@ import {
   ChatPluginPayload,
   ChatTTS,
   ChatTranslate,
-} from '@/types/chatMessage';
+} from '@/types/message';
 
 import { messageService } from '../message';
 
@@ -26,6 +26,7 @@ vi.mock('@/database/models/message', () => {
       clearTable: vi.fn(),
       batchUpdate: vi.fn(),
       queryAll: vi.fn(),
+      updatePluginState: vi.fn(),
     },
   };
 });
@@ -153,21 +154,6 @@ describe('MessageService', () => {
     });
   });
 
-  describe('updateMessageContent', () => {
-    it('should update the content of a message', async () => {
-      // Setup
-      const newContent = 'Updated message content';
-      (MessageModel.update as Mock).mockResolvedValue({ ...mockMessage, content: newContent });
-
-      // Execute
-      const result = await messageService.updateMessageContent(mockMessageId, newContent);
-
-      // Assert
-      expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, { content: newContent });
-      expect(result).toEqual({ ...mockMessage, content: newContent });
-    });
-  });
-
   describe('removeMessages', () => {
     it('should batch remove messages by assistantId and topicId', async () => {
       // Setup
@@ -231,7 +217,7 @@ describe('MessageService', () => {
   describe('updateMessageError', () => {
     it('should update the error field of a message', async () => {
       // Setup
-      const newError = { type: 'NoAPIKey', message: 'Error occurred' } as ChatMessageError;
+      const newError = { type: 'NoOpenAIAPIKey', message: 'Error occurred' } as ChatMessageError;
       (MessageModel.update as Mock).mockResolvedValue({ ...mockMessage, error: newError });
 
       // Execute
@@ -240,51 +226,6 @@ describe('MessageService', () => {
       // Assert
       expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, { error: newError });
       expect(result).toEqual({ ...mockMessage, error: newError });
-    });
-  });
-
-  describe('updateMessageTranslate', () => {
-    it('should update the translate field of a message', async () => {
-      // Setup
-      const newTranslate = { content: 'Translated text', to: 'es' } as ChatTranslate;
-      (MessageModel.update as Mock).mockResolvedValue({ ...mockMessage, translate: newTranslate });
-
-      // Execute
-      const result = await messageService.updateMessageTranslate(mockMessageId, newTranslate);
-
-      // Assert
-      expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, { translate: newTranslate });
-      expect(result).toEqual({ ...mockMessage, translate: newTranslate });
-    });
-  });
-
-  describe('updateMessageTTS', () => {
-    it('should update the tts field of a message', async () => {
-      // Setup
-      const newTTS = { init: false } as ChatTTS;
-      (MessageModel.update as Mock).mockResolvedValue({ ...mockMessage, tts: newTTS });
-
-      // Execute
-      const result = await messageService.updateMessageTTS(mockMessageId, newTTS);
-
-      // Assert
-      expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, { tts: newTTS });
-      expect(result).toEqual({ ...mockMessage, tts: newTTS });
-    });
-  });
-
-  describe('updateMessageRole', () => {
-    it('should update the role of a message', async () => {
-      // Setup
-      const newRole = 'user';
-      (MessageModel.update as Mock).mockResolvedValue({ ...mockMessage, role: newRole });
-
-      // Execute
-      const result = await messageService.updateMessageRole(mockMessageId, newRole);
-
-      // Assert
-      expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, { role: newRole });
-      expect(result).toEqual({ ...mockMessage, role: newRole });
     });
   });
 
@@ -315,7 +256,7 @@ describe('MessageService', () => {
       const key = 'stateKey';
       const value = 'stateValue';
       const newPluginState = { [key]: value };
-      (MessageModel.update as Mock).mockResolvedValue({
+      (MessageModel.updatePluginState as Mock).mockResolvedValue({
         ...mockMessage,
         pluginState: newPluginState,
       });
@@ -324,9 +265,7 @@ describe('MessageService', () => {
       const result = await messageService.updateMessagePluginState(mockMessageId, key, value);
 
       // Assert
-      expect(MessageModel.update).toHaveBeenCalledWith(mockMessageId, {
-        pluginState: newPluginState,
-      });
+      expect(MessageModel.updatePluginState).toHaveBeenCalledWith(mockMessageId, key, value);
       expect(result).toEqual({ ...mockMessage, pluginState: newPluginState });
     });
   });

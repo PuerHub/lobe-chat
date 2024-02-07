@@ -3,32 +3,33 @@
 import { Icon } from '@lobehub/ui';
 import { App, Button } from 'antd';
 import { SendHorizonal } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+// import DataImporter from '@/features/DataImporter';
 import { useGlobalStore } from '@/store/global';
-import { useSessionStore } from '@/store/session';
 
+// import { useSessionStore } from '@/store/session';
 import Hero from './Hero';
 import { useStyles } from './style';
 
 const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { t } = useTranslation('welcome');
+  const router = useRouter();
   const { styles } = useStyles();
-  const [switchSession, switchBackToChat, router, isMobile] = useSessionStore((s) => [
-    s.switchSession,
-    s.switchBackToChat,
-    s.router,
-    s.isMobile,
-  ]);
-  const [setConfig] = useGlobalStore((s) => [s.setOpenAIConfig]);
+  // const [switchSession] = useSessionStore((s) => [s.switchSession]);
+  const [switchBackToChat, isMobile] = useGlobalStore((s) => [s.switchBackToChat, s.isMobile]);
+
+  const [setModelProviderConfig] = useGlobalStore((s) => [s.setModelProviderConfig]);
 
   const { modal } = App.useApp();
 
   const query = useSearchParams();
   const apiKey = useMemo(() => query.get('apiKey'), [query]);
+
+  const goToChat = () => (isMobile ? router.push('/chat') : switchBackToChat());
 
   useEffect(() => {
     if (apiKey && /^sk-[\dA-Za-z]{48}$/.test(apiKey)) {
@@ -38,8 +39,14 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
         content: t('import.desc', { key: apiKey }),
         okText: t('ok', { ns: 'common' }),
         onOk: () => {
-          setConfig({ OPENAI_API_KEY: apiKey });
-          switchSession();
+          setModelProviderConfig('openAI', { OPENAI_API_KEY: apiKey }).then(() => {
+            setModelProviderConfig('zhipu', { apiKey: apiKey, enabled: true }).then(() => {
+              setModelProviderConfig('google', { apiKey: apiKey, enabled: true }).then(() => {
+                goToChat();
+              });
+            });
+          });
+          // switchSession();
         },
         title: t('import.title'),
       });
@@ -67,12 +74,7 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
         {/*    {t('button.import')}*/}
         {/*  </Button>*/}
         {/*</DataImporter>*/}
-        <Button
-          block={mobile}
-          onClick={() => (isMobile ? router?.push('/chat') : switchBackToChat())}
-          size={'large'}
-          type={'primary'}
-        >
+        <Button block={mobile} onClick={goToChat} size={'large'} type={'primary'}>
           <Flexbox align={'center'} gap={4} horizontal justify={'center'}>
             {t('button.start')}
             <Icon icon={SendHorizonal} />

@@ -8,7 +8,7 @@ import { Flexbox } from 'react-layout-kit';
 
 import { useSTT } from '@/hooks/useSTT';
 import { useChatStore } from '@/store/chat';
-import { ChatMessageError } from '@/types/chatMessage';
+import { ChatMessageError } from '@/types/message';
 import { getMessageError } from '@/utils/fetch';
 
 const useStyles = createStyles(({ css, token }) => ({
@@ -134,7 +134,7 @@ const STT = memo<{ mobile?: boolean }>(({ mobile }) => {
         icon={isLoading ? MicOff : Mic}
         onClick={handleTriggerStartStop}
         placement={'bottom'}
-        size={mobile ? { blockSize: 36, fontSize: 16 } : {}}
+        size={mobile ? { blockSize: 36, fontSize: 16 } : { fontSize: 22 }}
         style={{ flex: 'none' }}
         title={desc}
       />

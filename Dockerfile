@@ -57,8 +57,8 @@ ENV HOSTNAME "0.0.0.0"
 ENV PORT=3210
 
 # General Variables
-#ENV ACCESS_CODE "lobe66"
-ENV NEXT_PUBLIC_CUSTOM_MODELS ""
+ENV ACCESS_CODE ""
+ENV CUSTOM_MODELS ""
 
 # OpenAI
 ENV OPENAI_API_KEY ""
@@ -68,5 +68,14 @@ ENV OPENAI_PROXY_URL "https://api.puerhub.net/v1"
 ENV USE_AZURE_OPENAI ""
 ENV AZURE_API_KEY ""
 ENV AZURE_API_VERSION ""
+
+# Google
+ENV GOOGLE_API_KEY ""
+
+# Zhipu
+ENV ZHIPU_API_KEY ""
+
+# Moonshot
+ENV MOONSHOT_API_KEY ""
 
 CMD ["node", "server.js"]

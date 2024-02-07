@@ -1,17 +1,16 @@
-import { PersistOptions, devtools, persist } from 'zustand/middleware';
+import { devtools, subscribeWithSelector } from 'zustand/middleware';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
-import { createHyperStorage } from '@/store/middleware/createHyperStorage';
 import { isDev } from '@/utils/env';
 
-import { ChatEnhanceAction, chatEnhance } from './actions/enhance';
-import { ChatMessageAction, chatMessage } from './actions/message';
-import { ChatPluginAction, chatPlugin } from './actions/plugin';
-import { ShareAction, chatShare } from './actions/share';
-import { ChatTopicAction, chatTopic } from './actions/topic';
 import { ChatStoreState, initialState } from './initialState';
+import { ChatEnhanceAction, chatEnhance } from './slices/enchance/action';
+import { ChatMessageAction, chatMessage } from './slices/message/action';
+import { ShareAction, chatShare } from './slices/share/action';
+import { ChatPluginAction, chatPlugin } from './slices/tool/action';
+import { ChatTopicAction, chatTopic } from './slices/topic/action';
 
 export interface ChatStoreAction
   extends ChatMessageAction,
@@ -34,30 +33,13 @@ const createStore: StateCreator<ChatStore, [['zustand/devtools', never]]> = (...
   ...chatPlugin(...params),
 });
 
-const persistOptions: PersistOptions<ChatStore> = {
-  name: 'PuerHub_Chat',
-
-  // 手动控制 Hydration ，避免 ssr 报错
-  skipHydration: true,
-
-  storage: createHyperStorage({
-    localStorage: false,
-    url: {
-      mode: 'hash',
-      selectors: [{ activeTopicId: 'topic' }],
-    },
-  }),
-  version: 0,
-};
-
 //  ===============  实装 useStore ============ //
 
 export const useChatStore = createWithEqualityFn<ChatStore>()(
-  persist(
+  subscribeWithSelector(
     devtools(createStore, {
       name: 'PuerHub_Chat' + (isDev ? '_DEV' : ''),
     }),
-    persistOptions,
   ),
   shallow,
 );

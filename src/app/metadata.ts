@@ -1,9 +1,14 @@
 import { Metadata } from 'next';
 
+import { getServerConfig } from '@/config/server';
+
 import pkg from '../../package.json';
 
 const title = 'PuerHub';
 const { description, homepage } = pkg;
+
+const { METADATA_BASE_URL = 'https://chat-preview.lobehub.com/' } = getServerConfig();
+
 const metadata: Metadata = {
   appleWebApp: {
     statusBarStyle: 'black-translucent',
@@ -16,6 +21,7 @@ const metadata: Metadata = {
     shortcut: 'https://oss.puerhub.com/hub/favicon.ico',
   },
   manifest: '/manifest.json',
+  metadataBase: new URL(METADATA_BASE_URL),
   openGraph: {
     description: description,
     images: [

@@ -11,3 +11,5 @@ export const DBBaseFieldsSchema = z.object({
   id: z.string(),
   updatedAt: z.number(),
 });
+
+export const PUERHUB_CHAT_LOCAL_DB_NAME = 'PUERHUB_CHAT_DB';

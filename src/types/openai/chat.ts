@@ -32,21 +32,15 @@ export interface OpenAIChatMessage {
   role: LLMRoleType;
 }
 
-export interface OpenAIChatStringMessage {
-  content: string;
-  role: LLMRoleType;
-}
-
 /**
- * @title OpenAI Stream Payload
+ * @title Chat Stream Payload
  */
-export interface OpenAIChatStreamPayload {
+export interface ChatStreamPayload {
   /**
    * @title 控制生成文本中的惩罚系数，用于减少重复性
    * @default 0
    */
   frequency_penalty?: number;
-  functions?: ChatCompletionFunctions[];
   /**
    * @title 生成文本的最大长度
    */
@@ -73,6 +67,10 @@ export interface OpenAIChatStreamPayload {
    */
   presence_penalty?: number;
   /**
+   * @default openai
+   */
+  provider?: string;
+  /**
    * @title 是否开启流式请求
    * @default true
    */
@@ -82,7 +80,8 @@ export interface OpenAIChatStreamPayload {
    * @default 0.5
    */
   temperature: number;
-
+  tool_choice?: string;
+  tools?: ChatCompletionTool[];
   /**
    * @title 控制生成文本中最高概率的单个令牌
    * @default 1
@@ -111,4 +110,13 @@ export interface ChatCompletionFunctions {
   parameters?: {
     [key: string]: any;
   };
+}
+
+export interface ChatCompletionTool {
+  function: ChatCompletionFunctions;
+
+  /**
+   * The type of the tool. Currently, only `function` is supported.
+   */
+  type: 'function';
 }
