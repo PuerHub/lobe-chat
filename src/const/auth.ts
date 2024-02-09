@@ -1,5 +1,7 @@
 export const PUERHUB_CHAT_AUTH_HEADER = 'X-puerhub-chat-auth';
 
+export const OAUTH_AUTHORIZED = 'X-oauth-authorized';
+
 export const JWT_SECRET_KEY = 'PuerHub · AI';
 export const NON_HTTP_PREFIX = 'http_nosafe';
 
