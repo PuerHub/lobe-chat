@@ -1,14 +1,16 @@
-// export { auth as middleware } from './app/api/next-auth';
 import { NextResponse } from 'next/server';
 
-import { auth } from './app/api/oauth/next-auth';
+import { getServerConfig } from '@/config/server';
+
+import { auth } from './app/api/auth/next-auth';
 import { OAUTH_AUTHORIZED } from './const/auth';
 
 export const config = {
   matcher: '/api/:path*',
 };
+const defaultMiddleware = () => NextResponse.next();
 
-export default auth((req) => {
+const withAuthMiddleware = auth((req) => {
   // Just check if session exists
   const session = req.auth;
   const isLoggedIn = !!session;
@@ -23,3 +25,7 @@ export default auth((req) => {
     },
   });
 });
+
+const { ENABLE_OAUTH_SSO } = getServerConfig();
+
+export default !ENABLE_OAUTH_SSO ? defaultMiddleware : withAuthMiddleware;

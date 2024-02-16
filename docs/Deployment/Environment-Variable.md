@@ -7,6 +7,7 @@ LobeChat provides additional configuration options during deployment, which can 
 - [General Variables](#general-variables)
   - [`ACCESS_CODE`](#access_code)
   - [`ENABLE_OAUTH_SSO`](#enable_oauth_sso)
+  - [`NEXT_PUBLIC_BASE_PATH`](#next_public_base_path)
 - [Authentication Service Providers](#authentication-service-providers)
   - [Common Settings](#common-settings)
   - [Auth0](#auth0)
@@ -17,6 +18,7 @@ LobeChat provides additional configuration options during deployment, which can 
   - [Moonshot AI](#moonshot-ai)
   - [Google AI](#google-ai)
   - [AWS Bedrock](#aws-bedrock)
+  - [Ollama](#ollama)
 - [Plugin Service](#plugin-service)
   - [`PLUGINS_INDEX_URL`](#plugins_index_url)
   - [`PLUGIN_SETTINGS`](#plugin_settings)
@@ -41,7 +43,40 @@ LobeChat provides additional configuration options during deployment, which can 
 - Type: Optional
 - Description: Enable OAuth single sign-on (SSO) for LobeChat. Set to `1` to enable OAuth SSO. See [Authentication Service Providers](#authentication-service-providers) for more details.
 - Default: `-`
-- Example: `1` or `0`
+- Example: `1`
+
+### `NEXT_PUBLIC_BASE_PATH`
+
+- Type：Optional
+- Description：add `basePath` for LobeChat
+- Default: `-`
+- Example: `/test`
+
+#### `DEFAULT_AGENT_CONFIG`
+
+- Type: Optional
+- Description: Used to configure the default configuration of the LobeChat default assistant. It supports various data types and structures, including key-value pairs, nested fields, array values, etc.
+- Default Value: `-`
+- Example: `'model=gpt-4-1106-preview;params.max_tokens=300;plugins=search-engine,lobe-image-designer`
+
+`DEFAULT_AGENT_CONFIG` is used to configure the default configuration of the LobeChat default agent. It supports various data types and structures, including key-value pairs, nested fields, array values, etc. The table below provides detailed explanations of the configuration options, examples, and corresponding explanations for the `DEFAULT_AGENT_CONFIG` environment variable:
+
+| Configuration Type      | Example                                      | Explanation                                                                                                            |
+| ----------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Basic Key-Value Pair    | `model=gpt-4`                                | Set the model to `gpt-4`.                                                                                              |
+| Nested Field            | `tts.sttLocale=en-US`                        | Set the language region for the text-to-speech service to `en-US`.                                                     |
+| Array                   | `plugins=search-engine,lobe-image-designer`  | Enable the `search-engine` and `lobe-image-designer` plugins.                                                          |
+| Chinese Comma           | `plugins=search-engine，lobe-image-designer` | The same as above, demonstrating support for Chinese comma separation.                                                 |
+| Multiple Configurations | `model=glm-4;provider=zhipu`                 | Set the model to `glm-4` and the model provider to `zhipu`.                                                            |
+| Numeric Value           | `params.max_tokens=300`                      | Set the maximum number of tokens to `300`.                                                                             |
+| Boolean Value           | `enableAutoCreateTopic=true`                 | Enable automatic topic creation.                                                                                       |
+| Special Characters      | `inputTemplate="Hello; I am a bot;"`         | Set the input template to `Hello; I am a bot;`.                                                                        |
+| Error Handling          | `model=gpt-4;maxToken`                       | Ignore the invalid entry `maxToken` and only parse out `model=gpt-4`.                                                  |
+| Value Overriding        | `model=gpt-4;model=gpt-4-1106-preview`       | If the key is duplicated, use the value that appears last, in this case, the value of `model` is `gpt-4-1106-preview`. |
+
+Related discussions:
+
+- [\[RFC\] 022 - Default Helper Parameters for Environment Variable Configuration](https://github.com/lobehub/lobe-chat/discussions/913)
 
 ## Authentication Service Providers
 
@@ -56,7 +91,7 @@ LobeChat provides additional configuration options during deployment, which can 
 
 ### Auth0
 
-> !\[NOTE]
+> \[!NOTE]
 >
 > We only support the Auth0 authentication service provider at the moment. If you need to use other authentication service providers, you can submit a feature request or pull request.
 
@@ -99,7 +134,7 @@ LobeChat provides additional configuration options during deployment, which can 
 - Default: `https://api.openai.com/v1`
 - Example: `https://api.chatanywhere.cn` or `https://aihubmix.com/v1`
 
-> !\[NOTE]
+> \[!NOTE]
 >
 > Please check the request suffix of your proxy service provider. Some proxy service providers may add `/v1` to the request suffix, while others may not.
 > If you find that the AI returns an empty message during testing, try adding the `/v1` suffix and retrying.
@@ -199,6 +234,15 @@ If you need to use Azure OpenAI to provide model services, you can refer to the 
 - Description: The region setting for AWS services
 - Default Value: `us-east-1`
 - Example: `us-east-1`
+
+### Ollama
+
+#### `OLLAMA_PROXY_URL`
+
+- Type: Optional
+- Description: To enable the Ollama service provider, if set up which will appear as selectable model card in the language model setting page, you can also specify a custom language model.
+- Default: -
+- Example: `http://127.0.0.1:11434/v1`
 
 ## Plugin Service
 

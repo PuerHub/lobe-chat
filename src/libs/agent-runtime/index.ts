@@ -4,6 +4,7 @@ export { LobeBedrockAI } from './bedrock';
 export * from './error';
 export { LobeGoogleOpenAI } from './googleOpenai';
 export { LobeMoonshotAI } from './moonshot';
+export { LobeOllamaAI } from './ollama';
 export { LobeOpenAI } from './openai';
 export * from './types';
 export { AgentRuntimeError } from './utils/createError';

@@ -2,13 +2,15 @@ import { Form, type ItemGroup, SelectWithImg, SliderWithInput } from '@lobehub/u
 import { Form as AntForm, App, Button, Input, Select } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { AppWindow, Monitor, Moon, Palette, Sun } from 'lucide-react';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { signIn, signOut } from 'next-auth/react';
 import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { DEFAULT_SETTINGS } from '@/const/settings';
+import { imageUrl } from '@/const/url';
 import AvatarWithUpload from '@/features/AvatarWithUpload';
+import { useOAuthSession } from '@/hooks/useOAuthSession';
 import { localeOptions } from '@/locales/resources';
 import { useChatStore } from '@/store/chat';
 import { useFileStore } from '@/store/file';
@@ -31,8 +33,7 @@ const Common = memo<SettingsCommonProps>(({ showAccessCodeConfig, showOAuthLogin
   const { t } = useTranslation('setting');
   const [form] = AntForm.useForm();
 
-  const { data: session, status } = useSession();
-  const isOAuthLoggedIn = status === 'authenticated' && session && session.user;
+  const { user, isOAuthLoggedIn } = useOAuthSession();
 
   const [clearSessions, clearSessionGroups] = useSessionStore((s) => [
     s.clearSessions,
@@ -118,19 +119,19 @@ const Common = memo<SettingsCommonProps>(({ showAccessCodeConfig, showOAuthLogin
             options={[
               {
                 icon: Sun,
-                img: '/images/theme_light.webp',
+                img: imageUrl('theme_light.webp'),
                 label: t('settingTheme.themeMode.light'),
                 value: 'light',
               },
               {
                 icon: Moon,
-                img: '/images/theme_dark.webp',
+                img: imageUrl('theme_dark.webp'),
                 label: t('settingTheme.themeMode.dark'),
                 value: 'dark',
               },
               {
                 icon: Monitor,
-                img: '/images/theme_auto.webp',
+                img: imageUrl('theme_auto.webp'),
                 label: t('settingTheme.themeMode.auto'),
                 value: 'auto',
               },
@@ -226,7 +227,7 @@ const Common = memo<SettingsCommonProps>(({ showAccessCodeConfig, showOAuthLogin
           </Button>
         ),
         desc: isOAuthLoggedIn
-          ? `${session.user?.email} ${t('settingSystem.oauth.info.desc')}`
+          ? `${user?.email} ${t('settingSystem.oauth.info.desc')}`
           : t('settingSystem.oauth.signin.desc'),
         hidden: !showOAuthLogin,
         label: isOAuthLoggedIn

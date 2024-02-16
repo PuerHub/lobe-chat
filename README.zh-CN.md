@@ -205,14 +205,14 @@ LobeChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 <!-- AGENT LIST -->
 
-| 最近新增                                                                                                                                                                                        | 助手说明                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [填空练习生成器](https://chat-preview.lobehub.com/market?agent=cloze-exercise-generator)<br/><sup>By **[bentwnghk](https://github.com/bentwnghk)** on **2024-02-08**</sup>                      | 专门用于生成摘要填空练习。请提供段落的主题。<br/>`摘要` `练习` `生成器` `写作` `教育` |
-| [阅读理解向导](https://chat-preview.lobehub.com/market?agent=reading-comprehension-exercise-generator)<br/><sup>By **[bentwnghk](https://github.com/bentwnghk)** on **2024-02-08**</sup>        | 专门生成阅读理解练习<br/>`阅读理解` `练习生成` `教育`                                 |
-| [主题词汇工作表创建器](https://chat-preview.lobehub.com/market?agent=thematic-vocabulary-worksheet-generator)<br/><sup>By **[bentwnghk](https://github.com/bentwnghk)** on **2024-02-08**</sup> | 擅长创建英语主题词汇工作表<br/>`写作` `语言学习` `教学` `评估` `教育资源`             |
-| [词汇工作表向导](https://chat-preview.lobehub.com/market?agent=vocabulary-worksheet-wizard)<br/><sup>By **[bentwnghk](https://github.com/bentwnghk)** on **2024-02-08**</sup>                   | 专注于生成英语词汇工作表<br/>`词汇` `工作表` `教育` `语言学习`                        |
+| 最近新增                                                                                                                                                   | 助手说明                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [产品文案撰写](https://chat-preview.lobehub.com/market?agent=copywriting)<br/><sup>By **[pllz7](https://github.com/pllz7)** on **2024-02-14**</sup>        | 精通有说服力的文案撰写和消费者心理学<br/>`电子商务`                                                                   |
+| [私域运营专家](https://chat-preview.lobehub.com/market?agent=gl-syyy)<br/><sup>By **[guling-io](https://github.com/guling-io)** on **2024-02-14**</sup>    | 擅长私域运营、引流、承接、转化和内容策划，熟悉营销理论和相关经典著作。<br/>`私域运营` `引流` `承接` `转化` `内容策划` |
+| [自媒体运营专家](https://chat-preview.lobehub.com/market?agent=gl-zmtyy)<br/><sup>By **[guling-io](https://github.com/guling-io)** on **2024-02-14**</sup> | 擅长自媒体运营与内容创作<br/>`自媒体运营` `社交媒体` `内容创作` `粉丝增长` `品牌推广`                                 |
+| [产品描述](https://chat-preview.lobehub.com/market?agent=product-description)<br/><sup>By **[pllz7](https://github.com/pllz7)** on **2024-02-14**</sup>    | 打造引人入胜的产品描述，提升电子商务销售业绩<br/>`电子商务`                                                           |
 
-> 📊 Total agents: [<kbd>**164**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
+> 📊 Total agents: [<kbd>**177**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
 
  <!-- AGENT LIST -->
 
