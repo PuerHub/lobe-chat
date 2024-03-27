@@ -37,23 +37,7 @@ const nextConfig = {
     ],
     webVitalsAttribution: ['CLS', 'LCP'],
   },
-  images: {
-    remotePatterns: [
-      {
-        hostname: 'registry.npmmirror.com',
-        pathname: '/@lobehub/**',
-        port: '',
-        protocol: 'https',
-      },
-      {
-        hostname: 'oss.puerhub.com',
-        pathname: '/hub/**',
-        port: '',
-        protocol: 'https',
-      },
-    ],
-    unoptimized: !isProd,
-  },
+
   output: buildWithDocker ? 'standalone' : undefined,
 
   rewrites: async () => [

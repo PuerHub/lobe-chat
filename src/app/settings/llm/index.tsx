@@ -8,14 +8,17 @@ import { useTranslation } from 'react-i18next';
 import PageTitle from '@/components/PageTitle';
 
 // import { MORE_MODEL_PROVIDER_REQUEST_URL } from '@/const/url';
-//
-// import Footer from '../features/Footer';
-// import Bedrock from './Bedrock';
+import Anthropic from './Anthropic';
+import Bedrock from './Bedrock';
 import Google from './Google';
-
-/*import Moonshot from './Moonshot';*/
+import Groq from './Groq';
+import Mistral from './Mistral';
+import Moonshot from './Moonshot';
 import Ollama from './Ollama';
 import OpenAI from './OpenAI';
+import OpenRouter from './OpenRouter';
+import Perplexity from './Perplexity';
+import ZeroOne from './ZeroOne';
 import Zhipu from './Zhipu';
 
 export default memo<{ showOllama: boolean }>(({ showOllama }) => {
@@ -26,11 +29,17 @@ export default memo<{ showOllama: boolean }>(({ showOllama }) => {
       <PageTitle title={t('tab.llm')} />
       <OpenAI />
       {/*<AzureOpenAI />*/}
-      <Zhipu />
-      {/*<Moonshot />*/}
-      <Google />
-      {/*<Bedrock />*/}
       {showOllama && <Ollama />}
+      <Anthropic />
+      <Google />
+      <Groq />
+      <Bedrock />
+      <Perplexity />
+      <Mistral />
+      <OpenRouter />
+      <Moonshot />
+      <ZeroOne />
+      <Zhipu />
       {/*<Footer>*/}
       {/*  <Trans i18nKey="llm.waitingForMore" ns={'setting'}>*/}
       {/*    更多模型正在*/}

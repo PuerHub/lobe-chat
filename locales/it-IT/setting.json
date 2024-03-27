@@ -1,4 +1,14 @@
 {
+  "about": {
+    "title": "Informazioni"
+  },
+  "analytics": {
+    "telemetry": {
+      "desc": "Attivando l'invio dei dati di telemetria, ci aiuti a migliorare complessivamente l'esperienza utente di LobeChat",
+      "title": "Invio dati anonimi"
+    },
+    "title": "Analisi"
+  },
   "danger": {
     "clear": {
       "action": "Cancella subito",
@@ -21,6 +31,19 @@
     "sessionWithName": "Impostazioni della sessione · {{name}}"
   },
   "llm": {
+    "Anthropic": {
+      "endpoint": {
+        "desc": "Deve includere http(s):// oltre all'indirizzo predefinito",
+        "placeholder": "https://api.anthropic.com",
+        "title": "Indirizzo dell'API proxy"
+      },
+      "title": "Anthropic",
+      "token": {
+        "desc": "Inserisci la chiave API di Anthropic",
+        "placeholder": "Chiave API di Anthropic",
+        "title": "Chiave API"
+      }
+    },
     "AzureOpenAI": {
       "azureApiVersion": {
         "desc": "Versione dell'API di Azure, nel formato YYYY-MM-DD, consulta la [versione più recente](https://learn.microsoft.com/it-it/azure/ai-services/openai/reference#chat-completions)",
@@ -73,6 +96,22 @@
       "token": {
         "desc": "Inserisci la chiave API da Google",
         "placeholder": "Chiave API Google",
+        "title": "Chiave API"
+      }
+    },
+    "Groq": {
+      "title": "Groq",
+      "token": {
+        "desc": "Inserisci la chiave API da Groq",
+        "placeholder": "Chiave API Groq",
+        "title": "Chiave API"
+      }
+    },
+    "Mistral": {
+      "title": "Mistral AI",
+      "token": {
+        "desc": "Inserisci la chiave API da Mistral AI",
+        "placeholder": "Chiave API Mistral AI",
         "title": "Chiave API"
       }
     },
@@ -138,6 +177,38 @@
         "title": "Usa Azure OpenAI"
       }
     },
+    "OpenRouter": {
+      "checker": {
+        "desc": "Verifica se l'indirizzo del proxy è stato compilato correttamente"
+      },
+      "customModelName": {
+        "desc": "Aggiungi un modello personalizzato, separando più modelli con virgola (,)",
+        "placeholder": "mistralai/mistral-7b-instruct:free,openchat/openchat-7b:free",
+        "title": "Nome del modello personalizzato"
+      },
+      "title": "OpenRouter",
+      "token": {
+        "desc": "Inserisci la chiave API da OpenRouter AI",
+        "placeholder": "Chiave API OpenRouter AI",
+        "title": "Chiave API"
+      }
+    },
+    "Perplexity": {
+      "title": "Perplexity",
+      "token": {
+        "desc": "Inserisci la chiave API di Perplexity AI",
+        "placeholder": "Chiave API di Perplexity AI",
+        "title": "Chiave API"
+      }
+    },
+    "ZeroOne": {
+      "title": "01.AI ZeroOne万物",
+      "token": {
+        "desc": "填入01.AI ZeroOne万物的API密钥",
+        "placeholder": "01.AI ZeroOne万物API密钥",
+        "title": "API密钥"
+      }
+    },
     "Zhipu": {
       "title": "智谱",
       "token": {
@@ -153,6 +224,14 @@
       "title": "Verifica di connettività"
     },
     "waitingForMore": "Altri modelli sono in fase di <1> pianificazione per l'integrazione </1>, resta sintonizzato ✨"
+  },
+  "ollama": {
+    "download": {
+      "desc": "Ollama sta scaricando questo modello. Si prega di non chiudere questa pagina. Il download verrà ripreso dal punto in cui è stato interrotto in caso di riavvio.",
+      "remainingTime": "Tempo rimanente",
+      "speed": "Velocità di download",
+      "title": "Download del modello {{model}} in corso"
+    }
   },
   "plugin": {
     "addTooltip": "Aggiungi plugin personalizzato",
@@ -369,10 +448,47 @@
     "placeholder": "Inserisci l'identificatore dell'assistente, deve essere univoco, ad esempio sviluppo-web",
     "tooltips": "Condividi sul mercato degli assistenti"
   },
+  "sync": {
+    "device": {
+      "deviceName": {
+        "hint": "Aggiungi un nome per identificare il dispositivo",
+        "placeholder": "Inserisci il nome del dispositivo",
+        "title": "Nome del dispositivo"
+      },
+      "title": "Informazioni sul dispositivo",
+      "unknownBrowser": "Browser sconosciuto",
+      "unknownOS": "Sistema operativo sconosciuto"
+    },
+    "warning": {
+      "message": "Questa funzione è attualmente sperimentale e potrebbe comportare comportamenti imprevisti o instabili. In caso di problemi, invia tempestivamente un feedback."
+    },
+    "webrtc": {
+      "channelName": {
+        "desc": "WebRTC将使用此名称创建同步频道，请确保频道名称唯一",
+        "placeholder": "请输入同步频道名称",
+        "shuffle": "随机生成",
+        "title": "同步频道名称"
+      },
+      "channelPassword": {
+        "desc": "添加密码以确保频道私密性，只有密码正确时，设备才能加入频道",
+        "placeholder": "请输入同步频道密码",
+        "title": "同步频道密码"
+      },
+      "desc": "实时、点对点的数据通信，需要设备同时在线才能同步",
+      "enabled": {
+        "invalid": "请填写同步频道名称后再开启",
+        "title": "开启同步"
+      },
+      "title": "WebRTC同步"
+    }
+  },
   "tab": {
+    "about": "Informazioni",
     "agent": "Assistente predefinito",
     "common": "Impostazioni comuni",
+    "experiment": "实验",
     "llm": "Modello linguistico",
+    "sync": "云端同步",
     "tts": "Servizio vocale"
   },
   "tools": {

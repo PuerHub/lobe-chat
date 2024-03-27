@@ -67,7 +67,7 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
       >
         {/*<DataImporter*/}
         {/*  onFinishImport={() => {*/}
-        {/*    switchSession();*/}
+        {/*    router.push('/chat');*/}
         {/*  }}*/}
         {/*>*/}
         {/*  <Button block={mobile} size={'large'}>*/}

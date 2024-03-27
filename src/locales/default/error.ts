@@ -61,6 +61,9 @@ export default {
     ZhipuBizError: '请求智谱服务出错，请根据以下信息排查或重试',
     InvalidZhipuAPIKey: 'Zhipu API Key 不正确或为空，请检查 Zhipu API Key 后重试',
 
+    MistralBizError: '请求 Mistral AI 服务出错，请根据以下信息排查或重试',
+    InvalidMistralAPIKey: 'Mistral AI API Key 不正确或为空，请检查 Mistral API Key 后重试',
+
     MoonshotBizError: '请求月之暗面服务出错，请根据以下信息排查或重试',
     InvalidMoonshotAPIKey: 'Moonshot AI API Key 不正确或为空，请检查 Moonshot API Key 后重试',
 
@@ -73,8 +76,24 @@ export default {
     InvalidAzureAPIKey: 'Azure API Key 不正确或为空，请检查 Azure API Key 后重试',
     AzureBizError: '请求 Azure AI 服务出错，请根据以下信息排查或重试',
 
+    InvalidPerplexityAPIKey: 'Perplexity API Key 不正确或为空，请检查 Perplexity API Key 后重试',
+    PerplexityBizError: '请求 Perplexity AI 服务出错，请根据以下信息排查或重试',
+
+    InvalidAnthropicAPIKey: 'Anthropic API Key 不正确或为空，请检查 Anthropic API Key 后重试',
+    AnthropicBizError: '请求 Anthropic AI 服务出错，请根据以下信息排查或重试',
+
+    InvalidGroqAPIKey: 'Groq API Key 不正确或为空，请检查 Groq API Key 后重试',
+    GroqBizError: '请求 Groq 服务出错，请根据以下信息排查或重试',
+
+    InvalidOpenRouterAPIKey: 'OpenRouter API Key 不正确或为空，请检查 OpenRouter API Key 后重试',
+    OpenRouterBizError: '请求 OpenRouter AI 服务出错，请根据以下信息排查或重试',
+
+    ZeroOneBizError: '请求零一万物服务出错，请根据以下信息排查或重试',
+    InvalidZeroOneAPIKey: '零一万物 API Key 不正确或为空，请检查零一万物 API Key 后重试',
+
     InvalidOllamaArgs: 'Ollama 配置不正确，请检查 Ollama 配置后重试',
     OllamaBizError: '请求 Ollama 服务出错，请根据以下信息排查或重试',
+    OllamaServiceUnavailable: '未检测到 Ollama 服务，请检查是否正常启动',
 
     AgentRuntimeError: 'PuerHub AI 语言模型运行时执行出错，请根据以下信息排查或重试',
     /* eslint-enable */
@@ -87,6 +106,10 @@ export default {
   },
   unlock: {
     apikey: {
+      Anthropic: {
+        description: '输入你的 Anthropic API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义 Anthropic API Key',
+      },
       Bedrock: {
         customRegion: '自定义服务区域',
         description:
@@ -96,6 +119,14 @@ export default {
       Google: {
         description: '输入你的 Google API Key 即可开始会话。应用不会记录你的 API Key',
         title: '使用自定义 Google API Key',
+      },
+      Groq: {
+        description: '输入你的 Groq API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义 Groq API Key',
+      },
+      Mistral: {
+        description: '输入你的 Mistral AI API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义 Mistral AI API Key',
       },
       Moonshot: {
         description: '输入你的 Moonshot AI API Key 即可开始会话。应用不会记录你的 API Key',
@@ -107,6 +138,18 @@ export default {
           '输入你的 PuerHub AI API Key 即可开始会话。您可以到 https://ai.puerhub.xyz 获取',
         title: '使用 PuerHub AI API Key',
       },
+      OpenRouter: {
+        description: '输入你的 OpenRouter API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义 OpenRouter API Key',
+      },
+      Perplexity: {
+        description: '输入你的 Perplexity API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义 Perplexity API Key',
+      },
+      ZeroOne: {
+        description: '输入你的零一万物 API Key 即可开始会话。应用不会记录你的 API Key',
+        title: '使用自定义零一万物 API Key',
+      },
       Zhipu: {
         description: '输入你的 Zhipu API Key 即可开始会话。应用不会记录你的 API Key',
         title: '使用自定义 Zhipu API Key',
@@ -114,6 +157,13 @@ export default {
     },
     closeMessage: '关闭提示',
     confirm: '确认并重试',
+    model: {
+      Ollama: {
+        confirm: '下载',
+        description: '输入你的 Ollama 模型标签，完成即可继续会话',
+        title: '下载指定的 Ollama 模型',
+      },
+    },
     oauth: {
       description: '管理员已开启统一登录认证，点击下方按钮登录，即可解锁应用',
       success: '登录成功',

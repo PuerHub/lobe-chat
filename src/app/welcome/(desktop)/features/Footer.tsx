@@ -4,12 +4,14 @@ import { ActionIcon } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { Book, Users } from 'lucide-react';
 import { memo } from 'react';
+// import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { GROUP_QRCODE_URL, MANUAL_URL } from '@/const/url';
 
 const Footer = memo(() => {
   const theme = useTheme();
+  // const { t } = useTranslation('common');
 
   return (
     <Flexbox align={'center'} horizontal justify={'space-between'} style={{ padding: 16 }}>
