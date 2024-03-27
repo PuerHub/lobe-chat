@@ -8,12 +8,12 @@ const Google: ModelProviderCard = {
       tokens: 1_048_576,
     },
     {
-      displayName: 'Gemini Pro',
+      displayName: 'Gemini Pro (free)',
       id: 'gemini-pro',
       tokens: 30_720,
     },
     {
-      displayName: 'Gemini Pro Vision',
+      displayName: 'Gemini Pro Vision (free)',
       id: 'gemini-pro-vision',
       tokens: 12_288,
       vision: true,

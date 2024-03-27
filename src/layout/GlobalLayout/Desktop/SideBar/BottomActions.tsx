@@ -111,10 +111,10 @@ const BottomActions = memo<BottomActionProps>(({ tab }) => {
   return (
     <>
       <Link aria-label={'Group'} href={GROUP_QRCODE_URL} target={'_blank'}>
-        <ActionIcon icon={Users} placement={'right'} title={'Group'} />
+        <ActionIcon icon={Users} placement={'right'} title={t('group')} />
       </Link>
       <Link aria-label={'Manual'} href={MANUAL_URL} target={'_blank'}>
-        <ActionIcon icon={Book} placement={'right'} title={'Manual'} />
+        <ActionIcon icon={Book} placement={'right'} title={t('manual')} />
       </Link>
       <Dropdown arrow={false} menu={{ items }} trigger={['click']}>
         {hasNewVersion ? (

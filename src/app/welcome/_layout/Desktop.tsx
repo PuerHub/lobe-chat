@@ -1,9 +1,9 @@
 'use client';
 
-import { Logo } from '@lobehub/ui';
 import { PropsWithChildren, memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import Logo from '@/components/Logo';
 import ClientResponsiveLayout from '@/components/client/ClientResponsiveLayout';
 
 import { useStyles } from '../features/Banner/style';

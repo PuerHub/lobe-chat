@@ -31,18 +31,18 @@ const OpenRouterProvider = memo(() => {
           label: t('llm.OpenRouter.token.title'),
           name: [LLMProviderConfigKey, providerKey, LLMProviderApiTokenKey],
         },
-        {
-          children: (
-            <Input.TextArea
-              allowClear
-              placeholder={t('llm.OpenRouter.customModelName.placeholder')}
-              style={{ height: 100 }}
-            />
-          ),
-          desc: t('llm.OpenRouter.customModelName.desc'),
-          label: t('llm.OpenRouter.customModelName.title'),
-          name: [LLMProviderConfigKey, providerKey, 'customModelName'],
-        },
+        // {
+        //   children: (
+        //     <Input.TextArea
+        //       allowClear
+        //       placeholder={t('llm.OpenRouter.customModelName.placeholder')}
+        //       style={{ height: 100 }}
+        //     />
+        //   ),
+        //   desc: t('llm.OpenRouter.customModelName.desc'),
+        //   label: t('llm.OpenRouter.customModelName.title'),
+        //   name: [LLMProviderConfigKey, providerKey, 'customModelName'],
+        // },
         {
           children: (
             <Checker

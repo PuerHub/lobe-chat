@@ -4,14 +4,14 @@ import { ActionIcon } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { Book, Users } from 'lucide-react';
 import { memo } from 'react';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { GROUP_QRCODE_URL, MANUAL_URL } from '@/const/url';
 
 const Footer = memo(() => {
   const theme = useTheme();
-  // const { t } = useTranslation('common');
+  const { t } = useTranslation('common');
 
   return (
     <Flexbox align={'center'} horizontal justify={'space-between'} style={{ padding: 16 }}>
@@ -23,13 +23,13 @@ const Footer = memo(() => {
           icon={Users}
           onClick={() => window.open(GROUP_QRCODE_URL, '__blank')}
           size={'site'}
-          title={'Group'}
+          title={t('group')}
         />
         <ActionIcon
           icon={Book}
           onClick={() => window.open(MANUAL_URL, '__blank')}
           size={'site'}
-          title={'Manual'}
+          title={t('manual')}
         />
         {/*<ActionIcon*/}
         {/*  icon={Github}*/}

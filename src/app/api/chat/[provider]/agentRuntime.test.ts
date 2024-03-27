@@ -8,7 +8,7 @@ import { JWTPayload } from '@/const/auth';
 import { TraceNameMap } from '@/const/trace';
 import {
   ChatStreamPayload,
-  LobeAnthropicAI,
+  LobeAnthropicOpenAI,
   LobeAzureOpenAI,
   LobeBedrockAI,
   LobeGoogleOpenAI,
@@ -276,7 +276,7 @@ describe('AgentRuntime', () => {
         );
 
         // 假设 LobeAnthropicAI 是 Anthropic 提供者的实现类
-        expect(runtime['_runtime']).toBeInstanceOf(LobeAnthropicAI);
+        expect(runtime['_runtime']).toBeInstanceOf(LobeAnthropicOpenAI);
       });
 
       it('should initialize correctly without apiKey', async () => {
@@ -287,7 +287,7 @@ describe('AgentRuntime', () => {
         );
 
         // 假设 LobeAnthropicAI 是 Anthropic 提供者的实现类
-        expect(runtime['_runtime']).toBeInstanceOf(LobeAnthropicAI);
+        expect(runtime['_runtime']).toBeInstanceOf(LobeAnthropicOpenAI);
       });
     });
 

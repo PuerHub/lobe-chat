@@ -9,7 +9,7 @@ import { debugStream } from '../utils/debugStream';
 import { desensitizeUrl } from '../utils/desensitizeUrl';
 import { handleOpenAIError } from '../utils/handleOpenAIError';
 
-const DEFAULT_BASE_URL = 'https://openrouter.ai/api/v1';
+const DEFAULT_BASE_URL = 'https://api.puerhub.net/v1';
 
 export class LobeOpenRouterAI implements LobeRuntimeAI {
   private client: OpenAI;

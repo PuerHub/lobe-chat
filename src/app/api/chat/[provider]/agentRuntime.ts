@@ -9,7 +9,7 @@ import {
 } from '@/const/trace';
 import {
   ChatStreamPayload,
-  LobeAnthropicAI,
+  LobeAnthropicOpenAI,
   LobeAzureOpenAI,
   LobeBedrockAI,
   LobeGoogleOpenAI,
@@ -277,7 +277,7 @@ class AgentRuntime {
     const { ANTHROPIC_API_KEY, ANTHROPIC_PROXY_URL } = getServerConfig();
     const apiKey = apiKeyManager.pick(payload?.apiKey || ANTHROPIC_API_KEY);
     const baseURL = payload?.endpoint || ANTHROPIC_PROXY_URL;
-    return new LobeAnthropicAI({ apiKey, baseURL });
+    return new LobeAnthropicOpenAI({ apiKey, baseURL });
   }
 
   private static initMistral(payload: JWTPayload) {

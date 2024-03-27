@@ -35,6 +35,7 @@
     "globalSetting": "Export Global Settings"
   },
   "feedback": "Feedback",
+  "group": "Group",
   "historyRange": "History Range",
   "import": "Import Configuration",
   "importModal": {
@@ -94,6 +95,7 @@
     "zh-TW": "Traditional Chinese"
   },
   "layoutInitializing": "Initializing layout...",
+  "manual": "Manual",
   "modelProvider": {
     "anthropic": "Anthropic",
     "azure": "Azure",

@@ -8,7 +8,7 @@ import { ModelProvider } from '@/libs/agent-runtime';
 
 import Checker from '../components/Checker';
 import ProviderConfig from '../components/ProviderConfig';
-import { LLMProviderApiTokenKey, LLMProviderBaseUrlKey, LLMProviderConfigKey } from '../const';
+import { LLMProviderApiTokenKey, LLMProviderConfigKey } from '../const';
 
 const providerKey = 'anthropic';
 
@@ -31,12 +31,12 @@ const AnthropicProvider = memo(() => {
           label: t('llm.Anthropic.token.title'),
           name: [LLMProviderConfigKey, providerKey, LLMProviderApiTokenKey],
         },
-        {
-          children: <Input allowClear placeholder={t('llm.Anthropic.endpoint.placeholder')} />,
-          desc: t('llm.Anthropic.endpoint.desc'),
-          label: t('llm.Anthropic.endpoint.title'),
-          name: [LLMProviderConfigKey, providerKey, LLMProviderBaseUrlKey],
-        },
+        // {
+        //   children: <Input allowClear placeholder={t('llm.Anthropic.endpoint.placeholder')} />,
+        //   desc: t('llm.Anthropic.endpoint.desc'),
+        //   label: t('llm.Anthropic.endpoint.title'),
+        //   name: [LLMProviderConfigKey, providerKey, LLMProviderBaseUrlKey],
+        // },
         {
           children: <Checker model={'claude-2.1'} provider={ModelProvider.Anthropic} />,
           desc: t('llm.checker.desc'),

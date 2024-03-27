@@ -42,7 +42,22 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
           setModelProviderConfig('openAI', { OPENAI_API_KEY: apiKey }).then(() => {
             setModelProviderConfig('zhipu', { apiKey: apiKey, enabled: true }).then(() => {
               setModelProviderConfig('google', { apiKey: apiKey, enabled: true }).then(() => {
-                goToChat();
+                setModelProviderConfig('anthropic', { apiKey: apiKey, enabled: true }).then(() => {
+                  setModelProviderConfig('moonshot', { apiKey: apiKey, enabled: true }).then(() => {
+                    setModelProviderConfig('groq', { apiKey: apiKey, enabled: true }).then(() => {
+                      setModelProviderConfig('zeroone', { apiKey: apiKey, enabled: true }).then(
+                        () => {
+                          setModelProviderConfig('openrouter', {
+                            apiKey: apiKey,
+                            enabled: true,
+                          }).then(() => {
+                            goToChat();
+                          });
+                        },
+                      );
+                    });
+                  });
+                });
               });
             });
           });

@@ -37,6 +37,7 @@ export default {
     globalSetting: '导出全局设置',
   },
   feedback: '反馈与建议',
+  group: '群组',
   historyRange: '历史范围',
   import: '导入配置',
   importModal: {
@@ -96,6 +97,7 @@ export default {
     'zh-TW': '繁体中文',
   },
   layoutInitializing: '正在加载布局...',
+  manual: '使用手册',
   modelProvider: {
     anthropic: 'Anthropic',
     azure: 'Azure',
