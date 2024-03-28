@@ -16,6 +16,7 @@ import {
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
+import Logo from '@/components/Logo';
 import { ModelProvider } from '@/libs/agent-runtime';
 
 interface ModelProviderIconProps {
@@ -82,6 +83,10 @@ const ModelProviderIcon = memo<ModelProviderIconProps>(({ provider }) => {
 
     case ModelProvider.ZeroOne: {
       return <ZeroOne size={20} />;
+    }
+
+    case ModelProvider.Reverse: {
+      return <Logo size={20} type={'text'} />;
     }
 
     default: {

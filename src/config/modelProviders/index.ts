@@ -10,6 +10,7 @@ import OllamaProvider from './ollama';
 import OpenAIProvider from './openai';
 import OpenRouterProvider from './openrouter';
 import PerplexityProvider from './perplexity';
+import ReverseProvider from './reverse';
 import ZeroOneProvider from './zeroone';
 import ZhiPuProvider from './zhipu';
 
@@ -26,6 +27,7 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   PerplexityProvider.chatModels,
   AnthropicProvider.chatModels,
   ZeroOneProvider.chatModels,
+  ReverseProvider.chatModels,
 ].flat();
 
 export { default as AnthropicProvider } from './anthropic';
@@ -38,5 +40,6 @@ export { default as OllamaProvider } from './ollama';
 export { default as OpenAIProvider } from './openai';
 export { default as OpenRouterProvider } from './openrouter';
 export { default as PerplexityProvider } from './perplexity';
+export { default as ReverseProvider } from './reverse';
 export { default as ZeroOneProvider } from './zeroone';
 export { default as ZhiPuProvider } from './zhipu';

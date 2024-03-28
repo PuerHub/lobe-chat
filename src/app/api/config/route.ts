@@ -24,9 +24,11 @@ export const GET = async () => {
     ENABLED_MISTRAL,
     ENABLED_OPENROUTER,
     ENABLED_ZEROONE,
+    ENABLED_REVERSE,
     DEFAULT_AGENT_CONFIG,
     OLLAMA_CUSTOM_MODELS,
     OPENROUTER_CUSTOM_MODELS,
+    REVERSE_CUSTOM_MODELS,
   } = getServerConfig();
 
   const config: GlobalServerConfig = {
@@ -46,6 +48,7 @@ export const GET = async () => {
       ollama: { customModelName: OLLAMA_CUSTOM_MODELS, enabled: ENABLE_OLLAMA },
       openrouter: { customModelName: OPENROUTER_CUSTOM_MODELS, enabled: ENABLED_OPENROUTER },
       perplexity: { enabled: ENABLED_PERPLEXITY },
+      reverse: { customModelName: REVERSE_CUSTOM_MODELS, enabled: ENABLED_REVERSE },
       zeroone: { enabled: ENABLED_ZEROONE },
       zhipu: { enabled: ENABLED_ZHIPU },
     },

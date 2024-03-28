@@ -201,6 +201,19 @@
         "title": "API Key"
       }
     },
+    "Reverse": {
+      "customModelName": {
+        "desc": "Add custom model, separate multiple models with comma (,)",
+        "placeholder": "gpt-4-gizmo-g-*",
+        "title": "Custom Model Name"
+      },
+      "title": "Reverse",
+      "token": {
+        "desc": "Enter the PuerHub AI API Key",
+        "placeholder": "PuerHub AI API Key",
+        "title": "PuerHub API Key"
+      }
+    },
     "ZeroOne": {
       "title": "01-AI",
       "token": {

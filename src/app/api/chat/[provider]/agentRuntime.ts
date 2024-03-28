@@ -20,6 +20,7 @@ import {
   LobeOpenAI,
   LobeOpenRouterAI,
   LobePerplexityAI,
+  LobeReverse,
   LobeRuntimeAI,
   LobeZeroOneAI,
   LobeZhipuAI,
@@ -185,6 +186,11 @@ class AgentRuntime {
         runtimeModel = this.initZeroOne(payload);
         break;
       }
+
+      case ModelProvider.Reverse: {
+        runtimeModel = this.initReverse(payload);
+        break;
+      }
     }
 
     return new AgentRuntime(runtimeModel);
@@ -306,6 +312,13 @@ class AgentRuntime {
     const apiKey = apiKeyManager.pick(payload?.apiKey || ZEROONE_API_KEY);
 
     return new LobeZeroOneAI({ apiKey });
+  }
+
+  private static initReverse(payload: JWTPayload) {
+    const { REVERSE_API_KEY } = getServerConfig();
+    const apiKey = apiKeyManager.pick(payload?.apiKey || REVERSE_API_KEY);
+
+    return new LobeReverse({ apiKey });
   }
 }
 

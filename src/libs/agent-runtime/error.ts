@@ -43,6 +43,9 @@ export const AgentRuntimeErrorType = {
 
   InvalidOpenRouterAPIKey: 'InvalidOpenRouterAPIKey',
   OpenRouterBizError: 'OpenRouterBizError',
+
+  InvalidReverseAPIKey: 'InvalidReverseAPIKey',
+  ReverseBizError: 'ReverseBizError',
 } as const;
 
 export type ILobeAgentRuntimeErrorType =

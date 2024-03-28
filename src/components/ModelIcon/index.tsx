@@ -12,6 +12,7 @@ import {
   Moonshot,
   OpenAI,
   Perplexity,
+  Suno,
   Tongyi,
   Yi,
 } from '@lobehub/icons';
@@ -25,6 +26,8 @@ interface ModelProviderIconProps {
 const ModelIcon = memo<ModelProviderIconProps>(({ model, size = 12 }) => {
   if (!model) return;
 
+  if (model.startsWith('suno')) return <Suno.Avatar size={size} />;
+  if (model.startsWith('search-gpts')) return <OpenAI.Avatar size={size} />;
   if (model.startsWith('gpt-3')) return <OpenAI.Avatar size={size} type={'gpt3'} />;
   if (model.startsWith('gpt-4')) return <OpenAI.Avatar size={size} type={'gpt4'} />;
   if (model.startsWith('glm')) return <ChatGLM.Avatar size={size} />;

@@ -58,6 +58,9 @@ declare global {
       // Ollama Provider;
       OLLAMA_PROXY_URL?: string;
       OLLAMA_CUSTOM_MODELS?: string;
+
+      // Reverse Provider
+      REVERSE_API_KEY?: string;
     }
   }
 }
@@ -85,6 +88,8 @@ export const getProviderConfig = () => {
   const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
 
   const ZEROONE_API_KEY = process.env.ZEROONE_API_KEY || '';
+
+  const REVERSE_API_KEY = process.env.REVERSE_API_KEY || '';
 
   // region format: iad1,sfo1
   let regions: string[] = [];
@@ -151,5 +156,9 @@ export const getProviderConfig = () => {
     ENABLE_OLLAMA: !!process.env.OLLAMA_PROXY_URL,
     OLLAMA_PROXY_URL: process.env.OLLAMA_PROXY_URL || '',
     OLLAMA_CUSTOM_MODELS: process.env.OLLAMA_CUSTOM_MODELS,
+
+    ENABLED_REVERSE: true,
+    REVERSE_CUSTOM_MODELS: process.env.REVERSE_CUSTOM_MODELS,
+    REVERSE_API_KEY,
   };
 };

@@ -51,7 +51,12 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
                             apiKey: apiKey,
                             enabled: true,
                           }).then(() => {
-                            goToChat();
+                            setModelProviderConfig('reverse', {
+                              apiKey: apiKey,
+                              enabled: true,
+                            }).then(() => {
+                              goToChat();
+                            });
                           });
                         },
                       );

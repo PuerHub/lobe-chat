@@ -109,6 +109,7 @@
     "openai": "OpenAI",
     "openrouter": "OpenRouter",
     "perplexity": "Perplexity",
+    "reverse": "逆向",
     "zeroone": "01.AI 零一万物",
     "zhipu": "智谱AI"
   },
@@ -122,6 +123,7 @@
   "rename": "重命名",
   "reset": "重置",
   "retry": "重试",
+  "search": "搜索",
   "send": "发送",
   "setting": "设置",
   "share": "分享",

@@ -201,6 +201,19 @@
         "title": "API Key"
       }
     },
+    "Reverse": {
+      "customModelName": {
+        "desc": "增加自定义模型，多个模型使用逗号（,）隔开",
+        "placeholder": "gpt-4-gizmo-g-*",
+        "title": "自定义模型名称"
+      },
+      "title": "逆向",
+      "token": {
+        "desc": "填入 PuerHub AI 的 API Key",
+        "placeholder": "PuerHub AI API Key",
+        "title": "PuerHub API Key"
+      }
+    },
     "ZeroOne": {
       "title": "01.AI 零一万物",
       "token": {

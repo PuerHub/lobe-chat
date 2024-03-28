@@ -12,6 +12,7 @@ import {
   OpenAIProvider,
   OpenRouterProvider,
   PerplexityProvider,
+  ReverseProvider,
   ZeroOneProvider,
   ZhiPuProvider,
 } from '@/config/modelProviders';
@@ -25,6 +26,9 @@ import { currentSettings } from './settings';
 const modelProvider = (s: GlobalStore) => currentSettings(s).languageModel;
 const providerEnabled = (provider: GlobalLLMProviderKey) => (s: GlobalStore) =>
   currentSettings(s).languageModel[provider]?.enabled || false;
+
+const enableReverse = (s: GlobalStore) => modelProvider(s).reverse.enabled;
+const reverseAPIKey = (s: GlobalStore) => modelProvider(s).reverse.apiKey;
 
 const openAIConfig = (s: GlobalStore) => modelProvider(s).openAI;
 
@@ -163,6 +167,17 @@ const modelSelectList = (s: GlobalStore): ModelProviderCard[] => {
     OpenRouterProvider.chatModels,
   );
 
+  const reverseModelString = [
+    s.serverConfig.languageModel?.reverse?.customModelName,
+    currentSettings(s).languageModel.reverse.customModelName,
+  ]
+    .filter(Boolean)
+    .join(',');
+
+  const reverseModelConfig = parseModelString(reverseModelString);
+
+  const reverseChatModels = processChatModels(reverseModelConfig, ReverseProvider.chatModels);
+
   return [
     {
       ...OpenAIProvider,
@@ -180,6 +195,7 @@ const modelSelectList = (s: GlobalStore): ModelProviderCard[] => {
     { ...MoonshotProvider, enabled: enableMoonshot(s) },
     { ...OpenRouterProvider, chatModels: openrouterChatModels, enabled: enableOpenrouter(s) },
     { ...ZeroOneProvider, enabled: enableZeroone(s) },
+    { ...ReverseProvider, chatModels: reverseChatModels, enabled: enableReverse(s) },
   ];
 };
 
@@ -274,4 +290,8 @@ export const modelProviderSelectors = {
   // ZeroOne 零一万物
   enableZeroone,
   zerooneAPIKey,
+
+  // Reverse
+  enableReverse,
+  reverseAPIKey,
 };

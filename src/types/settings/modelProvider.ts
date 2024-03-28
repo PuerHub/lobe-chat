@@ -88,6 +88,12 @@ export interface ZeroOneConfig {
   enabled?: boolean;
 }
 
+export interface ReverseConfig {
+  apiKey?: string;
+  customModelName?: string;
+  enabled?: boolean;
+}
+
 export interface GlobalLLMConfig {
   anthropic: AnthropicConfig;
   azure: AzureOpenAIConfig;
@@ -100,6 +106,7 @@ export interface GlobalLLMConfig {
   openAI: OpenAIConfig;
   openrouter: OpenRouterConfig;
   perplexity: PerplexityConfig;
+  reverse: ReverseConfig;
   zeroone: ZeroOneConfig;
   zhipu: ZhiPuConfig;
 }
