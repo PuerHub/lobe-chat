@@ -66,18 +66,18 @@ const LLM = memo(() => {
         //   label: useAzure ? t('llm.AzureOpenAI.endpoint.title') : t('llm.OpenAI.endpoint.title'),
         //   name: [LLMProviderConfigKey, providerKey, 'endpoint'],
         // },
-        {
-          children: (
-            <Input.TextArea
-              allowClear
-              placeholder={t('llm.OpenAI.customModelName.placeholder')}
-              style={{ height: 100 }}
-            />
-          ),
-          desc: t('llm.OpenAI.customModelName.desc'),
-          label: t('llm.OpenAI.customModelName.title'),
-          name: [LLMProviderConfigKey, providerKey, 'customModelName'],
-        },
+        // {
+        //   children: (
+        //     <Input.TextArea
+        //       allowClear
+        //       placeholder={t('llm.OpenAI.customModelName.placeholder')}
+        //       style={{ height: 100 }}
+        //     />
+        //   ),
+        //   desc: t('llm.OpenAI.customModelName.desc'),
+        //   label: t('llm.OpenAI.customModelName.title'),
+        //   name: [LLMProviderConfigKey, providerKey, 'customModelName'],
+        // },
         // {
         //   children: <Switch />,
         //   desc: t('llm.OpenAI.useAzure.desc'),

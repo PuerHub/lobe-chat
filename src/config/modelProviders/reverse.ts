@@ -1,5 +1,3 @@
-import { t } from 'i18next';
-
 import { ModelProviderCard } from '@/types/llm';
 
 const Reverse: ModelProviderCard = {
@@ -14,7 +12,7 @@ const Reverse: ModelProviderCard = {
       vision: false,
     },
     {
-      displayName: `GPTs ${t('search', { ns: 'common' })}`,
+      displayName: `GPTs Search`,
       files: false,
       functionCall: false,
       hidden: false,

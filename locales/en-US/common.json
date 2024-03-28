@@ -60,6 +60,7 @@
   },
   "lang": {
     "ar": "Arabic",
+    "bg-BG": "Bulgarian",
     "bn": "Bengali",
     "cs-CZ": "Czech",
     "da-DK": "Danish",
@@ -123,7 +124,6 @@
   "rename": "Rename",
   "reset": "Reset",
   "retry": "Retry",
-  "search": "Search",
   "send": "Send",
   "setting": "Settings",
   "share": "Share",
