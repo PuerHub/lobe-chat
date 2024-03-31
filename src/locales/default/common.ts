@@ -113,6 +113,7 @@ export default {
     openrouter: 'OpenRouter',
     perplexity: 'Perplexity',
     reverse: '逆向模型',
+    togetherai: 'TogetherAI',
     zeroone: '01.AI 零一万物',
     zhipu: '智谱AI',
   },

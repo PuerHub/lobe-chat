@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 
 import PageTitle from '@/components/PageTitle';
 
-// import { MORE_MODEL_PROVIDER_REQUEST_URL } from '@/const/url';
 import Anthropic from './Anthropic';
 import Google from './Google';
 import Groq from './Groq';
@@ -16,6 +15,7 @@ import Ollama from './Ollama';
 import OpenAI from './OpenAI';
 import OpenRouter from './OpenRouter';
 import Reverse from './Reverse';
+// import TogetherAI from './TogetherAI';
 import ZeroOne from './ZeroOne';
 import Zhipu from './Zhipu';
 
@@ -39,6 +39,7 @@ export default memo<{ showOllama: boolean }>(({ showOllama }) => {
       <ZeroOne />
       <Zhipu />
       <Reverse />
+      {/*<TogetherAI />*/}
       {/*<Footer>*/}
       {/*  <Trans i18nKey="llm.waitingForMore" ns={'setting'}>*/}
       {/*    更多模型正在*/}

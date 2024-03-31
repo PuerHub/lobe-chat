@@ -22,6 +22,7 @@ import {
   LobePerplexityAI,
   LobeReverse,
   LobeRuntimeAI,
+  LobeTogetherAI,
   LobeZeroOneAI,
   LobeZhipuAI,
   ModelProvider,
@@ -182,6 +183,11 @@ class AgentRuntime {
         break;
       }
 
+      case ModelProvider.TogetherAI: {
+        runtimeModel = this.initTogetherAI(payload);
+        break;
+      }
+
       case ModelProvider.ZeroOne: {
         runtimeModel = this.initZeroOne(payload);
         break;
@@ -305,6 +311,13 @@ class AgentRuntime {
     const apiKey = apiKeyManager.pick(payload?.apiKey || OPENROUTER_API_KEY);
 
     return new LobeOpenRouterAI({ apiKey });
+  }
+
+  private static initTogetherAI(payload: JWTPayload) {
+    const { TOGETHERAI_API_KEY } = getServerConfig();
+    const apiKey = apiKeyManager.pick(payload?.apiKey || TOGETHERAI_API_KEY);
+
+    return new LobeTogetherAI({ apiKey });
   }
 
   private static initZeroOne(payload: JWTPayload) {

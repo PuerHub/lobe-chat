@@ -13,6 +13,7 @@ import {
   OpenRouterProvider,
   PerplexityProvider,
   ReverseProvider,
+  TogetherAIProvider,
   ZeroOneProvider,
   ZhiPuProvider,
 } from '@/config/modelProviders';
@@ -70,6 +71,9 @@ const groqAPIKey = (s: GlobalStore) => modelProvider(s).groq.apiKey;
 
 const enableOpenrouter = (s: GlobalStore) => modelProvider(s).openrouter.enabled;
 const openrouterAPIKey = (s: GlobalStore) => modelProvider(s).openrouter.apiKey;
+
+const enableTogetherAI = (s: GlobalStore) => modelProvider(s).togetherai.enabled;
+const togetheraiAPIKey = (s: GlobalStore) => modelProvider(s).togetherai.apiKey;
 
 const enableZeroone = (s: GlobalStore) => modelProvider(s).zeroone.enabled;
 const zerooneAPIKey = (s: GlobalStore) => modelProvider(s).zeroone.apiKey;
@@ -178,6 +182,14 @@ const modelSelectList = (s: GlobalStore): ModelProviderCard[] => {
 
   const reverseChatModels = processChatModels(reverseModelConfig, ReverseProvider.chatModels);
 
+  const togetheraiModelConfig = parseModelString(
+    currentSettings(s).languageModel.togetherai.customModelName,
+  );
+  const togetheraiChatModels = processChatModels(
+    togetheraiModelConfig,
+    TogetherAIProvider.chatModels,
+  );
+
   return [
     {
       ...OpenAIProvider,
@@ -196,6 +208,7 @@ const modelSelectList = (s: GlobalStore): ModelProviderCard[] => {
     { ...OpenRouterProvider, chatModels: openrouterChatModels, enabled: enableOpenrouter(s) },
     { ...ZeroOneProvider, enabled: enableZeroone(s) },
     { ...ReverseProvider, chatModels: reverseChatModels, enabled: enableReverse(s) },
+    { ...TogetherAIProvider, chatModels: togetheraiChatModels, enabled: enableTogetherAI(s) },
   ];
 };
 
@@ -294,4 +307,8 @@ export const modelProviderSelectors = {
   // Reverse
   enableReverse,
   reverseAPIKey,
+
+  // TogetherAI
+  enableTogetherAI,
+  togetheraiAPIKey,
 };

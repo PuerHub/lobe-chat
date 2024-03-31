@@ -12,7 +12,6 @@ import { commonSelectors } from '@/store/global/selectors';
 
 import SettingList from '../features/SettingList';
 import AvatarBanner from './features/AvatarBanner';
-import ExtraList from './features/ExtraList';
 
 const useStyles = createStyles(({ css, token }) => ({
   divider: css`
@@ -38,11 +37,11 @@ const Setting = memo(() => {
       </AvatarBanner>
       <div style={{ width: '100%' }}>
         <SettingList />
-        <div className={styles.divider} />
-        <ExtraList />
+        {/*<div className={styles.divider} />*/}
+        {/*<ExtraList />*/}
         <Center style={{ paddingInline: 64 }}>
           <Divider>
-            <span className={styles.footer}>LobeChat v{CURRENT_VERSION}</span>
+            <span className={styles.footer}>PuerHub v{CURRENT_VERSION}</span>
           </Divider>
         </Center>
       </div>

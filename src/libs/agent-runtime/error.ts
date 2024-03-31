@@ -46,6 +46,9 @@ export const AgentRuntimeErrorType = {
 
   InvalidReverseAPIKey: 'InvalidReverseAPIKey',
   ReverseBizError: 'ReverseBizError',
+
+  InvalidTogetherAIAPIKey: 'InvalidTogetherAIAPIKey',
+  TogetherAIBizError: 'TogetherAIBizError',
 } as const;
 
 export type ILobeAgentRuntimeErrorType =
