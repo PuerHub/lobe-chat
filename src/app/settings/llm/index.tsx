@@ -2,19 +2,24 @@
 
 // import Link from 'next/link';
 import { memo } from 'react';
-// import { Trans, useTranslation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
+// import { Trans, useTranslation } from 'react-i18next';
 import PageTitle from '@/components/PageTitle';
 
+// import { MORE_MODEL_PROVIDER_REQUEST_URL } from '@/const/url';
+// import Footer from '../features/Footer';
 import Anthropic from './Anthropic';
+// import Azure from './Azure';
 import Google from './Google';
 import Groq from './Groq';
+// import Mistral from './Mistral';
 import Moonshot from './Moonshot';
 import Ollama from './Ollama';
 import OpenAI from './OpenAI';
 import OpenRouter from './OpenRouter';
 import Reverse from './Reverse';
+// import Perplexity from './Perplexity';
 // import TogetherAI from './TogetherAI';
 import ZeroOne from './ZeroOne';
 import Zhipu from './Zhipu';
@@ -26,20 +31,20 @@ export default memo<{ showOllama: boolean }>(({ showOllama }) => {
     <>
       <PageTitle title={t('tab.llm')} />
       <OpenAI />
-      {/*<AzureOpenAI />*/}
+      {/*<Azure />*/}
       {showOllama && <Ollama />}
-      <Anthropic />
       <Google />
-      <Groq />
+      <Anthropic />
       {/*<Bedrock />*/}
+      <OpenRouter />
+      {/*<TogetherAI />*/}
+      <Groq />
       {/*<Perplexity />*/}
       {/*<Mistral />*/}
-      <OpenRouter />
       <Moonshot />
-      <ZeroOne />
       <Zhipu />
+      <ZeroOne />
       <Reverse />
-      {/*<TogetherAI />*/}
       {/*<Footer>*/}
       {/*  <Trans i18nKey="llm.waitingForMore" ns={'setting'}>*/}
       {/*    更多模型正在*/}

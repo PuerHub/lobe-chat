@@ -1,13 +1,4 @@
 {
-  "ModelSelect": {
-    "featureTag": {
-      "custom": "사용자 정의 모델, 기본적으로 함수 호출 및 시각 인식을 모두 지원하며, 상기 기능의 가용성을 실제로 확인하십시오",
-      "file": "이 모델은 파일 업로드를 지원하여 인식할 수 있습니다.",
-      "functionCall": "이 모델은 함수 호출을 지원합니다",
-      "tokens": "이 모델은 단일 세션당 최대 {{tokens}} 토큰을 지원합니다",
-      "vision": "이 모델은 시각 인식을 지원합니다"
-    }
-  },
   "about": "소개",
   "advanceSettings": "고급 설정",
   "appInitializing": "PuerHub AI 이 초기화 중입니다. 잠시 기다려주세요...",
@@ -95,23 +86,6 @@
     "zh-TW": "중국어(번체)"
   },
   "layoutInitializing": "레이아웃을 불러오는 중...",
-  "modelProvider": {
-    "anthropic": "Anthropic",
-    "azure": "Azure",
-    "bedrock": "AWS Bedrock",
-    "google": "Google",
-    "groq": "Groq",
-    "mistral": "Mistral AI",
-    "moonshot": "문샷 AI",
-    "ollama": "올라마",
-    "oneapi": "One API",
-    "openai": "OpenAI",
-    "openrouter": "오픈 라우터",
-    "togetherai": "TogetherAI",
-    "perplexity": "Perplexity",
-    "zeroone": "01.AI 제로원",
-    "zhipu": "지푸 AI"
-  },
   "noDescription": "설명 없음",
   "oauth": "SSO 로그인",
   "ok": "확인",
@@ -167,9 +141,9 @@
   "telemetry": {
     "allow": "허용",
     "deny": "거부",
-    "desc": "우리는 익명으로 당신의 사용 정보를 수집하여 LobeChat을 개선하고 더 나은 제품 경험을 제공하기를 희망합니다. \"설정\" - \"정보\"에서 언제든지 비활성화할 수 있습니다.",
+    "desc": "우리는 익명으로 당신의 사용 정보를 수집하여 PuerHub AI을 개선하고 더 나은 제품 경험을 제공하기를 희망합니다. \"설정\" - \"정보\"에서 언제든지 비활성화할 수 있습니다.",
     "learnMore": "더 알아보기",
-    "title": "LobeChat을 더 나아지게 하는 데 도와주세요"
+    "title": "PuerHub AI을 더 나아지게 하는 데 도와주세요"
   },
   "temp": "임시",
   "updateAgent": "에이전트 정보 업데이트",

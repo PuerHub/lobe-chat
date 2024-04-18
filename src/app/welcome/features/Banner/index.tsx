@@ -39,7 +39,7 @@ const Banner = memo<{ mobile?: boolean }>(({ mobile }) => {
         content: t('import.desc', { key: apiKey }),
         okText: t('ok', { ns: 'common' }),
         onOk: () => {
-          setModelProviderConfig('openAI', { OPENAI_API_KEY: apiKey }).then(() => {
+          setModelProviderConfig('openai', { apiKey: apiKey }).then(() => {
             setModelProviderConfig('zhipu', { apiKey: apiKey, enabled: true }).then(() => {
               setModelProviderConfig('google', { apiKey: apiKey, enabled: true }).then(() => {
                 setModelProviderConfig('anthropic', { apiKey: apiKey, enabled: true }).then(() => {

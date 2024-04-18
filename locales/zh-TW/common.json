@@ -1,13 +1,4 @@
 {
-  "ModelSelect": {
-    "featureTag": {
-      "custom": "自訂模型，預設支援函數呼叫與視覺辨識，請根據實際情況驗證上述能力的可用性",
-      "file": "該模型支援上傳檔案讀取與識別",
-      "functionCall": "該模型支援函數呼叫（Function Call）",
-      "tokens": "該模型單個會話最多支援 {{tokens}} Tokens",
-      "vision": "該模型支援視覺辨識"
-    }
-  },
   "about": "關於",
   "advanceSettings": "進階設定",
   "appInitializing": "PuerHub AI 初始化中，請耐心等候...",
@@ -95,23 +86,6 @@
     "zh-TW": "繁體中文"
   },
   "layoutInitializing": "正在載入版面配置...",
-  "modelProvider": {
-    "anthropic": "Anthropic",
-    "azure": "Azure",
-    "bedrock": "AWS Bedrock",
-    "google": "Google",
-    "groq": "Groq",
-    "mistral": "Mistral AI",
-    "moonshot": "Moonshot AI",
-    "ollama": "奧拉馬",
-    "oneapi": "One API",
-    "openai": "OpenAI",
-    "openrouter": "OpenRouter",
-    "togetherai": "TogetherAI",
-    "perplexity": "Perplexity AI",
-    "zeroone": "01.AI 零一萬物",
-    "zhipu": "智譜AI"
-  },
   "noDescription": "暫無描述",
   "oauth": "單一登錄（SSO）",
   "ok": "確定",
@@ -167,9 +141,9 @@
   "telemetry": {
     "allow": "允許",
     "deny": "拒絕",
-    "desc": "我們希望匿名獲取你的使用信息，進而幫助我們改進 LobeChat，並為你提供更好的產品體驗。你可以在「設定」 - 「關於」隨時關閉。",
+    "desc": "我們希望匿名獲取你的使用信息，進而幫助我們改進 PuerHub AI，並為你提供更好的產品體驗。你可以在「設定」 - 「關於」隨時關閉。",
     "learnMore": "了解更多",
-    "title": "幫助 LobeChat 做得更好"
+    "title": "幫助 PuerHub AI 做得更好"
   },
   "temp": "臨時",
   "updateAgent": "更新助理資訊",

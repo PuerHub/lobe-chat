@@ -1,13 +1,4 @@
 {
-  "ModelSelect": {
-    "featureTag": {
-      "custom": "Özel model, varsayılan olarak hem fonksiyon çağrısını hem de görüntü tanımayı destekler, lütfen yukarıdaki yeteneklerin kullanılabilirliğini doğrulayın",
-      "file": "Bu model dosya yükleme ve tanıma desteği sağlar",
-      "functionCall": "Bu model fonksiyon çağrısını destekler (Function Call)",
-      "tokens": "Bu model, tek bir oturumda en fazla {{tokens}} Token'ı destekler",
-      "vision": "Bu model görüntü tanımı destekler"
-    }
-  },
   "about": "Hakkında",
   "advanceSettings": "Gelişmiş Ayarlar",
   "appInitializing": "PuerHub AI başlatılıyor, lütfen bekleyin...",
@@ -95,23 +86,6 @@
     "zh-TW": "Geleneksel Çince"
   },
   "layoutInitializing": "Başlatılıyor...",
-  "modelProvider": {
-    "anthropic": "Antropik",
-    "azure": "Azure",
-    "bedrock": "AWS Bedrock",
-    "google": "Google",
-    "groq": "Groq",
-    "mistral": "Mistral AI",
-    "moonshot": "Moonshot AI",
-    "ollama": "Ollama",
-    "oneapi": "One API",
-    "openai": "OpenAI",
-    "openrouter": "AçıkYönlendirici",
-    "togetherai": "TogetherAI",
-    "perplexity": "Perplexity",
-    "zeroone": "01.AI SıfırBir",
-    "zhipu": "Zhipu AI"
-  },
   "noDescription": "Açıklama yok",
   "oauth": "SSO Girişi",
   "ok": "Tamam",
@@ -167,9 +141,9 @@
   "telemetry": {
     "allow": "İzin ver",
     "deny": "Reddet",
-    "desc": "Anonim kullanım bilgilerinizi toplamamıza izin vererek LobeChat'i geliştirmemize ve size daha iyi bir ürün deneyimi sunmamıza yardımcı olabilirsiniz. Dilediğiniz zaman 'Ayarlar' - 'Hakkında' bölümünden devre dışı bırakabilirsiniz.",
+    "desc": "Anonim kullanım bilgilerinizi toplamamıza izin vererek PuerHub AI'i geliştirmemize ve size daha iyi bir ürün deneyimi sunmamıza yardımcı olabilirsiniz. Dilediğiniz zaman 'Ayarlar' - 'Hakkında' bölümünden devre dışı bırakabilirsiniz.",
     "learnMore": "Daha Fazla Bilgi",
-    "title": "LobeChat'i Geliştirmemize Yardımcı Olun"
+    "title": "PuerHub AI'i Geliştirmemize Yardımcı Olun"
   },
   "temp": "Geçici",
   "updateAgent": "Asistan Bilgilerini Güncelle",

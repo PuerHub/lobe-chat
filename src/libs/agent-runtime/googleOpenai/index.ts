@@ -5,9 +5,7 @@ import { LobeRuntimeAI } from '../BaseAI';
 import { AgentRuntimeErrorType } from '../error';
 import { ChatStreamPayload, ModelProvider, OpenAIChatMessage } from '../types';
 import { AgentRuntimeError } from '../utils/createError';
-import { debugStream } from '../utils/debugStream';
 import { desensitizeUrl } from '../utils/desensitizeUrl';
-import { DEBUG_CHAT_COMPLETION } from '../utils/env';
 import { handleOpenAIError } from '../utils/handleOpenAIError';
 
 const DEFAULT_BASE_URL = 'https://api.puerhub.net/v1';
@@ -38,11 +36,7 @@ export class LobeGoogleOpenAI implements LobeRuntimeAI {
 
       const stream = OpenAIStream(response);
 
-      const [debug, returnStream] = stream.tee();
-
-      if (DEBUG_CHAT_COMPLETION) {
-        debugStream(debug).catch(console.error);
-      }
+      const [returnStream] = stream.tee();
 
       return new StreamingTextResponse(returnStream);
     } catch (error) {

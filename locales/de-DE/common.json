@@ -1,13 +1,4 @@
 {
-  "ModelSelect": {
-    "featureTag": {
-      "custom": "Benutzerdefiniertes Modell, das standardmäßig sowohl Funktionsaufrufe als auch visuelle Erkennung unterstützt. Bitte überprüfen Sie die Verfügbarkeit dieser Fähigkeiten basierend auf den tatsächlichen Anforderungen.",
-      "file": "Dieses Modell unterstützt das Hochladen von Dateien zur Erkennung.",
-      "functionCall": "Dieses Modell unterstützt Funktionsaufrufe (Function Call).",
-      "tokens": "Dieses Modell unterstützt maximal {{tokens}} Tokens pro einzelner Sitzung.",
-      "vision": "Dieses Modell unterstützt visuelle Erkennung."
-    }
-  },
   "about": "Über",
   "advanceSettings": "Erweiterte Einstellungen",
   "appInitializing": "PuerHub AI wird initialisiert. Bitte haben Sie einen Moment Geduld...",
@@ -95,23 +86,6 @@
     "zh-TW": "Chinesisch (traditionell)"
   },
   "layoutInitializing": "Layout wird geladen...",
-  "modelProvider": {
-    "anthropic": "Anthropic",
-    "azure": "Azure",
-    "bedrock": "AWS Bedrock",
-    "google": "Google",
-    "groq": "Groq",
-    "mistral": "Mistral KI",
-    "moonshot": "Moonshot KI",
-    "ollama": "Ollama",
-    "oneapi": "One API",
-    "openai": "OpenAI",
-    "openrouter": "OpenRouter",
-    "togetherai": "TogetherAI",
-    "perplexity": "Perplexity",
-    "zeroone": "01-AI",
-    "zhipu": "Zhipu AI"
-  },
   "noDescription": "Keine Beschreibung vorhanden",
   "oauth": "SSO-Anmeldung",
   "ok": "OK",
@@ -167,9 +141,9 @@
   "telemetry": {
     "allow": "Erlauben",
     "deny": "Verweigern",
-    "desc": "Wir möchten anonyme Nutzungsdaten sammeln, um uns bei der Verbesserung von LobeChat zu helfen und dir ein besseres Produkterlebnis zu bieten. Du kannst dies jederzeit in den „Einstellungen“ - „Über“ deaktivieren.",
+    "desc": "Wir möchten anonyme Nutzungsdaten sammeln, um uns bei der Verbesserung von PuerHub AI zu helfen und dir ein besseres Produkterlebnis zu bieten. Du kannst dies jederzeit in den „Einstellungen“ - „Über“ deaktivieren.",
     "learnMore": "Mehr erfahren",
-    "title": "Hilf LobeChat, besser zu werden"
+    "title": "Hilf PuerHub AI, besser zu werden"
   },
   "temp": "Temporär",
   "updateAgent": "Assistentenprofil aktualisieren",
