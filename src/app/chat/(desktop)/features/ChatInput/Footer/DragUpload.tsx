@@ -148,7 +148,7 @@ const DragUpload = memo(() => {
       window.removeEventListener('drop', handleDrop);
       window.removeEventListener('paste', handlePaste);
     };
-  }, [handleDrop, handlePaste]);
+  }, [handleDragEnter, handleDragOver, handleDragLeave, handleDrop, handlePaste]);
 
   return (
     isDragging && (
@@ -161,8 +161,12 @@ const DragUpload = memo(() => {
               <Icon icon={FileText} size={{ fontSize: 64, strokeWidth: 1 }} />
             </Flexbox>
             <Flexbox align={'center'} gap={8} style={{ textAlign: 'center' }}>
-              <Flexbox className={styles.title}>{t('upload.dragTitle')}</Flexbox>
-              <Flexbox className={styles.desc}>{t('upload.dragDesc')}</Flexbox>
+              <Flexbox className={styles.title}>
+                {t(enabledFiles ? 'upload.dragFileTitle' : 'upload.dragTitle')}
+              </Flexbox>
+              <Flexbox className={styles.desc}>
+                {t(enabledFiles ? 'upload.dragFileDesc' : 'upload.dragDesc')}
+              </Flexbox>
             </Flexbox>
           </Center>
         </div>
