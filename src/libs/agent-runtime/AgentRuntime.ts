@@ -1,12 +1,13 @@
 import { ClientOptions } from 'openai';
 
 import type { TracePayload } from '@/const/trace';
+import LobeReverse from '@/libs/agent-runtime/reverse';
 
 import { LobeRuntimeAI } from './BaseAI';
-import { LobeAnthropicAI } from './anthropic';
+import { LobeAnthropicOpenAI } from './anthropicOpenai';
 import { LobeAzureOpenAI } from './azureOpenai';
 import { LobeBedrockAI, LobeBedrockAIParams } from './bedrock';
-import { LobeGoogleAI } from './google';
+import { LobeGoogleOpenAI } from './googleOpenai';
 import { LobeGroq } from './groq';
 import { LobeMistralAI } from './mistral';
 import { LobeMoonshotAI } from './moonshot';
@@ -100,6 +101,7 @@ class AgentRuntime {
       openai: Partial<ClientOptions>;
       openrouter: Partial<ClientOptions>;
       perplexity: Partial<ClientOptions>;
+      reverse: Partial<ClientOptions>;
       togetherai: Partial<ClientOptions>;
       zeroone: Partial<ClientOptions>;
       zhipu: Partial<ClientOptions>;
@@ -130,7 +132,7 @@ class AgentRuntime {
       }
 
       case ModelProvider.Google: {
-        runtimeModel = new LobeGoogleAI(params.google ?? {});
+        runtimeModel = await LobeGoogleOpenAI.fromAPIKey(params.google ?? {});
         break;
       }
 
@@ -155,7 +157,7 @@ class AgentRuntime {
       }
 
       case ModelProvider.Anthropic: {
-        runtimeModel = new LobeAnthropicAI(params.anthropic ?? {});
+        runtimeModel = new LobeAnthropicOpenAI(params.anthropic ?? {});
         break;
       }
 
@@ -181,6 +183,11 @@ class AgentRuntime {
 
       case ModelProvider.ZeroOne: {
         runtimeModel = new LobeZeroOneAI(params.zeroone ?? {});
+        break;
+      }
+
+      case ModelProvider.Reverse: {
+        runtimeModel = new LobeReverse(params.reverse ?? {});
         break;
       }
     }

@@ -1,5 +1,5 @@
 import { OpenAIStream, StreamingTextResponse } from 'ai';
-import OpenAI from 'openai';
+import OpenAI, { ClientOptions } from 'openai';
 
 import { LobeRuntimeAI } from '../BaseAI';
 import { AgentRuntimeErrorType } from '../error';
@@ -20,8 +20,8 @@ export class LobeGoogleOpenAI implements LobeRuntimeAI {
     this.baseURL = this._llm.baseURL;
   }
 
-  static async fromAPIKey(apiKey?: string, baseURL: string = DEFAULT_BASE_URL) {
-    const llm = new OpenAI({ apiKey, baseURL });
+  static async fromAPIKey({ apiKey, baseURL = DEFAULT_BASE_URL, ...res }: ClientOptions) {
+    const llm = new OpenAI({ apiKey, baseURL, ...res });
 
     return new LobeGoogleOpenAI(llm);
   }
