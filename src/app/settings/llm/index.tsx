@@ -4,18 +4,18 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-// import { Trans, useTranslation } from 'react-i18next';
 import PageTitle from '@/components/PageTitle';
 
 // import { MORE_MODEL_PROVIDER_REQUEST_URL } from '@/const/url';
+//
 // import Footer from '../features/Footer';
 import Anthropic from './Anthropic';
 // import Azure from './Azure';
+// import Bedrock from './Bedrock';
 import Google from './Google';
 import Groq from './Groq';
 // import Mistral from './Mistral';
 import Moonshot from './Moonshot';
-import Ollama from './Ollama';
 import OpenAI from './OpenAI';
 import OpenRouter from './OpenRouter';
 import Reverse from './Reverse';
@@ -24,7 +24,7 @@ import Reverse from './Reverse';
 import ZeroOne from './ZeroOne';
 import Zhipu from './Zhipu';
 
-export default memo<{ showOllama: boolean }>(({ showOllama }) => {
+export default memo(() => {
   const { t } = useTranslation('setting');
 
   return (
@@ -32,7 +32,7 @@ export default memo<{ showOllama: boolean }>(({ showOllama }) => {
       <PageTitle title={t('tab.llm')} />
       <OpenAI />
       {/*<Azure />*/}
-      {showOllama && <Ollama />}
+      {/*<Ollama />*/}
       <Google />
       <Anthropic />
       {/*<Bedrock />*/}
@@ -45,15 +45,6 @@ export default memo<{ showOllama: boolean }>(({ showOllama }) => {
       <Zhipu />
       <ZeroOne />
       <Reverse />
-      {/*<Footer>*/}
-      {/*  <Trans i18nKey="llm.waitingForMore" ns={'setting'}>*/}
-      {/*    更多模型正在*/}
-      {/*    <Link aria-label={'todo'} href={MORE_MODEL_PROVIDER_REQUEST_URL} target="_blank">*/}
-      {/*      计划接入*/}
-      {/*    </Link>*/}
-      {/*    中 ，敬请期待 ✨*/}
-      {/*  </Trans>*/}
-      {/*</Footer>*/}
     </>
   );
 });

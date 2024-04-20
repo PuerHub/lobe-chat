@@ -1,3 +1,4 @@
+export { default as AgentRuntime } from './AgentRuntime';
 export { LobeAnthropicOpenAI } from './anthropicOpenai';
 export { LobeAzureOpenAI } from './azureOpenai';
 export * from './BaseAI';
