@@ -16,7 +16,7 @@ const Footer = memo(() => {
   return (
     <Flexbox align={'center'} horizontal justify={'space-between'} style={{ padding: 16 }}>
       <span style={{ color: theme.colorTextDescription }}>
-        ©{new Date().getFullYear()} PuerHub based on LobeHub under the MIT license
+        © 2023 - {new Date().getFullYear()} PuerHub based on LobeHub under the MIT license
       </span>
       <Flexbox horizontal>
         <ActionIcon
@@ -31,12 +31,6 @@ const Footer = memo(() => {
           size={'site'}
           title={t('manual')}
         />
-        {/*<ActionIcon*/}
-        {/*  icon={Github}*/}
-        {/*  onClick={() => window.open(GITHUB, '__blank')}*/}
-        {/*  size={'site'}*/}
-        {/*  title={'GitHub'}*/}
-        {/*/>*/}
       </Flexbox>
     </Flexbox>
   );
