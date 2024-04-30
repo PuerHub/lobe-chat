@@ -6,11 +6,11 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 
+import { useAgentStore } from '@/store/agent';
+import { agentSelectors } from '@/store/agent/slices/chat';
 import { useFileStore } from '@/store/file';
-import { useGlobalStore } from '@/store/global';
-import { modelProviderSelectors } from '@/store/global/selectors';
-import { useSessionStore } from '@/store/session';
-import { agentSelectors } from '@/store/session/selectors';
+import { useUserStore } from '@/store/user';
+import { modelProviderSelectors } from '@/store/user/selectors';
 
 const FileUpload = memo(() => {
   const { t } = useTranslation('chat');
@@ -18,8 +18,8 @@ const FileUpload = memo(() => {
   const theme = useTheme();
   const upload = useFileStore((s) => s.uploadFile);
 
-  const model = useSessionStore(agentSelectors.currentAgentModel);
-  const [canUpload, enabledFiles] = useGlobalStore((s) => [
+  const model = useAgentStore(agentSelectors.currentAgentModel);
+  const [canUpload, enabledFiles] = useUserStore((s) => [
     modelProviderSelectors.isModelEnabledUpload(model)(s),
     modelProviderSelectors.isModelEnabledFiles(model)(s),
   ]);

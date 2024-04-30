@@ -22,9 +22,9 @@ const metadata: Metadata = {
   },
   description,
   icons: {
-    apple: 'https://oss.puerhub.com/hub/apple-touch-icon.png',
-    icon: 'https://oss.puerhub.com/hub/favicon-32x32.png',
-    shortcut: 'https://oss.puerhub.com/hub/favicon.ico',
+    apple: '/icons/apple-touch-icon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.ico',
   },
   manifest: noManifest ? undefined : '/manifest.json',
   metadataBase: new URL(SITE_URL),

@@ -4,6 +4,40 @@
     "market": "Przeglądaj rynek",
     "start": "Rozpocznij teraz"
   },
+  "guide": {
+    "agents": {
+      "replaceBtn": "Zmień",
+      "title": "Nowe zalecenia asystenta:"
+    },
+    "defaultMessage": "Jestem Twoim prywatnym asystentem PuerHub AI. W czym mogę pomóc?\nJeśli potrzebujesz bardziej profesjonalnej lub spersonalizowanej pomocy, kliknij `+` aby stworzyć niestandardowego asystenta",
+    "qa": {
+      "q01": "Czym jest PuerHub?",
+      "q02": "Czym jest PuerHub AI?",
+      "q03": "Co oznaczają przekaźnik i agregacja w PuerHub AI?",
+      "q04": "Jakie funkcje wspiera PuerHub AI?",
+      "q05": "Czy PuerHub AI posiada społeczność do interakcji?",
+      "q06": "Jaki jest mechanizm zwrotu za zaproszenia?",
+      "q07": "Jak zintegrować API oraz dostosować odniesienia pochodne?",
+      "q08": "Potrzebuję rozwiązań korporacyjnych, jak się skontaktować?",
+      "q09": "Gdzie mogę zobaczyć dzienniki użytkowania?",
+      "q10": "Czy obsługuje rozpoznawanie i generowanie obrazów?",
+      "q11": "Czy obsługuje syntezę mowy i rozpoznawanie mowy?",
+      "q12": "Czy obsługuje system wtyczek?",
+      "q13": "Jak mogę uzyskać GPTs?",
+      "q14": "Czy obsługuje wielu dostawców usług AI?",
+      "q15": "Co robić, gdy napotkam problemy podczas użytkowania?"
+    },
+    "questions": {
+      "moreBtn": "Dowiedz się więcej",
+      "title": "Najczęściej zadawane pytania:"
+    },
+    "welcome": {
+      "afternoon": "Dzień dobry",
+      "morning": "Dzień dobry",
+      "night": "Dobry wieczór",
+      "noon": "Dzień dobry"
+    }
+  },
   "header": "Witaj",
   "pickAgent": "Wybierz szablon asystenta lub kontynuuj",
   "skip": "Pomiń tworzenie",

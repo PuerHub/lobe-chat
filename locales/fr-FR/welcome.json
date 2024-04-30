@@ -4,6 +4,40 @@
     "market": "Parcourir le marché",
     "start": "Démarrer maintenant"
   },
+  "guide": {
+    "agents": {
+      "replaceBtn": "Remplacer",
+      "title": "Nouvelles recommandations d'assistants :"
+    },
+    "defaultMessage": "Je suis votre assistant intelligent personnel PuerHub AI. Que puis-je faire pour vous maintenant ?\nSi vous avez besoin d'une assistance plus professionnelle ou personnalisée, vous pouvez cliquer sur `+` pour créer un assistant personnalisé.",
+    "qa": {
+      "q01": "Qu'est-ce que PuerHub ?",
+      "q02": "Qu'est-ce que PuerHub AI ?",
+      "q03": "Que signifient relais et agrégation dans PuerHub AI ?",
+      "q04": "Quelles fonctionnalités PuerHub AI prend-il en charge ?",
+      "q05": "PuerHub AI a-t-il une communauté pour l'interaction ?",
+      "q06": "Quel est le mécanisme de rémunération pour les invitations ?",
+      "q07": "Comment intégrer l'API et adapter les références dérivées ?",
+      "q08": "J'ai besoin de solutions d'entreprise, comment puis-je vous contacter ?",
+      "q09": "Où puis-je consulter les journaux d'utilisation ?",
+      "q10": "Prend-il en charge la reconnaissance et la génération d'images ?",
+      "q11": "Prend-il en charge la synthèse vocale et la reconnaissance vocale ?",
+      "q12": "Prend-il en charge un système de plugins ?",
+      "q13": "Comment puis-je obtenir des GPTs ?",
+      "q14": "Prend-il en charge plusieurs fournisseurs de services AI ?",
+      "q15": "Que dois-je faire si je rencontre des problèmes lors de l'utilisation ?"
+    },
+    "questions": {
+      "moreBtn": "En savoir plus",
+      "title": "Questions fréquentes :"
+    },
+    "welcome": {
+      "afternoon": "Bon après-midi",
+      "morning": "Bonjour",
+      "night": "Bonsoir",
+      "noon": "Bonjour"
+    }
+  },
   "header": "Bienvenue",
   "pickAgent": "Ou choisissez parmi les modèles d'agent suivants",
   "skip": "Passer",

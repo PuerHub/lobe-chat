@@ -4,6 +4,7 @@
   "appInitializing": "PuerHub AI is initializing, please wait...",
   "autoGenerate": "Auto Generate",
   "autoGenerateTooltip": "Auto-generate agent description based on prompts",
+  "blog": "Product Blog",
   "cancel": "Cancel",
   "changelog": "Changelog",
   "close": "Close",
@@ -26,6 +27,7 @@
     "globalSetting": "Export Global Settings"
   },
   "feedback": "Feedback",
+  "follow": "Follow us on {{name}}",
   "group": "Group",
   "historyRange": "History Range",
   "import": "Import Configuration",
@@ -90,10 +92,12 @@
   "manual": "Manual",
   "noDescription": "No description available",
   "oauth": "SSO Login",
+  "officialSite": "Official Website",
   "ok": "OK",
   "password": "Password",
   "pin": "Pin",
   "pinOff": "Unpin",
+  "privacy": "Privacy Policy",
   "regenerate": "Regenerate",
   "rename": "Rename",
   "reset": "Reset",
@@ -148,6 +152,7 @@
     "title": "Help PuerHub AI be better"
   },
   "temp": "Temporary",
+  "terms": "Terms of Service",
   "updateAgent": "Update Agent Information",
   "upgradeVersion": {
     "action": "Upgrade",

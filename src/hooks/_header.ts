@@ -3,13 +3,13 @@ import {
   OPENAI_END_POINT,
   PUERHUB_CHAT_ACCESS_CODE,
 } from '@/const/fetch';
-import { useGlobalStore } from '@/store/global';
-import { modelConfigSelectors, settingsSelectors } from '@/store/global/selectors';
+import { useUserStore } from '@/store/user';
+import { modelConfigSelectors, settingsSelectors } from '@/store/user/selectors';
 
 // TODO: Need to be removed after tts refactor
 // eslint-disable-next-line no-undef
 export const createHeaderWithOpenAI = (header?: HeadersInit): HeadersInit => {
-  const openai = modelConfigSelectors.openAIConfig(useGlobalStore.getState());
+  const openai = modelConfigSelectors.openAIConfig(useUserStore.getState());
 
   const apiKey = openai.apiKey || '';
   const endpoint = openai.endpoint || '';
@@ -19,6 +19,6 @@ export const createHeaderWithOpenAI = (header?: HeadersInit): HeadersInit => {
     ...header,
     [OPENAI_API_KEY_HEADER_KEY]: apiKey,
     [OPENAI_END_POINT]: endpoint,
-    [PUERHUB_CHAT_ACCESS_CODE]: settingsSelectors.password(useGlobalStore.getState()),
+    [PUERHUB_CHAT_ACCESS_CODE]: settingsSelectors.password(useUserStore.getState()),
   };
 };

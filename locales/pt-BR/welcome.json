@@ -4,6 +4,40 @@
     "market": "Explorar o mercado",
     "start": "Começar agora"
   },
+  "guide": {
+    "agents": {
+      "replaceBtn": "Trocar",
+      "title": "Recomendação de assistentes adicionais:"
+    },
+    "defaultMessage": "Eu sou o seu assistente de IA pessoal, PuerHub AI. Como posso ajudar você agora?\nSe precisar de assistência mais profissional ou personalizada, clique em `+` para criar um assistente personalizado",
+    "qa": {
+      "q01": "O que é PuerHub?",
+      "q02": "O que é PuerHub AI?",
+      "q03": "O que significa relay e agregação no PuerHub AI?",
+      "q04": "Quais funcionalidades o PuerHub AI suporta?",
+      "q05": "O PuerHub AI possui uma comunidade para interação?",
+      "q06": "Qual é o mecanismo de comissão por convite?",
+      "q07": "Como integrar com a API e adaptar referências derivadas?",
+      "q08": "Preciso de soluções empresariais, como posso entrar em contato?",
+      "q09": "Onde posso ver os registros de uso?",
+      "q10": "Ele suporta reconhecimento e geração de imagens?",
+      "q11": "Ele suporta síntese de voz e reconhecimento de voz?",
+      "q12": "Ele suporta um sistema de plugins?",
+      "q13": "Como posso obter GPTs?",
+      "q14": "Ele suporta vários provedores de serviços de AI?",
+      "q15": "O que devo fazer se eu encontrar problemas ao usá-lo?"
+    },
+    "questions": {
+      "moreBtn": "Saiba mais",
+      "title": "Perguntas frequentes:"
+    },
+    "welcome": {
+      "afternoon": "Boa tarde",
+      "morning": "Bom dia",
+      "night": "Boa noite",
+      "noon": "Boa tarde"
+    }
+  },
   "header": "Bem-vindo",
   "pickAgent": "Ou escolha entre os modelos de assistente abaixo",
   "skip": "Pular",

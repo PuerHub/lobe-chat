@@ -4,6 +4,45 @@
     "market": "Visit Market",
     "start": "Start Now"
   },
+  "footer": {
+    "manual": "User Manual",
+    "uptime": "Server Uptime",
+    "wechatGroup": "WeChat Group"
+  },
+  "guide": {
+    "agents": {
+      "replaceBtn": "Replace Batch",
+      "title": "New Assistant Recommendations:"
+    },
+    "defaultMessage": "I am your personal intelligent assistant PuerHub AI, how can I help you now?\nIf you need a more professional or customized assistant, you can click on `+` to create a custom assistant",
+    "qa": {
+      "q01": "What is PuerHub?",
+      "q02": "What is PuerHub AI?",
+      "q03": "What does relay and aggregation mean in PuerHub AI?",
+      "q04": "What features does PuerHub AI support?",
+      "q05": "Does PuerHub AI have a community for interaction?",
+      "q06": "What is the mechanism for invitation rebates?",
+      "q07": "How to integrate with the API and accommodate derivative references?",
+      "q08": "I need enterprise solutions, how can I contact you?",
+      "q09": "Where can I view the usage logs?",
+      "q10": "Does it support image recognition and generation?",
+      "q11": "Does it support speech synthesis and speech recognition?",
+      "q12": "Does it support a plugin system?",
+      "q13": "How can I obtain GPTs?",
+      "q14": "Does it support multiple AI service providers?",
+      "q15": "What should I do if I encounter problems while using it?"
+    },
+    "questions": {
+      "moreBtn": "Learn More",
+      "title": "Frequently Asked Questions:"
+    },
+    "welcome": {
+      "afternoon": "Good Afternoon",
+      "morning": "Good Morning",
+      "night": "Good Evening",
+      "noon": "Good Noon"
+    }
+  },
   "header": "Welcome",
   "import": {
     "title": "Confirm Import",

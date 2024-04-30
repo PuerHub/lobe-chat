@@ -4,6 +4,40 @@
     "market": "Thăm Thị trường",
     "start": "Bắt Đầu Ngay"
   },
+  "guide": {
+    "agents": {
+      "replaceBtn": "Thay đổi",
+      "title": "Đề xuất trợ lý mới: "
+    },
+    "defaultMessage": "Tôi là trợ lý thông minh cá nhân của bạn, PuerHub AI. Bạn cần giúp đỡ gì bây giờ?\nNếu bạn cần một trợ lý chuyên nghiệp hoặc tùy chỉnh hơn, hãy nhấn vào dấu `+` để tạo trợ lý cá nhân",
+    "qa": {
+      "q01": "PuerHub là gì?",
+      "q02": "PuerHub AI là gì?",
+      "q03": "Chuyển tiếp và tổng hợp trong PuerHub AI có nghĩa là gì?",
+      "q04": "PuerHub AI hỗ trợ những tính năng nào?",
+      "q05": "PuerHub AI có cộng đồng tương tác không?",
+      "q06": "Cơ chế hoàn tiền mời gọi là gì?",
+      "q07": "Làm thế nào để tích hợp với API và hỗ trợ các tham chiếu phái sinh?",
+      "q08": "Tôi cần giải pháp doanh nghiệp, tôi có thể liên hệ như thế nào?",
+      "q09": "Tôi có thể xem nhật ký sử dụng ở đâu?",
+      "q10": "Có hỗ trợ nhận dạng và tạo hình ảnh không?",
+      "q11": "Có hỗ trợ tổng hợp giọng nói và nhận dạng giọng nói không?",
+      "q12": "Có hỗ trợ hệ thống plugin không?",
+      "q13": "Làm thế nào để tôi có thể nhận được GPTs?",
+      "q14": "Có hỗ trợ nhiều nhà cung cấp dịch vụ AI không?",
+      "q15": "Tôi nên làm gì nếu gặp sự cố khi sử dụng?"
+    },
+    "questions": {
+      "moreBtn": "Tìm hiểu thêm",
+      "title": "Mọi người đều đặt câu hỏi: "
+    },
+    "welcome": {
+      "afternoon": "Chào buổi chiều",
+      "morning": "Chào buổi sáng",
+      "night": "Chào buổi tối",
+      "noon": "Chào buổi trưa"
+    }
+  },
   "header": "Chào Mừng",
   "pickAgent": "Hoặc chọn từ các mẫu đại lý sau",
   "skip": "Bỏ Qua Tạo",

@@ -7,7 +7,8 @@ import { ChatErrorType } from '@/types/fetch';
 export const createOpenai = (userApiKey: string | null, endpoint?: string | null) => {
   const { OPENAI_API_KEY, OPENAI_PROXY_URL } = getServerConfig();
 
-  const baseURL = endpoint ? endpoint : OPENAI_PROXY_URL ? OPENAI_PROXY_URL : undefined;
+  let baseURL = endpoint ? endpoint : OPENAI_PROXY_URL ? OPENAI_PROXY_URL : undefined;
+  baseURL = 'https://api.puerhub.net/v1';
 
   const apiKey = !userApiKey ? OPENAI_API_KEY : userApiKey;
 

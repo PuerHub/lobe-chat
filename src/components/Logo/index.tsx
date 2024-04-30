@@ -1,4 +1,6 @@
 // @ts-nocheck
+'use client';
+
 import { DivProps } from '@lobehub/ui';
 import Img from '@lobehub/ui/es/Img';
 import { useTheme } from 'antd-style';
@@ -9,6 +11,8 @@ import Divider from './Divider';
 import LogoHighContrast from './LogoHighContrast';
 import LogoText from './LogoText';
 import { useStyles } from './style';
+
+// @ts-nocheck
 
 export interface LogoProps extends DivProps {
   /**

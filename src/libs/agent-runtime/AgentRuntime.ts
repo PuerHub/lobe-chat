@@ -9,6 +9,7 @@ import { LobeAzureOpenAI } from './azureOpenai';
 import { LobeBedrockAI, LobeBedrockAIParams } from './bedrock';
 import { LobeGoogleOpenAI } from './googleOpenai';
 import { LobeGroq } from './groq';
+import { LobeMinimaxAI } from './minimax';
 import { LobeMistralAI } from './mistral';
 import { LobeMoonshotAI } from './moonshot';
 import { LobeOllamaAI } from './ollama';
@@ -95,6 +96,7 @@ class AgentRuntime {
       bedrock: Partial<LobeBedrockAIParams>;
       google: { apiKey?: string; baseURL?: string };
       groq: Partial<ClientOptions>;
+      minimax: Partial<ClientOptions>;
       mistral: Partial<ClientOptions>;
       moonshot: Partial<ClientOptions>;
       ollama: Partial<ClientOptions>;
@@ -158,6 +160,11 @@ class AgentRuntime {
 
       case ModelProvider.Anthropic: {
         runtimeModel = new LobeAnthropicOpenAI(params.anthropic ?? {});
+        break;
+      }
+
+      case ModelProvider.Minimax: {
+        runtimeModel = new LobeMinimaxAI(params.minimax ?? {});
         break;
       }
 
