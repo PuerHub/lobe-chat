@@ -8,7 +8,7 @@ import ProviderConfig from '../components/ProviderConfig';
 const OpenAIProvider = memo(() => {
   return (
     <ProviderConfig
-      modelList={{ showModelFetcher: true }}
+      // modelList={{ showModelFetcher: true }}
       provider={'openai'}
       showBrowserRequest
       title={<OpenAI.Combine size={24} />}

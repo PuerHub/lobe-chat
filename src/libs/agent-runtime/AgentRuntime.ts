@@ -134,7 +134,8 @@ class AgentRuntime {
       }
 
       case ModelProvider.Google: {
-        runtimeModel = await LobeGoogleOpenAI.fromAPIKey(params.google ?? {});
+        // runtimeModel = await LobeGoogleOpenAI.fromAPIKey(params.google ?? {});
+        runtimeModel = new LobeGoogleOpenAI(params.google ?? {});
         break;
       }
 

@@ -8,7 +8,7 @@ import ProviderConfig from '../components/ProviderConfig';
 const TogetherAIProvider = memo(() => {
   return (
     <ProviderConfig
-      checkModel={'togethercomputer/alpaca-7b'}
+      checkModel={'deepseek-ai/deepseek-coder-33b-instruct'}
       // modelList={{ showModelFetcher: true }}
       provider={'togetherai'}
       title={<Together.Combine size={26} type={'color'} />}

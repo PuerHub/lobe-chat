@@ -35,7 +35,7 @@ const createStore: StateCreator<UserStore, [['zustand/devtools', never]]> = (...
 export const useUserStore = createWithEqualityFn<UserStore>()(
   subscribeWithSelector(
     devtools(createStore, {
-      name: 'LobeChat_User' + (isDev ? '_DEV' : ''),
+      name: 'PuerHub_User' + (isDev ? '_DEV' : ''),
     }),
   ),
   shallow,

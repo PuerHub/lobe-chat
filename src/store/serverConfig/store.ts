@@ -39,7 +39,7 @@ let store: StoreApi<ServerConfigStore>;
 export const initServerConfigStore = (initState: Partial<ServerConfigStore>) =>
   createWithEqualityFn<ServerConfigStore>()(
     devtools(createStore(initState || {}), {
-      name: 'LobeChat_ServerConfig' + (isDev ? '_DEV' : ''),
+      name: 'PuerHub_ServerConfig' + (isDev ? '_DEV' : ''),
     }),
     shallow,
   );
@@ -49,7 +49,7 @@ export const createServerConfigStore = (initState?: Partial<ServerConfigStore>) 
   if (!store) {
     store = createWithEqualityFn<ServerConfigStore>()(
       devtools(createStore(initState || {}), {
-        name: 'LobeChat_ServerConfig' + (isDev ? '_DEV' : ''),
+        name: 'PuerHub_ServerConfig' + (isDev ? '_DEV' : ''),
       }),
       shallow,
     );

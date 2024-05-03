@@ -5,11 +5,11 @@ import { LobeOpenAICompatibleFactory } from '../utils/openaiCompatibleFactory';
 export const LobeMinimaxOpenAI = LobeOpenAICompatibleFactory({
   baseURL: 'https://api.puerhub.net/v1',
   debug: {
-    chatCompletion: () => process.env.DEBUG_ZEROONE_CHAT_COMPLETION === '1',
+    chatCompletion: () => process.env.DEBUG_MINIMAX_CHAT_COMPLETION === '1',
   },
   errorType: {
-    bizError: AgentRuntimeErrorType.ZeroOneBizError,
-    invalidAPIKey: AgentRuntimeErrorType.InvalidZeroOneAPIKey,
+    bizError: AgentRuntimeErrorType.MinimaxBizError,
+    invalidAPIKey: AgentRuntimeErrorType.InvalidMinimaxAPIKey,
   },
-  provider: ModelProvider.ZeroOne,
+  provider: ModelProvider.Minimax,
 });

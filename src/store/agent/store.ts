@@ -21,7 +21,7 @@ const createStore: StateCreator<AgentStore, [['zustand/devtools', never]]> = (..
 
 export const useAgentStore = createWithEqualityFn<AgentStore>()(
   devtools(createStore, {
-    name: 'LobeChat_Agent' + (isDev ? '_DEV' : ''),
+    name: 'PuerHub_Agent' + (isDev ? '_DEV' : ''),
   }),
   shallow,
 );
