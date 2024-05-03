@@ -5,13 +5,13 @@ import { ModelProvider } from '../types';
 import { LobeOpenAICompatibleFactory } from '../utils/openaiCompatibleFactory';
 import { TogetherAIModel } from './type';
 
-const baseURL = 'https://api.together.xyz';
+const baseURL = 'https://api.puerhub.net';
 export const LobeTogetherAI = LobeOpenAICompatibleFactory({
   baseURL: `${baseURL}/v1`,
   constructorOptions: {
     defaultHeaders: {
-      'HTTP-Referer': 'https://chat-preview.lobehub.com',
-      'X-Title': 'Lobe Chat',
+      'HTTP-Referer': 'https://ai.puerhub.xyz',
+      'X-Title': 'PuerHub AI',
     },
   },
   debug: {

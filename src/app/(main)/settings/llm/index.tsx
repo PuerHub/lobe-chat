@@ -1,16 +1,10 @@
 'use client';
 
-// import Link from 'next/link';
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Flexbox } from 'react-layout-kit';
 
-import PageTitle from '@/components/PageTitle';
-// import { MORE_MODEL_PROVIDER_REQUEST_URL } from '@/const/url';
-
-// import Footer from '../features/Footer';
 import Anthropic from './Anthropic';
 // import Azure from './Azure';
-import Bedrock from './Bedrock';
+// import Bedrock from './Bedrock';
 import Google from './Google';
 import Groq from './Groq';
 import Minimax from './Minimax';
@@ -19,24 +13,21 @@ import Moonshot from './Moonshot';
 // import Ollama from './Ollama';
 import OpenAI from './OpenAI';
 import OpenRouter from './OpenRouter';
-// import Perplexity from './Perplexity';
 import Reverse from './Reverse';
+// import Perplexity from './Perplexity';
 import TogetherAI from './TogetherAI';
 import ZeroOne from './ZeroOne';
 import Zhipu from './Zhipu';
 
-export default memo(() => {
-  const { t } = useTranslation('setting');
-
+const Page = () => {
   return (
-    <>
-      <PageTitle title={t('tab.llm')} />
+    <Flexbox gap={24}>
       <OpenAI />
       {/*<Ollama />*/}
       {/*<Azure />*/}
       <Google />
       <Anthropic />
-      <Bedrock />
+      {/*<Bedrock />*/}
       <OpenRouter />
       <TogetherAI />
       <Groq />
@@ -47,6 +38,10 @@ export default memo(() => {
       <Zhipu />
       <ZeroOne />
       <Reverse />
-    </>
+    </Flexbox>
   );
-});
+};
+
+Page.displayName = 'LlmSetting';
+
+export default Page;

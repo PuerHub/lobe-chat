@@ -9,7 +9,7 @@ import { LobeAzureOpenAI } from './azureOpenai';
 import { LobeBedrockAI, LobeBedrockAIParams } from './bedrock';
 import { LobeGoogleOpenAI } from './googleOpenai';
 import { LobeGroq } from './groq';
-import { LobeMinimaxAI } from './minimax';
+import { LobeMinimaxOpenAI } from './minimaxOpenai';
 import { LobeMistralAI } from './mistral';
 import { LobeMoonshotAI } from './moonshot';
 import { LobeOllamaAI } from './ollama';
@@ -164,7 +164,7 @@ class AgentRuntime {
       }
 
       case ModelProvider.Minimax: {
-        runtimeModel = new LobeMinimaxAI(params.minimax ?? {});
+        runtimeModel = new LobeMinimaxOpenAI(params.minimax ?? {});
         break;
       }
 
