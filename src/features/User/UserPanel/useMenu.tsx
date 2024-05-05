@@ -1,20 +1,34 @@
-import { Icon } from '@lobehub/ui';
+import { ActionIcon, Icon } from '@lobehub/ui';
 import { Badge } from 'antd';
-import { Book, HardDriveDownload, HardDriveUpload, LifeBuoy, Settings2, Users } from 'lucide-react';
+import {
+  Book,
+  HardDriveDownload,
+  HardDriveUpload,
+  LifeBuoy,
+  Maximize,
+  Settings2,
+  Users,
+} from 'lucide-react';
 import Link from 'next/link';
 import { PropsWithChildren, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
+import urlJoin from 'url-join';
 
 import { type MenuProps } from '@/components/Menu';
 import { GROUP_QRCODE_URL, MANUAL_URL } from '@/const/url';
 import DataImporter from '@/features/DataImporter';
+import { useOpenSettings } from '@/hooks/useInterceptingRoutes';
+import { useQueryRoute } from '@/hooks/useQueryRoute';
 import { configService } from '@/services/config';
+import { SettingsTabs } from '@/store/global/initialState';
 
 import { useNewVersion } from './useNewVersion';
 
 export const useMenu = () => {
+  const router = useQueryRoute();
   const hasNewVersion = useNewVersion();
+  const openSettings = useOpenSettings();
   const { t } = useTranslation(['common', 'setting']);
 
   const NewVersionBadge = useCallback(
@@ -29,6 +43,29 @@ export const useMenu = () => {
     },
     [t],
   );
+
+  const settings: MenuProps['items'] = [
+    {
+      icon: <Icon icon={Settings2} />,
+      key: 'setting',
+      label: (
+        <Flexbox align={'center'} horizontal>
+          <Flexbox flex={1} horizontal onClick={openSettings}>
+            <NewVersionBadge showBadge={hasNewVersion}>{t('userPanel.setting')}</NewVersionBadge>
+          </Flexbox>
+          <ActionIcon
+            icon={Maximize}
+            onClick={() => router.push(urlJoin('/settings', SettingsTabs.Common))}
+            size={'small'}
+            title={t('fullscreen')}
+          />
+        </Flexbox>
+      ),
+    },
+    {
+      type: 'divider',
+    },
+  ];
 
   const exports: MenuProps['items'] = [
     {
@@ -65,21 +102,6 @@ export const useMenu = () => {
       icon: <Icon icon={HardDriveDownload} />,
       key: 'export',
       label: t('export'),
-    },
-    {
-      type: 'divider',
-    },
-  ];
-
-  const settings: MenuProps['items'] = [
-    {
-      icon: <Icon icon={Settings2} />,
-      key: 'setting',
-      label: (
-        <Link href={'/settings'}>
-          <NewVersionBadge showBadge={hasNewVersion}>{t('userPanel.setting')}</NewVersionBadge>
-        </Link>
-      ),
     },
     {
       type: 'divider',
