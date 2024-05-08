@@ -40,5 +40,5 @@ export const DEFAULT_PREFERENCE: UserPreference = {
 export const initialPreferenceState: UserPreferenceState = {
   isPreferenceInit: false,
   preference: DEFAULT_PREFERENCE,
-  preferenceStorage: new AsyncLocalStorage('LOBE_PREFERENCE'),
+  preferenceStorage: new AsyncLocalStorage('PUERHUB_PREFERENCE'),
 };

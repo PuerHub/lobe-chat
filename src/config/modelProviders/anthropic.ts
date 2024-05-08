@@ -13,16 +13,16 @@ const Anthropic: ModelProviderCard = {
       tokens: 200_000,
       vision: true,
     },
-    // {
-    //   description:
-    //     'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
-    //   displayName: 'Claude 3 Opus',
-    //   enabled: true,
-    //   id: 'claude-3-opus-20240229',
-    //   maxOutput: 4096,
-    //   tokens: 200_000,
-    //   vision: true,
-    // },
+    {
+      description:
+        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
+      displayName: 'Claude 3 Opus',
+      enabled: true,
+      id: 'claude-3-opus-20240229',
+      maxOutput: 4096,
+      tokens: 200_000,
+      vision: true,
+    },
     {
       description:
         'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',

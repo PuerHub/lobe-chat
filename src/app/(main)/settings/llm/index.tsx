@@ -21,7 +21,7 @@ import Zhipu from './Zhipu';
 
 const Page = () => {
   return (
-    <Flexbox gap={24}>
+    <Flexbox gap={24} width={'100%'}>
       <OpenAI />
       {/*<Ollama />*/}
       {/*<Azure />*/}

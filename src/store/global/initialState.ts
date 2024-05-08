@@ -68,6 +68,6 @@ export const initialState: GlobalState = {
     showSessionPanel: true,
     showSystemRole: false,
   },
-  preferenceStorage: new AsyncLocalStorage('LOBE_GLOBAL_PREFERENCE'),
+  preferenceStorage: new AsyncLocalStorage('PUERHUB_GLOBAL_PREFERENCE'),
   sidebarKey: SidebarTabKey.Chat,
 };

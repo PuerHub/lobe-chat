@@ -11,7 +11,7 @@ import { type StoreState, initialState } from './initialState';
 
 export type Store = StoreAction & StoreState;
 
-const LOBE_AGENT_MARKET = 'LOBE_AGENT_MARKET';
+const LOBE_AGENT_MARKET = 'PUERHUB_AGENT_MARKET';
 
 const persistOptions: PersistOptions<Store> = {
   name: LOBE_AGENT_MARKET,

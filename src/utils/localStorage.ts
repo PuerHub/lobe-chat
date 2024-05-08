@@ -1,8 +1,8 @@
-const PREV_KEY = 'LOBE_GLOBAL';
+const PREV_KEY = 'PUERHUB_GLOBAL';
 
 // LOBE_PREFERENCE for userStore
 // LOBE_GLOBAL_PREFERENCE for globalStore
-type StorageKey = 'LOBE_PREFERENCE' | 'LOBE_GLOBAL_PREFERENCE';
+type StorageKey = 'PUERHUB_PREFERENCE' | 'PUERHUB_GLOBAL_PREFERENCE';
 
 export class AsyncLocalStorage<State> {
   private storageKey: StorageKey;
@@ -20,7 +20,7 @@ export class AsyncLocalStorage<State> {
       const preference = data.state.preference;
 
       if (data.state?.preference) {
-        localStorage.setItem('LOBE_PREFERENCE', JSON.stringify(preference));
+        localStorage.setItem('PUERHUB_PREFERENCE', JSON.stringify(preference));
       }
       localStorage.removeItem(PREV_KEY);
     }

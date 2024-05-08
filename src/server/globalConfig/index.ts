@@ -6,6 +6,7 @@ import {
   TogetherAIProviderCard,
 } from '@/config/modelProviders';
 import { getServerConfig } from '@/config/server';
+import { enableNextAuth } from '@/const/auth';
 import { GlobalServerConfig } from '@/types/serverConfig';
 import { extractEnabledModels, transformToChatModelCards } from '@/utils/parseModels';
 
@@ -14,7 +15,6 @@ import { parseAgentConfig } from './parseDefaultAgent';
 export const getServerGlobalConfig = () => {
   const {
     ENABLE_LANGFUSE,
-    ENABLE_OAUTH_SSO,
 
     DEFAULT_AGENT_CONFIG,
     OPENAI_MODEL_LIST,
@@ -52,7 +52,7 @@ export const getServerGlobalConfig = () => {
       config: parseAgentConfig(DEFAULT_AGENT_CONFIG),
     },
 
-    enabledOAuthSSO: ENABLE_OAUTH_SSO,
+    enabledOAuthSSO: enableNextAuth,
     languageModel: {
       anthropic: {
         enabled: ENABLED_ANTHROPIC,
