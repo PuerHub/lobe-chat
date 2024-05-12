@@ -79,7 +79,7 @@ export const chatShare: StateCreator<ChatStore, [['zustand/devtools', never]], [
             draft.push({ from: 'gpt', value: i.content });
             break;
           }
-          case 'function': {
+          case 'tool': {
             if (withPluginInfo)
               draft.push(
                 PLUGIN_INFO({
