@@ -14,7 +14,7 @@
   "copySuccess": "Copied successfully",
   "dataStatistics": {
     "messages": "Messages",
-    "sessions": "Assistants",
+    "sessions": "Agents",
     "today": "Today's New",
     "topics": "Topics"
   },
@@ -59,6 +59,7 @@
     },
     "title": "Import Data"
   },
+  "installPWA": "Install browser app",
   "joinGroup": "Join Group",
   "lang": {
     "ar": "Arabic",
@@ -172,6 +173,7 @@
   "userPanel": {
     "anonymousNickName": "Anonymous User",
     "billing": "Billing Management",
+    "data": "Data Storage",
     "defaultNickname": "Community User",
     "discord": "Community Support",
     "docs": "Documentation",

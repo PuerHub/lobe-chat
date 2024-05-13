@@ -1,6 +1,6 @@
 import { t } from 'i18next';
 
-import { enableAuth } from '@/const/auth';
+import { enableAuth, enableClerk } from '@/const/auth';
 import { UserStore } from '@/store/user';
 import { LobeUser } from '@/types/user';
 
@@ -48,4 +48,5 @@ const isLogin = (s: UserStore) => {
 export const authSelectors = {
   isLogin,
   isLoginWithAuth: (s: UserStore) => s.isSignedIn,
+  isLoginWithClerk: (s: UserStore) => s.isSignedIn && enableClerk,
 };
