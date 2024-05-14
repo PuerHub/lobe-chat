@@ -1,6 +1,7 @@
 import {
   AnthropicProviderCard,
   BedrockProviderCard,
+  DeepSeekProviderCard,
   GoogleProviderCard,
   GroqProviderCard,
   MinimaxProviderCard,
@@ -50,7 +51,7 @@ export const DEFAULT_AGENT_CONFIG: LobeAgentConfig = {
   displayMode: 'chat',
   enableAutoCreateTopic: true,
   historyCount: 1,
-  model: 'gpt-4-turbo',
+  model: 'gpt-4o',
   params: {
     frequency_penalty: 0,
     presence_penalty: 0,
@@ -80,6 +81,11 @@ export const DEFAULT_LLM_CONFIG: GlobalLLMConfig = {
     enabledModels: filterEnabledModels(BedrockProviderCard),
     region: 'us-east-1',
     secretAccessKey: '',
+  },
+  deepseek: {
+    apiKey: '',
+    enabled: false,
+    enabledModels: filterEnabledModels(DeepSeekProviderCard),
   },
   google: {
     apiKey: '',

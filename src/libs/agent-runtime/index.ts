@@ -3,6 +3,7 @@ export { LobeAnthropicOpenAI } from './anthropicOpenai';
 export { LobeAzureOpenAI } from './azureOpenai';
 export * from './BaseAI';
 export { LobeBedrockAI } from './bedrock';
+export { LobeDeepSeekAI } from './deepseek';
 export * from './error';
 export { LobeGoogleOpenAI } from './googleOpenai';
 export { LobeGroq } from './groq';

@@ -52,6 +52,9 @@ export const AgentRuntimeErrorType = {
 
   InvalidMinimaxAPIKey: 'InvalidMinimaxAPIKey',
   MinimaxBizError: 'MinimaxBizError',
+
+  InvalidDeepSeekAPIKey: 'InvalidDeepSeekAPIKey',
+  DeepSeekBizError: 'DeepSeekBizError',
 } as const;
 
 export type ILobeAgentRuntimeErrorType =

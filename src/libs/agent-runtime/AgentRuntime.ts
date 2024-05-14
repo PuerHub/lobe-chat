@@ -7,6 +7,7 @@ import { LobeRuntimeAI } from './BaseAI';
 import { LobeAnthropicOpenAI } from './anthropicOpenai';
 import { LobeAzureOpenAI } from './azureOpenai';
 import { LobeBedrockAI, LobeBedrockAIParams } from './bedrock';
+import { LobeDeepSeekAI } from './deepseek';
 import { LobeGoogleOpenAI } from './googleOpenai';
 import { LobeGroq } from './groq';
 import { LobeMinimaxOpenAI } from './minimaxOpenai';
@@ -102,6 +103,7 @@ class AgentRuntime {
       anthropic: Partial<ClientOptions>;
       azure: { apiVersion?: string; apikey?: string; endpoint?: string };
       bedrock: Partial<LobeBedrockAIParams>;
+      deepseek: Partial<ClientOptions>;
       google: { apiKey?: string; baseURL?: string };
       groq: Partial<ClientOptions>;
       minimax: Partial<ClientOptions>;
@@ -169,6 +171,11 @@ class AgentRuntime {
 
       case ModelProvider.Anthropic: {
         runtimeModel = new LobeAnthropicOpenAI(params.anthropic ?? {});
+        break;
+      }
+
+      case ModelProvider.DeepSeek: {
+        runtimeModel = new LobeDeepSeekAI(params.deepseek ?? {});
         break;
       }
 

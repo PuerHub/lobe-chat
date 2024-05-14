@@ -34,6 +34,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
           const providers: GlobalLLMProviderKey[] = [
             'openai',
             'zhipu',
+            'deepseek',
             'google',
             'anthropic',
             'moonshot',

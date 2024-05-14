@@ -14,6 +14,7 @@ import { parseAgentConfig } from './parseDefaultAgent';
 
 export const getServerGlobalConfig = () => {
   const {
+    ACCESS_CODES,
     ENABLE_LANGFUSE,
 
     DEFAULT_AGENT_CONFIG,
@@ -24,6 +25,7 @@ export const getServerGlobalConfig = () => {
     ENABLED_AWS_BEDROCK,
     ENABLED_GOOGLE,
     ENABLED_GROQ,
+    ENABLED_DEEPSEEK,
     ENABLED_PERPLEXITY,
     ENABLED_ANTHROPIC,
     ENABLED_MINIMAX,
@@ -52,6 +54,7 @@ export const getServerGlobalConfig = () => {
       config: parseAgentConfig(DEFAULT_AGENT_CONFIG),
     },
 
+    enabledAccessCode: ACCESS_CODES?.length > 0,
     enabledOAuthSSO: enableNextAuth,
     languageModel: {
       anthropic: {
@@ -67,6 +70,7 @@ export const getServerGlobalConfig = () => {
         }),
       },
       bedrock: { enabled: ENABLED_AWS_BEDROCK },
+      deepseek: { enabled: ENABLED_DEEPSEEK },
       google: { enabled: ENABLED_GOOGLE },
       groq: { enabled: ENABLED_GROQ },
       minimax: { enabled: ENABLED_MINIMAX },

@@ -8,6 +8,7 @@ import {
   LobeAnthropicOpenAI,
   LobeAzureOpenAI,
   LobeBedrockAI,
+  LobeDeepSeekAI,
   LobeGoogleOpenAI,
   LobeGroq,
   LobeMistralAI,
@@ -871,6 +872,21 @@ describe('AgentRuntimeOnClient', () => {
         const runtime = await initializeWithClientStore(ModelProvider.Groq, {});
         expect(runtime).toBeInstanceOf(AgentRuntime);
         expect(runtime['_runtime']).toBeInstanceOf(LobeGroq);
+      });
+
+      it('DeepSeek provider: with apiKey', async () => {
+        merge(initialSettingsState, {
+          settings: {
+            languageModel: {
+              deepseek: {
+                apiKey: 'user-deepseek-key',
+              },
+            },
+          },
+        } as UserSettingsState) as unknown as UserStore;
+        const runtime = await initializeWithClientStore(ModelProvider.DeepSeek, {});
+        expect(runtime).toBeInstanceOf(AgentRuntime);
+        expect(runtime['_runtime']).toBeInstanceOf(LobeDeepSeekAI);
       });
 
       /**

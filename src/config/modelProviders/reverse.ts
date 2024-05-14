@@ -26,6 +26,14 @@ const Reverse: ModelProviderCard = {
       id: 'gpt-4-all',
       vision: false,
     },
+    {
+      displayName: `GPT 4o All`,
+      enabled: true,
+      files: false,
+      functionCall: false,
+      id: 'gpt-4o-all',
+      vision: false,
+    },
   ],
   id: 'reverse',
 };
