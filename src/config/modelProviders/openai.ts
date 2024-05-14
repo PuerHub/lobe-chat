@@ -29,8 +29,10 @@ const OpenAI: ModelProviderCard = {
       tokens: 4096,
     },
     {
+      description: 'Currently points to gpt-3.5-turbo-16k-0613',
       displayName: 'GPT-3.5 Turbo 16K',
       id: 'gpt-3.5-turbo-16k',
+      legacy: true,
       tokens: 16_385,
     },
     {
@@ -43,9 +45,10 @@ const OpenAI: ModelProviderCard = {
       displayName: 'GPT-3.5 Turbo 16K (0613)',
       id: 'gpt-3.5-turbo-16k-0613',
       legacy: true,
-      tokens: 4096,
+      tokens: 16_385,
     },
     {
+      description: 'Currently points to gpt-4-0125-preview',
       displayName: 'GPT-4 Turbo Preview',
       functionCall: true,
       id: 'gpt-4-turbo-preview',
@@ -58,7 +61,7 @@ const OpenAI: ModelProviderCard = {
       tokens: 128_000,
     },
     {
-      description: 'GPT-4 视觉预览版，支持视觉任务',
+      description: 'Currently points to gpt-4-1106-vision-preview',
       displayName: 'GPT-4 Turbo Vision Preview',
       id: 'gpt-4-vision-preview',
       tokens: 128_000,
@@ -77,6 +80,7 @@ const OpenAI: ModelProviderCard = {
       tokens: 128_000,
     },
     {
+      description: 'Currently points to gpt-4-0613',
       displayName: 'GPT-4',
       // enabled: true,
       functionCall: true,
@@ -90,6 +94,7 @@ const OpenAI: ModelProviderCard = {
       tokens: 8192,
     },
     {
+      description: 'Currently points to gpt-4-32k-0613',
       displayName: 'GPT-4 32K',
       enabled: true,
       functionCall: true,
@@ -103,7 +108,7 @@ const OpenAI: ModelProviderCard = {
       tokens: 32_768,
     },
     {
-      description: 'GPT-4 Turbo',
+      description: 'GPT-4 Turbo with Vision',
       displayName: 'GPT-4 Turbo',
       enabled: true,
       functionCall: true,
@@ -120,7 +125,7 @@ const OpenAI: ModelProviderCard = {
       vision: true,
     },
     {
-      description: 'GPT-4o',
+      description: 'Currently points to gpt-4o-2024-05-13',
       displayName: 'GPT-4o',
       enabled: true,
       functionCall: true,
@@ -129,21 +134,13 @@ const OpenAI: ModelProviderCard = {
       vision: true,
     },
     {
-      description: 'GPT-4o (240513)',
-      displayName: 'GPT-4o (240513)',
+      description: 'GPT-4o (2024-05-13)',
+      displayName: 'GPT-4o (2024-05-13)',
       functionCall: true,
       id: 'gpt-4o-2024-05-13',
       tokens: 128_000,
       vision: true,
     },
-    // {
-    //   displayName: 'GPT-4 ALL',
-    //   files: true,
-    //   functionCall: true,
-    //   id: 'gpt-4-all',
-    //   tokens: 32_768,
-    //   vision: true,
-    // },
   ],
   enabled: true,
   id: 'openai',
