@@ -52,7 +52,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       card: 'summary_large_image',
       description: t('chat.description'),
       images: ['/og/cover.png'],
-      site: '@lobehub',
+      site: '@puerhub',
       title: t('chat.title'),
     },
   };

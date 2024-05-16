@@ -14,6 +14,8 @@ import { useStyles } from './style';
 
 // @ts-nocheck
 
+// @ts-nocheck
+
 export interface LogoProps extends DivProps {
   /**
    * @description Additional React Node to be rendered next to the logo
@@ -53,7 +55,7 @@ const Logo = memo<LogoProps>(({ type = '3d', size = 32, style, extra, className,
     case 'flat': {
       logoComponent = (
         <Img
-          alt="lobehub"
+          alt="puerhub"
           height={size}
           src={'https://oss.puerhub.com/hub/logo.webp'}
           style={style}
