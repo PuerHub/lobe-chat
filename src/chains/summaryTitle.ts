@@ -23,7 +23,7 @@ export const chainSummaryTitle = async (
   const tokens = await chatHelpers.getMessagesTokenCount(finalMessages);
   let model: string | undefined = undefined;
   if (tokens > 16_000) {
-    model = 'gpt-4o';
+    model = 'gpt-4-turbo';
   }
 
   return {

@@ -51,6 +51,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
               apiKey: apiKey,
               enabled: true,
               endpoint: 'https://api.puerhub.net/v1',
+              fetchOnClient: true,
             });
           }
 

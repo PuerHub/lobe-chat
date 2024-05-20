@@ -17,6 +17,11 @@ const unit8ArrayToJSONChunk = (unit8Array: Uint8Array): OpenAI.ChatCompletionChu
     chunkValue = chunkValue.slice(5).trim();
   }
 
+  const splitData = chunkValue.split('\ndata:');
+  if (splitData.length > 1) {
+    chunkValue = splitData[0].trim();
+  }
+
   try {
     return JSON.parse(chunkValue);
   } catch (e) {

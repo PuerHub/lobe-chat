@@ -47,6 +47,11 @@ export const transformOpenAIStream = (chunk: OpenAI.ChatCompletionChunk): Stream
     } as StreamProtocolToolCallChunk;
   }
 
+  // azure
+  if (item.finish_reason === null && !item.delta) {
+    return { data: chunk, id: chunk.id, type: 'data' };
+  }
+
   // 给定结束原因
   if (item.finish_reason) {
     return { data: item.finish_reason, id: chunk.id, type: 'stop' };
