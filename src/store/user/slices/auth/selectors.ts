@@ -48,5 +48,5 @@ const isLogin = (s: UserStore) => {
 export const authSelectors = {
   isLogin,
   isLoginWithAuth: (s: UserStore) => s.isSignedIn,
-  isLoginWithClerk: (s: UserStore) => s.isSignedIn && enableClerk,
+  isLoginWithClerk: (s: UserStore): boolean => (s.isSignedIn && enableClerk) || false,
 };

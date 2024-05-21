@@ -28,6 +28,10 @@ interface ModelProviderIconProps {
 
 const ModelProviderIcon = memo<ModelProviderIconProps>(({ provider }) => {
   switch (provider) {
+    case 'lobehub': {
+      return <Logo size={20} />;
+    }
+
     case ModelProvider.ZhiPu: {
       return <Zhipu size={20} />;
     }

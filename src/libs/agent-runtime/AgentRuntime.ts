@@ -1,7 +1,6 @@
 import { ClientOptions } from 'openai';
 
 import type { TracePayload } from '@/const/trace';
-import LobeReverse from '@/libs/agent-runtime/reverse';
 
 import { LobeRuntimeAI } from './BaseAI';
 import { LobeAnthropicOpenAI } from './anthropicOpenai';
@@ -17,6 +16,7 @@ import { LobeOllamaAI } from './ollama';
 import { LobeOpenAI } from './openai';
 import { LobeOpenRouterAI } from './openrouter';
 import { LobePerplexityAI } from './perplexity';
+import { LobeReverse } from './reverse';
 import { LobeTogetherAI } from './togetherai';
 import {
   ChatCompetitionOptions,
