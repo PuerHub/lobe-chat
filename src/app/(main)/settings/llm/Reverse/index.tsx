@@ -12,6 +12,7 @@ const ReverseProvider = memo(() => {
     <ProviderConfig
       checkModel={'gpt-4-all'}
       provider={'reverse'}
+      showApiKey={false}
       title={<Logo extra={t('llm.reverse')} type={'combine'} />}
     />
   );

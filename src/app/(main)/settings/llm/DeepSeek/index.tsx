@@ -13,6 +13,7 @@ const DeepSeekProvider = memo(() => {
       checkModel={'deepseek-chat'}
       // modelList={{ showModelFetcher: true }}
       provider={ModelProvider.DeepSeek}
+      showApiKey={false}
       title={<DeepSeek.Combine size={28} type={'color'} />}
     />
   );

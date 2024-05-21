@@ -12,6 +12,7 @@ const MistralProvider = memo(() => {
     <ProviderConfig
       checkModel={'open-mistral-7b'}
       provider={ModelProvider.Mistral}
+      showApiKey={false}
       title={<Mistral.Combine size={26} type={'color'} />}
     />
   );

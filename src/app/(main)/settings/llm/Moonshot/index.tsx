@@ -15,6 +15,7 @@ const MoonshotProvider = memo(() => {
     <ProviderConfig
       checkModel={'moonshot-v1-8k'}
       provider={ModelProvider.Moonshot}
+      showApiKey={false}
       title={
         <Moonshot.Combine
           color={theme.isDarkMode ? theme.colorText : Moonshot.colorPrimary}

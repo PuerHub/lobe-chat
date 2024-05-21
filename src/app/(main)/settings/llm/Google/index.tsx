@@ -17,6 +17,7 @@ const GoogleProvider = memo(() => {
       // proxyUrl={{
       //   placeholder: 'https://generativelanguage.googleapis.com',
       // }}
+      showApiKey={false}
       title={
         <Flexbox align={'center'} gap={8} horizontal>
           <Google.BrandColor size={22} />

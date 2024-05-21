@@ -13,6 +13,7 @@ const OpenRouterProvider = memo(() => {
       checkModel={'mistralai/mistral-7b-instruct:free'}
       // modelList={{ showModelFetcher: true }}
       provider={ModelProvider.OpenRouter}
+      showApiKey={false}
       title={<OpenRouter.Combine iconProps={{ color: OpenRouter.colorPrimary }} size={20} />}
     />
   );

@@ -12,6 +12,7 @@ const MinimaxProvider = memo(() => {
     <ProviderConfig
       checkModel={'abab5.5s-chat'}
       provider={ModelProvider.Minimax}
+      showApiKey={false}
       title={<Minimax.Combine size={32} type={'color'} />}
     />
   );

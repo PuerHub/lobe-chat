@@ -10,6 +10,7 @@ const ZhipuProvider = memo(() => {
     <ProviderConfig
       checkModel={'glm-3-turbo'}
       provider={'zhipu'}
+      showApiKey={false}
       title={<Zhipu.Combine size={32} type={'color'} />}
     />
   );

@@ -16,6 +16,7 @@ const OpenAIProvider = memo(() => {
       //   }
       // }
       // showApiKey={showOpenAIApiKey}
+      showApiKey={false}
       title={<OpenAI.Combine size={24} />}
     />
   );

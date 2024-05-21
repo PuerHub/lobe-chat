@@ -11,6 +11,7 @@ const TogetherAIProvider = memo(() => {
       checkModel={'deepseek-ai/deepseek-coder-33b-instruct'}
       // modelList={{ showModelFetcher: true }}
       provider={'togetherai'}
+      showApiKey={false}
       title={<Together.Combine size={26} type={'color'} />}
     />
   );

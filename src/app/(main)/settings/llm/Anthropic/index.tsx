@@ -14,6 +14,7 @@ const AnthropicProvider = memo(() => {
     <ProviderConfig
       checkModel={'claude-3-haiku-20240307'}
       provider={ModelProvider.Anthropic}
+      showApiKey={false}
       // proxyUrl={{
       //   placeholder: 'https://api.anthropic.com',
       // }}

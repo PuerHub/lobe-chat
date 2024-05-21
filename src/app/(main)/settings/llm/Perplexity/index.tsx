@@ -15,6 +15,7 @@ const PerplexityProvider = memo(() => {
       proxyUrl={{
         placeholder: 'https://api.perplexity.ai',
       }}
+      showApiKey={false}
       title={<Perplexity.Combine size={24} type={'color'} />}
     />
   );

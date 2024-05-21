@@ -12,6 +12,7 @@ const ZeroOneProvider = memo(() => {
     <ProviderConfig
       checkModel={'yi-34b-chat-0205'}
       provider={ModelProvider.ZeroOne}
+      showApiKey={false}
       title={<ZeroOne.Text size={20} />}
     />
   );

@@ -18,6 +18,7 @@ const GroqProvider = memo(() => {
       // proxyUrl={{
       //   placeholder: 'https://api.groq.com/openai/v1',
       // }}
+      showApiKey={false}
       title={<Groq.Text color={theme.isDarkMode ? theme.colorText : Groq.colorPrimary} size={20} />}
     />
   );
