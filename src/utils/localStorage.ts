@@ -2,7 +2,7 @@ const PREV_KEY = 'PUERHUB_GLOBAL';
 
 // LOBE_PREFERENCE for userStore
 // LOBE_GLOBAL_PREFERENCE for globalStore
-type StorageKey = 'PUERHUB_PREFERENCE' | 'PUERHUB_GLOBAL_PREFERENCE';
+type StorageKey = 'PUERHUB_PREFERENCE' | 'PUERHUB_SYSTEM_STATUS';
 
 export class AsyncLocalStorage<State> {
   private storageKey: StorageKey;

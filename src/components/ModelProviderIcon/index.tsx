@@ -5,6 +5,7 @@ import {
   DeepSeek,
   Google,
   Groq,
+  LobeHub,
   Minimax,
   Mistral,
   Moonshot,
@@ -29,7 +30,7 @@ interface ModelProviderIconProps {
 const ModelProviderIcon = memo<ModelProviderIconProps>(({ provider }) => {
   switch (provider) {
     case 'lobehub': {
-      return <Logo size={20} />;
+      return <LobeHub size={20} />;
     }
 
     case ModelProvider.ZhiPu: {

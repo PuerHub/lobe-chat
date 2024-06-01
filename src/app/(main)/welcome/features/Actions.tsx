@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { useUserStore } from '@/store/user';
-import { GlobalLLMProviderKey } from '@/types/settings';
+import { GlobalLLMProviderKey } from '@/types/user/settings';
 
 const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { t } = useTranslation('welcome');
@@ -19,7 +19,10 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
   const query = useSearchParams();
   const apiKey = useMemo(() => query.get('apiKey'), [query]);
 
-  const [setModelProviderConfig] = useUserStore((s) => [s.setModelProviderConfig]);
+  const [setModelProviderConfig, updateKeyVaultConfig] = useUserStore((s) => [
+    s.setModelProviderConfig,
+    s.updateKeyVaultConfig,
+  ]);
 
   const { modal } = App.useApp();
 
@@ -48,10 +51,13 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
 
           for (const provider of providers) {
             await setModelProviderConfig(provider, {
-              apiKey: apiKey,
               enabled: true,
-              endpoint: 'https://api.puerhub.net/v1',
               fetchOnClient: true,
+            });
+
+            await updateKeyVaultConfig(provider, {
+              apiKey: apiKey,
+              baseURL: 'https://api.puerhub.net/v1',
             });
           }
 

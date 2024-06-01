@@ -49,12 +49,6 @@
   "scope": "/",
   "screenshots": [
     {
-      "src": "/screenshots/shot-1.mobile.png",
-      "sizes": "640x1138",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
       "src": "/screenshots/shot-2.mobile.png",
       "sizes": "640x1138",
       "type": "image/png",
@@ -71,42 +65,6 @@
       "sizes": "640x1138",
       "type": "image/png",
       "form_factor": "narrow"
-    },
-    {
-      "src": "/screenshots/shot-5.mobile.png",
-      "sizes": "640x1138",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/screenshots/shot-1.desktop.png",
-      "sizes": "1280x676",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/shot-2.desktop.png",
-      "sizes": "1280x676",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/shot-3.desktop.png",
-      "sizes": "1280x676",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/shot-4.desktop.png",
-      "sizes": "1280x676",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/shot-5.desktop.png",
-      "sizes": "1280x676",
-      "type": "image/png",
-      "form_factor": "wide"
     }
   ],
   "short_name": "PuerHub",
