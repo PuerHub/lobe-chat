@@ -8,8 +8,8 @@ export const LobeReverse = LobeOpenAICompatibleFactory({
     chatCompletion: () => process.env.DEBUG_REVERSE_CHAT_COMPLETION === '1',
   },
   errorType: {
-    bizError: AgentRuntimeErrorType.ReverseBizError,
-    invalidAPIKey: AgentRuntimeErrorType.InvalidReverseAPIKey,
+    bizError: AgentRuntimeErrorType.ProviderBizError,
+    invalidAPIKey: AgentRuntimeErrorType.InvalidProviderAPIKey,
   },
   provider: ModelProvider.Reverse,
 });

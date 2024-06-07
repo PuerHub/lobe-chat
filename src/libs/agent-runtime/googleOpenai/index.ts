@@ -8,8 +8,8 @@ export const LobeGoogleOpenAI = LobeOpenAICompatibleFactory({
     chatCompletion: () => process.env.DEBUG_GOOGLE_CHAT_COMPLETION === '1',
   },
   errorType: {
-    bizError: AgentRuntimeErrorType.GoogleBizError,
-    invalidAPIKey: AgentRuntimeErrorType.InvalidGoogleAPIKey,
+    bizError: AgentRuntimeErrorType.ProviderBizError,
+    invalidAPIKey: AgentRuntimeErrorType.InvalidProviderAPIKey,
   },
   provider: ModelProvider.Google,
 });

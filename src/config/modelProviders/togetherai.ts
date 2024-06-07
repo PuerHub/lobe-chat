@@ -70,7 +70,10 @@ const TogetherAI: ModelProviderCard = {
       tokens: 32_768,
     },
   ],
+  checkModel: 'deepseek-ai/deepseek-coder-33b-instruct',
   id: 'togetherai',
+  // modelList: { showModelFetcher: true },
+  name: 'Together AI',
 };
 
 export default TogetherAI;

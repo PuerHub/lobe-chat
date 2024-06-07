@@ -16,6 +16,7 @@ import { LobeOllamaAI } from './ollama';
 import { LobeOpenAI } from './openai';
 import { LobeOpenRouterAI } from './openrouter';
 import { LobePerplexityAI } from './perplexity';
+import { LobeQwenAI } from './qwen';
 import { LobeReverse } from './reverse';
 import { LobeTogetherAI } from './togetherai';
 import {
@@ -113,6 +114,7 @@ class AgentRuntime {
       openai: Partial<ClientOptions>;
       openrouter: Partial<ClientOptions>;
       perplexity: Partial<ClientOptions>;
+      qwen: Partial<ClientOptions>;
       reverse: Partial<ClientOptions>;
       togetherai: Partial<ClientOptions>;
       zeroone: Partial<ClientOptions>;
@@ -206,6 +208,11 @@ class AgentRuntime {
 
       case ModelProvider.ZeroOne: {
         runtimeModel = new LobeZeroOneAI(params.zeroone ?? {});
+        break;
+      }
+
+      case ModelProvider.Qwen: {
+        runtimeModel = new LobeQwenAI(params.qwen ?? {});
         break;
       }
 

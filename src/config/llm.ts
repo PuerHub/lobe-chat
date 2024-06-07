@@ -115,6 +115,9 @@ export const getLLMConfig = () => {
       OLLAMA_PROXY_URL: z.string().optional(),
       OLLAMA_MODEL_LIST: z.string().optional(),
 
+      ENABLED_QWEN: z.boolean(),
+      QWEN_API_KEY: z.string().optional(),
+
       ENABLED_REVERSE: z.boolean(),
       REVERSE_API_KEY: z.string().optional(),
       REVERSE_MODEL_LIST: z.string().optional(),
@@ -198,6 +201,10 @@ export const getLLMConfig = () => {
       ENABLED_OLLAMA: false,
       OLLAMA_PROXY_URL: process.env.OLLAMA_PROXY_URL || '',
       OLLAMA_MODEL_LIST: process.env.OLLAMA_MODEL_LIST || process.env.OLLAMA_CUSTOM_MODELS,
+
+      // ENABLED_QWEN: !!process.env.QWEN_API_KEY,
+      ENABLED_QWEN: true,
+      QWEN_API_KEY: process.env.QWEN_API_KEY,
 
       // ENABLED_REVERSE: !!process.env.TOGETHERAI_API_KEY,
       ENABLED_REVERSE: true,

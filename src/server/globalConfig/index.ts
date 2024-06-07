@@ -33,6 +33,7 @@ export const getServerGlobalConfig = () => {
     ENABLED_ANTHROPIC,
     ENABLED_MINIMAX,
     ENABLED_MISTRAL,
+    ENABLED_QWEN,
 
     ENABLED_AZURE_OPENAI,
     AZURE_MODEL_LIST,
@@ -105,6 +106,7 @@ export const getServerGlobalConfig = () => {
         }),
       },
       perplexity: { enabled: ENABLED_PERPLEXITY },
+      qwen: { enabled: ENABLED_QWEN },
 
       reverse: {
         enabled: ENABLED_REVERSE,

@@ -36,6 +36,7 @@ const Reverse: ModelProviderCard = {
     },
   ],
   id: 'reverse',
+  name: 'Reverse',
 };
 
 export default Reverse;

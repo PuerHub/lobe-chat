@@ -8,8 +8,8 @@ export const LobeAnthropicOpenAI = LobeOpenAICompatibleFactory({
     chatCompletion: () => process.env.DEBUG_ANTHROPIC_CHAT_COMPLETION === '1',
   },
   errorType: {
-    bizError: AgentRuntimeErrorType.AnthropicBizError,
-    invalidAPIKey: AgentRuntimeErrorType.InvalidAnthropicAPIKey,
+    bizError: AgentRuntimeErrorType.ProviderBizError,
+    invalidAPIKey: AgentRuntimeErrorType.InvalidProviderAPIKey,
   },
   provider: ModelProvider.Anthropic,
 });

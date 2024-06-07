@@ -44,6 +44,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
             'groq',
             'zeroone',
             'openrouter',
+            'qwen',
             'togetherai',
             'minimax',
             'reverse',
