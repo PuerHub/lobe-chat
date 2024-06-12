@@ -26,7 +26,7 @@ const Qwen: ModelProviderCard = {
     },
     {
       description: '通义千问2 57B规模14B激活参数的MOE模型',
-      displayName: 'Qwen-2 57B Instruct',
+      displayName: 'Qwen-2 57B-A14B MoE',
       enabled: true,
       id: 'qwen2-57b-a14b-instruct',
       tokens: 30_720,

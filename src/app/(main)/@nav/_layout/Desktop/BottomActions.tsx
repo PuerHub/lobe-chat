@@ -12,7 +12,7 @@ const BottomActions = memo(() => {
   return (
     <>
       <Link aria-label={t('group')} href={GROUP_QRCODE_URL} target={'_blank'}>
-        <ActionIcon icon={Users} placement={'right'} title={'group'} />
+        <ActionIcon icon={Users} placement={'right'} title={t('group')} />
       </Link>
       <Link aria-label={t('manual')} href={MANUAL_URL} target={'_blank'}>
         <ActionIcon icon={Book} placement={'right'} title={t('manual')} />
