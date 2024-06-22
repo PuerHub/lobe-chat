@@ -13,6 +13,7 @@ import {
   PerplexityProviderCard,
   QwenProviderCard,
   ReverseProviderCard,
+  StepfunProviderCard,
   TogetherAIProviderCard,
   ZeroOneProviderCard,
   ZhiPuProviderCard,
@@ -81,6 +82,10 @@ export const DEFAULT_LLM_CONFIG: UserModelProviderConfig = {
   reverse: {
     enabled: false,
     enabledModels: filterEnabledModels(ReverseProviderCard),
+  },
+  stepfun: {
+    enabled: false,
+    enabledModels: filterEnabledModels(StepfunProviderCard),
   },
   togetherai: {
     enabled: false,

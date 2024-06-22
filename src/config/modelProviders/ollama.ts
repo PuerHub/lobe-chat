@@ -180,6 +180,7 @@ const Ollama: ModelProviderCard = {
       vision: true,
     },
   ],
+  // defaultShowBrowserRequest: true,
   id: 'ollama',
   modelList: { showModelFetcher: true },
   name: 'Ollama',

@@ -3,7 +3,7 @@ export interface OpenAICompatibleKeyVault {
   baseURL?: string;
 }
 
-interface AzureOpenAIKeyVault {
+export interface AzureOpenAIKeyVault {
   apiKey?: string;
   apiVersion?: string;
   endpoint?: string;
@@ -32,6 +32,7 @@ export interface UserKeyVaults {
   perplexity?: OpenAICompatibleKeyVault;
   qwen?: OpenAICompatibleKeyVault;
   reverse?: OpenAICompatibleKeyVault;
+  stepfun?: OpenAICompatibleKeyVault;
   togetherai?: OpenAICompatibleKeyVault;
   zeroone?: OpenAICompatibleKeyVault;
   zhipu?: OpenAICompatibleKeyVault;

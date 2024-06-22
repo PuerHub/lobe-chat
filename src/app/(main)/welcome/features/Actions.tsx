@@ -47,6 +47,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
             'qwen',
             'togetherai',
             'minimax',
+            'stepfun',
             'reverse',
           ];
 

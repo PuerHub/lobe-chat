@@ -3,11 +3,27 @@ import { ModelProviderCard } from '@/types/llm';
 const Reverse: ModelProviderCard = {
   chatModels: [
     {
-      displayName: 'Suno V3',
+      displayName: 'Suno v3',
       enabled: true,
       files: false,
       functionCall: false,
       id: 'suno-v3',
+      vision: false,
+    },
+    {
+      displayName: 'Suno v3.5',
+      enabled: true,
+      files: false,
+      functionCall: false,
+      id: 'suno-v3.5',
+      vision: false,
+    },
+    {
+      displayName: 'Luma Video Reverse',
+      enabled: true,
+      files: false,
+      functionCall: false,
+      id: 'luma-video',
       vision: false,
     },
     {

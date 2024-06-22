@@ -8,6 +8,7 @@ import {
   Minimax, // Mistral,
   Moonshot,
   OpenRouter, // Perplexity,
+  Stepfun,
   Together,
   Tongyi,
   ZeroOne,
@@ -19,6 +20,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+// import urlJoin from 'url-join';
 import Logo from '@/components/Logo';
 import {
   AnthropicProviderCard,
@@ -30,6 +32,7 @@ import {
   OpenRouterProviderCard, // PerplexityProviderCard,
   QwenProviderCard,
   ReverseProviderCard,
+  StepfunProviderCard,
   TogetherAIProviderCard,
   ZeroOneProviderCard,
   ZhiPuProviderCard,
@@ -40,6 +43,8 @@ import { ProviderItem } from '../type';
 // import { useBedrockProvider } from './Bedrock';
 import { useOllamaProvider } from './Ollama';
 import { useOpenAIProvider } from './OpenAI';
+
+// const BASE_DOC_URL = 'https://lobehub.com/docs/usage/providers';
 
 const AnthropicBrand = () => {
   const { isDarkMode } = useTheme();
@@ -133,6 +138,10 @@ export const useProviderList = (): ProviderItem[] => {
       {
         ...ZeroOneProviderCard,
         title: <ZeroOne.Text size={20} />,
+      },
+      {
+        ...StepfunProviderCard,
+        title: <Stepfun.Combine size={20} type={'color'} />,
       },
       {
         ...ReverseProviderCard,

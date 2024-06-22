@@ -3,6 +3,7 @@
 import { Flexbox } from 'react-layout-kit';
 
 import { useProviderList } from './ProviderList/providers';
+import Footer from './components/Footer';
 import ProviderConfig from './components/ProviderConfig';
 
 const Page = () => {
@@ -13,6 +14,7 @@ const Page = () => {
       {list.map(({ id, ...res }) => (
         <ProviderConfig id={id as any} key={id} {...res} />
       ))}
+      <Footer />
     </Flexbox>
   );
 };

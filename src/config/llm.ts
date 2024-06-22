@@ -121,6 +121,9 @@ export const getLLMConfig = () => {
       ENABLED_REVERSE: z.boolean(),
       REVERSE_API_KEY: z.string().optional(),
       REVERSE_MODEL_LIST: z.string().optional(),
+
+      ENABLED_STEPFUN: z.boolean(),
+      STEPFUN_API_KEY: z.string().optional(),
     },
     runtimeEnv: {
       API_KEY_SELECT_MODE: process.env.API_KEY_SELECT_MODE,
@@ -210,6 +213,10 @@ export const getLLMConfig = () => {
       ENABLED_REVERSE: true,
       REVERSE_API_KEY: process.env.REVERSE_API_KEY,
       REVERSE_MODEL_LIST: process.env.REVERSE_MODEL_LIST,
+
+      // ENABLED_STEPFUN: !!process.env.STEPFUN_API_KEY,
+      ENABLED_STEPFUN: true,
+      STEPFUN_API_KEY: process.env.STEPFUN_API_KEY,
     },
   });
 };

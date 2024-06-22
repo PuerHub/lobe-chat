@@ -34,6 +34,7 @@ export const getServerGlobalConfig = () => {
     ENABLED_MINIMAX,
     ENABLED_MISTRAL,
     ENABLED_QWEN,
+    ENABLED_STEPFUN,
 
     ENABLED_AZURE_OPENAI,
     AZURE_MODEL_LIST,
@@ -116,6 +117,8 @@ export const getServerGlobalConfig = () => {
           modelString: REVERSE_MODEL_LIST,
         }),
       },
+
+      stepfun: { enabled: ENABLED_STEPFUN },
 
       togetherai: {
         enabled: ENABLED_TOGETHERAI,

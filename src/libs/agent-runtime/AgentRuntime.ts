@@ -18,6 +18,7 @@ import { LobeOpenRouterAI } from './openrouter';
 import { LobePerplexityAI } from './perplexity';
 import { LobeQwenAI } from './qwen';
 import { LobeReverse } from './reverse';
+import { LobeStepfunAI } from './stepfun';
 import { LobeTogetherAI } from './togetherai';
 import {
   ChatCompetitionOptions,
@@ -116,6 +117,7 @@ class AgentRuntime {
       perplexity: Partial<ClientOptions>;
       qwen: Partial<ClientOptions>;
       reverse: Partial<ClientOptions>;
+      stepfun: Partial<ClientOptions>;
       togetherai: Partial<ClientOptions>;
       zeroone: Partial<ClientOptions>;
       zhipu: Partial<ClientOptions>;
@@ -218,6 +220,11 @@ class AgentRuntime {
 
       case ModelProvider.Reverse: {
         runtimeModel = new LobeReverse(params.reverse ?? {});
+        break;
+      }
+
+      case ModelProvider.Stepfun: {
+        runtimeModel = new LobeStepfunAI(params.stepfun ?? {});
         break;
       }
     }
