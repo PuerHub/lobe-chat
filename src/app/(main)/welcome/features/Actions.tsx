@@ -31,7 +31,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
       modal.confirm({
         cancelText: t('cancel', { ns: 'common' }),
         centered: true,
-        content: t('import.desc', { key: apiKey }),
+        content: t('import.desc', { key: apiKey, ns: 'welcome' }),
         okText: t('ok', { ns: 'common' }),
         onOk: async () => {
           const providers: GlobalLLMProviderKey[] = [
@@ -65,7 +65,7 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
 
           router.push('/chat');
         },
-        title: t('import.title'),
+        title: t('import.title', { ns: 'welcome' }),
       });
     }
   }, [apiKey]);

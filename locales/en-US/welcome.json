@@ -44,6 +44,10 @@
     }
   },
   "header": "Welcome",
+  "import": {
+    "title": "Confirm Import",
+    "desc": "Import path containing the API key {{key}} ?"
+  },
   "pickAgent": "Or choose from the following assistant templates",
   "skip": "Skip Creation",
   "slogan": {
