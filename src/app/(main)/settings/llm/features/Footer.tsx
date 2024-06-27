@@ -1,6 +1,6 @@
 'use client';
 
-import { useTheme } from 'antd-style';
+// import { useTheme } from 'antd-style';
 // import Link from 'next/link';
 import { memo } from 'react';
 // import {Trans} from 'react-i18next';
@@ -10,13 +10,13 @@ import { Center } from 'react-layout-kit';
 // import {MORE_MODEL_PROVIDER_REQUEST_URL} from '@/const/url';
 
 const Footer = memo(() => {
-  const theme = useTheme();
+  // const theme = useTheme();
   return (
     <Center
       style={{
-        background: theme.colorFillQuaternary,
-        border: `1px dashed ${theme.colorFillSecondary}`,
-        borderRadius: theme.borderRadiusLG,
+        // background: theme.colorFillQuaternary,
+        // border: `1px dashed ${theme.colorFillSecondary}`,
+        // borderRadius: theme.borderRadiusLG,
         padding: 12,
       }}
     >

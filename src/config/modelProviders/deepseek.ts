@@ -11,7 +11,7 @@ const DeepSeek: ModelProviderCard = {
     },
     {
       description: '擅长编程场景',
-      displayName: 'DeepSeek-coder-V2',
+      displayName: 'DeepSeek-Coder-V2',
       enabled: true,
       id: 'deepseek-coder',
       tokens: 32_768,
