@@ -13,6 +13,7 @@ import {
   FishAudio,
   Gemini,
   Gemma,
+  HuggingFace,
   Hunyuan,
   LLaVA,
   Meta,
@@ -48,6 +49,7 @@ const ModelIcon = memo<ModelProviderIconProps>(({ model: originModel, size = 12 
   const model = originModel.toLowerCase();
 
   // currently supported models, maybe not in its own provider
+  if (model.includes('huggingface')) return <HuggingFace.Avatar size={size} />;
   if (model.startsWith('suno')) return <Suno.Avatar size={size} />;
   if (model.startsWith('luma')) return <Logo size={size} />;
   if (model.startsWith('search-gpts')) return <OpenAI.Avatar size={size} />;
@@ -76,7 +78,7 @@ const ModelIcon = memo<ModelProviderIconProps>(({ model: originModel, size = 12 
   // below: To be supported in providers, move up if supported
   if (model.includes('baichuan'))
     return <Baichuan.Avatar background={Baichuan.colorPrimary} size={size} />;
-  if (model.includes('rwkv')) return <Rwkv.Avatar size={size} />;
+  if (model.includes('rwkv') || model.includes('recursal')) return <Rwkv.Avatar size={size} />;
   if (model.includes('ernie')) return <Wenxin.Avatar size={size} />;
   if (model.includes('spark')) return <Spark.Avatar size={size} />;
   if (model.includes('hunyuan')) return <Hunyuan.Avatar size={size} />;
@@ -100,6 +102,7 @@ const ModelIcon = memo<ModelProviderIconProps>(({ model: originModel, size = 12 
   if (model.includes('phi3') || model.includes('phi-3')) return <Azure.Avatar size={size} />;
   if (model.includes('firefly')) return <Adobe.Avatar size={size} />;
   if (model.includes('jamba') || model.includes('j2-')) return <Ai21.Avatar size={size} />;
+  if (model.endsWith(':free')) return <OpenRouter.Avatar size={size} />;
 });
 
 export default ModelIcon;

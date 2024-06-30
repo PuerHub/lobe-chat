@@ -33,10 +33,16 @@ const TogetherAI: ModelProviderCard = {
     //   id: 'zero-one-ai/Yi-34B-Chat',
     //   tokens: 4096,
     // },
+    // {
+    //   displayName: 'Mixtral-8x7B Instruct (46.7B)',
+    //   enabled: true,
+    //   id: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+    //   tokens: 32_768,
+    // },
     {
-      displayName: 'Mixtral-8x7B Instruct (46.7B)',
+      displayName: 'Mixtral-8x22B Instruct',
       enabled: true,
-      id: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+      id: 'mistralai/Mixtral-8x22B-Instruct-v0.1',
       tokens: 32_768,
     },
     // {
