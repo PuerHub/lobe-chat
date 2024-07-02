@@ -1,5 +1,6 @@
 import {
   Anthropic,
+  Baichuan,
   Claude,
   DeepSeek,
   Gemini,
@@ -24,6 +25,7 @@ import { Flexbox } from 'react-layout-kit';
 import Logo from '@/components/Logo';
 import {
   AnthropicProviderCard,
+  BaichuanProviderCard,
   DeepSeekProviderCard,
   GoogleProviderCard,
   GroqProviderCard,
@@ -142,6 +144,10 @@ export const useProviderList = (): ProviderItem[] => {
       {
         ...StepfunProviderCard,
         title: <Stepfun.Combine size={20} type={'color'} />,
+      },
+      {
+        ...BaichuanProviderCard,
+        title: <Baichuan.Combine size={20} type={'color'} />,
       },
       {
         ...ReverseProviderCard,

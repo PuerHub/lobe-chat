@@ -88,7 +88,7 @@ const Google: ModelProviderCard = {
       // functionCall: true,
       id: 'gemini-1.5-pro-latest',
       maxOutput: 8192,
-      tokens: 1_048_576 + 8192,
+      tokens: 2_097_152 + 8192,
       vision: true,
     },
     // {
