@@ -35,6 +35,7 @@ export interface UserKeyVaults {
   qwen?: OpenAICompatibleKeyVault;
   reverse?: OpenAICompatibleKeyVault;
   stepfun?: OpenAICompatibleKeyVault;
+  taichu?: OpenAICompatibleKeyVault;
   togetherai?: OpenAICompatibleKeyVault;
   zeroone?: OpenAICompatibleKeyVault;
   zhipu?: OpenAICompatibleKeyVault;

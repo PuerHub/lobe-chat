@@ -1,4 +1,5 @@
 import {
+  // AiMass,
   Anthropic,
   Baichuan,
   Claude,
@@ -34,7 +35,7 @@ import {
   OpenRouterProviderCard, // PerplexityProviderCard,
   QwenProviderCard,
   ReverseProviderCard,
-  StepfunProviderCard,
+  StepfunProviderCard, // TaichuProviderCard,
   TogetherAIProviderCard,
   ZeroOneProviderCard,
   ZhiPuProviderCard,
@@ -149,6 +150,10 @@ export const useProviderList = (): ProviderItem[] => {
         ...BaichuanProviderCard,
         title: <Baichuan.Combine size={20} type={'color'} />,
       },
+      // {
+      //   ...TaichuProviderCard,
+      //   title: <AiMass.Combine size={28} type={'color'} />,
+      // },
       {
         ...ReverseProviderCard,
         title: <Logo extra={t('llm.reverse')} type={'combine'} />,

@@ -13,6 +13,15 @@ const ZhiPu: ModelProviderCard = {
       tokens: 128_000,
     },
     {
+      description:
+        '模型对用户提问进行规划，选择合适的工具，逐步分析并采取下一步行动，最终完成复杂任务',
+      displayName: 'GLM-4-AllTools',
+      enabled: true,
+      functionCall: true,
+      id: 'glm-4-alltools',
+      tokens: 128_000,
+    },
+    {
       description: '发布于20240116的最智能版本模型，目前已被 GLM-4-0520 版本超越',
       displayName: 'GLM-4',
       functionCall: true,

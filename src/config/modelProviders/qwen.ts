@@ -69,6 +69,7 @@ const Qwen: ModelProviderCard = {
     },
   ],
   checkModel: 'qwen2-0.5b-instruct',
+  disableBrowserRequest: false,
   id: 'qwen',
   // modelList: { showModelFetcher: true },
   name: 'Qwen',
