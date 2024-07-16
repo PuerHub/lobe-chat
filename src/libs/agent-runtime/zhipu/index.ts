@@ -28,7 +28,7 @@ export class LobeZhipuAI implements LobeRuntimeAI {
     this.baseURL = this.client.baseURL;
   }
 
-  static async fromAPIKey({ apiKey, baseURL = DEFAULT_BASE_URL, ...res }: ClientOptions) {
+  static async fromAPIKey({ apiKey, baseURL = DEFAULT_BASE_URL, ...res }: ClientOptions = {}) {
     // const invalidZhipuAPIKey = AgentRuntimeError.createError(
     //   AgentRuntimeErrorType.InvalidProviderAPIKey,
     // );
@@ -44,7 +44,6 @@ export class LobeZhipuAI implements LobeRuntimeAI {
     // }
     //
     // const header = { Authorization: `Bearer ${token}` };
-    // const llm = new OpenAI({ apiKey, baseURL, defaultHeaders: header, ...res });
     const llm = new OpenAI({ apiKey, baseURL, ...res });
 
     return new LobeZhipuAI(llm);

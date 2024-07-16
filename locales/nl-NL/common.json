@@ -1,6 +1,14 @@
 {
   "about": "Over",
   "advanceSettings": "Geavanceerde instellingen",
+  "alert": {
+    "cloud": {
+      "action": "Probeer nu",
+      "desc": "Registreer je en ontvang een kredietlimiet, ontdek meer dan 50+ AI-modellen! Als je op zoek bent naar diensten zoals private implementatie, aangepaste aanpassingen, facturering enz., neem dan contact op met de klantenservice.",
+      "descOnMobile": "Registreer je en ontvang een kredietlimiet, ontdek meer dan 50+ AI-modellen! Als je op zoek bent naar diensten zoals private implementatie, aangepaste aanpassingen, facturering enz., neem dan contact op met de klantenservice.",
+      "title": "Meld u nu aan bij PuerHub AI"
+    }
+  },
   "appInitializing": "PuerHub AI wordt geïnitialiseerd, even geduld a.u.b...",
   "autoGenerate": "Automatisch genereren",
   "autoGenerateTooltip": "Automatisch assistentbeschrijving genereren op basis van suggesties",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "anonieme gebruiker",
     "billing": "facturatie",
+    "cloud": "Ga naar PuerHub AI",
     "data": "gegevensopslag",
     "defaultNickname": "communitygebruiker",
     "discord": "communityondersteuning",

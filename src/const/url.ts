@@ -8,6 +8,7 @@ import { INBOX_SESSION_ID } from './session';
 
 export const OFFICIAL_URL = 'https://puerhub.xyz/';
 export const OFFICIAL_SITE = 'https://ai.puerhub.xyz/';
+export const OFFICIAL_PREVIEW_URL = 'https://puerhub.xyz/';
 
 export const getCanonicalUrl = (path: string) => urlJoin(OFFICIAL_URL, path);
 

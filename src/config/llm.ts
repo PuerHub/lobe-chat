@@ -92,6 +92,9 @@ export const getLLMConfig = () => {
 
       ENABLED_TAICHU: z.boolean(),
       TAICHU_API_KEY: z.string().optional(),
+
+      ENABLED_AI360: z.boolean(),
+      AI360_API_KEY: z.string().optional(),
     },
     runtimeEnv: {
       API_KEY_SELECT_MODE: process.env.API_KEY_SELECT_MODE,
@@ -192,6 +195,10 @@ export const getLLMConfig = () => {
       // ENABLED_TAICHU: !!process.env.TAICHU_API_KEY,
       ENABLED_TAICHU: false,
       TAICHU_API_KEY: process.env.TAICHU_API_KEY,
+
+      // ENABLED_AI360: !!process.env.AI360_API_KEY,
+      ENABLED_AI360: false,
+      AI360_API_KEY: process.env.AI360_API_KEY,
     },
   });
 };

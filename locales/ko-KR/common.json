@@ -1,6 +1,14 @@
 {
   "about": "소개",
   "advanceSettings": "고급 설정",
+  "alert": {
+    "cloud": {
+      "action": "지금 체험하기",
+      "desc": "가입 시 크레딧 제공, 50개 이상의 AI 모델 체험 가능! 사설 배포, 맞춤형 미세 조정, 청구서 발행 등의 서비스가 필요하시면 고객 서비스에 문의하세요.",
+      "descOnMobile": "가입 시 크레딧 제공, 50개 이상의 AI 모델 체험 가능! 사설 배포, 맞춤형 미세 조정, 청구서 발행 등의 서비스가 필요하시면 고객 서비스에 문의하세요.",
+      "title": "지금 PuerHub AI 가입하기"
+    }
+  },
   "appInitializing": "PuerHub AI 이 초기화 중입니다. 잠시 기다려주세요...",
   "autoGenerate": "자동 생성",
   "autoGenerateTooltip": "힌트 단어를 기반으로 에이전트 설명을 자동으로 완성합니다",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "익명 사용자",
     "billing": "결제 관리",
+    "cloud": "PuerHub AI로 이동",
     "data": "데이터 저장",
     "defaultNickname": "커뮤니티 사용자",
     "discord": "커뮤니티 지원",

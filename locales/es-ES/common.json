@@ -1,6 +1,14 @@
 {
   "about": "Acerca de",
   "advanceSettings": "Configuración avanzada",
+  "alert": {
+    "cloud": {
+      "action": "Prueba ahora",
+      "desc": "¡Regístrate y obtén un límite de crédito, desbloquea la experiencia con 50+ modelos de IA! Si necesitas implementación privada, ajustes personalizados, servicios de facturación, etc., contacta al servicio de atención al cliente.",
+      "descOnMobile": "¡Regístrate y obtén un límite de crédito, desbloquea la experiencia con 50+ modelos de IA! Si necesitas implementación privada, ajustes personalizados, servicios de facturación, etc., contacta al servicio de atención al cliente.",
+      "title": "¡Regístrate ahora en PuerHub AI!"
+    }
+  },
   "appInitializing": "PuerHub AI está inicializando, por favor espere...",
   "autoGenerate": "Generación automática",
   "autoGenerateTooltip": "Completar automáticamente la descripción del asistente basándose en las sugerencias",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Usuario Anónimo",
     "billing": "Gestión de facturación",
+    "cloud": "Ir a PuerHub AI",
     "data": "Almacenamiento de datos",
     "defaultNickname": "Usuario de la comunidad",
     "discord": "Soporte de la comunidad",

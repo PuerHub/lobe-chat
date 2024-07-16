@@ -1,6 +1,15 @@
 export default {
   about: '关于',
   advanceSettings: '高级设置',
+  alert: {
+    cloud: {
+      action: '立即体验',
+      desc: '注册即送额度，解锁 50+ AI 模型体验！若需私有部署、定制微调，开票等服务请联系客服。',
+      descOnMobile:
+        '注册即送额度，解锁 50+ AI 模型体验！若需私有部署、定制微调，开票等服务请联系客服。',
+      title: '即刻注册 PuerHub AI',
+    },
+  },
   appInitializing: 'PuerHub AI 启动中，请耐心等待...',
   autoGenerate: '自动补全',
   autoGenerateTooltip: '基于提示词自动补全助手描述',
@@ -56,7 +65,6 @@ export default {
     title: '喜欢我们的产品？',
   },
   fullscreen: '全屏模式',
-
   group: '群组',
   historyRange: '历史范围',
   import: '导入配置',
@@ -203,6 +211,7 @@ export default {
   userPanel: {
     anonymousNickName: '匿名用户',
     billing: '账单管理',
+    cloud: '前往 PuerHub AI',
     data: '数据存储',
     defaultNickname: '社区版用户',
     discord: '社区支持',

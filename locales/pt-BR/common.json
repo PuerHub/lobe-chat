@@ -1,6 +1,14 @@
 {
   "about": "Sobre",
   "advanceSettings": "Configurações avançadas",
+  "alert": {
+    "cloud": {
+      "action": "Experimente agora",
+      "desc": "Inscreva-se e ganhe um limite, experimente mais de 50 modelos de IA! Se precisar de serviços como implantação privada, ajustes personalizados, emissão de notas fiscais, entre em contato com o atendimento ao cliente.",
+      "descOnMobile": "Inscreva-se e ganhe um limite, experimente mais de 50 modelos de IA! Se precisar de serviços como implantação privada, ajustes personalizados, emissão de notas fiscais, entre em contato com o atendimento ao cliente.",
+      "title": "Cadastre-se no PuerHub AI agora"
+    }
+  },
   "appInitializing": "PuerHub AI inicializando, por favor aguarde...",
   "autoGenerate": "Auto completar",
   "autoGenerateTooltip": "Auto completar descrição do assistente com base em sugestões",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Usuário Anônimo",
     "billing": "Gerenciamento de faturas",
+    "cloud": "Vá para PuerHub AI",
     "data": "Armazenamento de dados",
     "defaultNickname": "Usuário da Comunidade",
     "discord": "Suporte da Comunidade",

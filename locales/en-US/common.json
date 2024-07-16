@@ -1,6 +1,14 @@
 {
   "about": "About",
   "advanceSettings": "Advanced Settings",
+  "alert": {
+    "cloud": {
+      "action": "Experience Now",
+      "desc": "Register and get an amount limit, unlock the experience of 50+ AI models! For private deployment, custom tuning, invoicing services, etc., please contact customer service.",
+      "descOnMobile": "Register and get an amount limit, unlock the experience of 50+ AI models! For private deployment, custom tuning, invoicing services, etc., please contact customer service.",
+      "title": "Sign up for PuerHub AI Now"
+    }
+  },
   "appInitializing": "PuerHub AI is initializing, please wait...",
   "autoGenerate": "Auto Generate",
   "autoGenerateTooltip": "Auto-generate assistant description based on prompts",
@@ -209,6 +217,7 @@
   "userPanel": {
     "anonymousNickName": "Anonymous User",
     "billing": "Billing Management",
+    "cloud": "Go to PuerHub AI",
     "data": "Data Storage",
     "defaultNickname": "Community User",
     "discord": "Community Support",

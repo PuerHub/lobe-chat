@@ -1,6 +1,14 @@
 {
   "about": "概要",
   "advanceSettings": "高度な設定",
+  "alert": {
+    "cloud": {
+      "action": "今すぐ試す",
+      "desc": "登録でクレジットがもらえます。50以上のAIモデルを無料で体験できます！プライバシー設定、カスタマイズ、請求書などのサービスが必要な場合は、顧客サポートに連絡してください。",
+      "descOnMobile": "登録でクレジットがもらえます。50以上のAIモデルを無料で体験できます！プライバシー設定、カスタマイズ、請求書などのサービスが必要な場合は、顧客サポートに連絡してください。",
+      "title": "今すぐPuerHub AIに登録"
+    }
+  },
   "appInitializing": "PuerHub AI を初期化中です。しばらくお待ちください...",
   "autoGenerate": "自動生成",
   "autoGenerateTooltip": "ヒントに基づいてエージェントの説明を自動生成します",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "匿名ユーザー",
     "billing": "請求管理",
+    "cloud": "PuerHub AI へ",
     "data": "データストレージ",
     "defaultNickname": "コミュニティユーザー",
     "discord": "コミュニティサポート",

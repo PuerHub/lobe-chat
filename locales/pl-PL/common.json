@@ -1,6 +1,14 @@
 {
   "about": "O nas",
   "advanceSettings": "Zaawansowane ustawienia",
+  "alert": {
+    "cloud": {
+      "action": "Doświadczenie teraz",
+      "desc": "Rejestracja przynosi limit środków, odblokuj doświadczenie z 50+ modelami AI! W razie potrzeby prywatnej instalacji, dostosowania, usług fakturowania itp. skontaktuj się z biurem obsługi klienta.",
+      "descOnMobile": "Rejestracja przynosi limit środków, odblokuj doświadczenie z 50+ modelami AI! W razie potrzeby prywatnej instalacji, dostosowania, usług fakturowania itp. skontaktuj się z biurem obsługi klienta.",
+      "title": "Zarejestruj się w PuerHub AI teraz"
+    }
+  },
   "appInitializing": "PuerHub AI inicjuje, proszę czekać...",
   "autoGenerate": "Automatyczne generowanie",
   "autoGenerateTooltip": "Automatyczne uzupełnianie opisu asystenta na podstawie sugestii",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Użytkownik Anonimowy",
     "billing": "Zarządzanie rachunkami",
+    "cloud": "Przejdź do PuerHub AI",
     "data": "Przechowywanie danych",
     "defaultNickname": "Użytkownik Wersji Społecznościowej",
     "discord": "Wsparcie społeczności",

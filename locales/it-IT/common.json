@@ -1,6 +1,14 @@
 {
   "about": "Informazioni",
   "advanceSettings": "Impostazioni avanzate",
+  "alert": {
+    "cloud": {
+      "action": "Prova subito",
+      "desc": "Registrazione con offerta di credito, accesso a oltre 50 modelli AI! Per configurazioni private, personalizzazioni, fatturazione e altri servizi, contattare il servizio clienti.",
+      "descOnMobile": "Registrazione con offerta di credito, accesso a oltre 50 modelli AI! Per configurazioni private, personalizzazioni, fatturazione e altri servizi, contattare il servizio clienti.",
+      "title": "Iscriviti ora a PuerHub AI"
+    }
+  },
   "appInitializing": "PuerHub AI inizializzazione in corso, attendere prego...",
   "autoGenerate": "Generazione automatica",
   "autoGenerateTooltip": "Completamento automatico basato su suggerimenti",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Utente Anonimo",
     "billing": "Gestione fatturazione",
+    "cloud": "Vai a PuerHub AI",
     "data": "Archiviazione dati",
     "defaultNickname": "Utente Community",
     "discord": "Supporto della community",

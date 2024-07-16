@@ -1,6 +1,14 @@
 {
   "about": "Über",
   "advanceSettings": "Erweiterte Einstellungen",
+  "alert": {
+    "cloud": {
+      "action": "Jetzt ausprobieren",
+      "desc": "Registrierung und Freischaltung von Kredit额度, Erlebnis von über 50+ AI-Modellen! Für private Einrichtung, angepasste Anpassungen, Rechnungsstellung und andere Dienstleistungen wenden Sie sich bitte an den Kundenservice.",
+      "descOnMobile": "Registrierung und Freischaltung von Kredit额度, Erlebnis von über 50+ AI-Modellen!Für private Einrichtung, angepasste Anpassungen, Rechnungsstellung und andere Dienstleistungen wenden Sie sich bitte an den Kundenservice.",
+      "title": "Melden Sie sich jetzt bei PuerHub AI an"
+    }
+  },
   "appInitializing": "PuerHub AI wird initialisiert. Bitte haben Sie einen Moment Geduld...",
   "autoGenerate": "Automatisch generieren",
   "autoGenerateTooltip": "Assistentenbeschreibung automatisch auf Basis von Vorschlägen vervollständigen",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Anonymer Benutzer",
     "billing": "Abrechnung verwalten",
+    "cloud": "Zu PuerHub AI gehen",
     "data": "Daten speichern",
     "defaultNickname": "Community User",
     "discord": "Community-Support",

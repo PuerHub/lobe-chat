@@ -1,6 +1,14 @@
 {
   "about": "Giới thiệu",
   "advanceSettings": "Cài đặt nâng cao",
+  "alert": {
+    "cloud": {
+      "action": "Thử ngay",
+      "desc": "Đăng ký nhận khung tín dụng miễn phí, mở khóa trải nghiệm hơn 50+ mô hình AI! Nếu cần thiết lập riêng, điều chỉnh tùy chỉnh, hóa đơn và các dịch vụ khác, xin liên hệ với bộ phận khách hàng.",
+      "descOnMobile": "Đăng ký nhận khung tín dụng miễn phí, mở khóa trải nghiệm hơn 50+ mô hình AI!Nếu cần thiết lập riêng, điều chỉnh tùy chỉnh, hóa đơn và các dịch vụ khác, xin liên hệ với bộ phận khách hàng.",
+      "title": "Đăng ký PuerHub AI ngay hôm nay"
+    }
+  },
   "appInitializing": "PuerHub AI đang khởi động, vui lòng chờ...",
   "autoGenerate": "Tự động tạo",
   "autoGenerateTooltip": "Tự động hoàn thành mô tả trợ lý dựa trên từ gợi ý",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Người dùng ẩn danh",
     "billing": "Quản lý hóa đơn",
+    "cloud": "Chuyển đến PuerHub AI",
     "data": "Lưu trữ dữ liệu",
     "defaultNickname": "Người dùng phiên bản cộng đồng",
     "discord": "Hỗ trợ cộng đồng",

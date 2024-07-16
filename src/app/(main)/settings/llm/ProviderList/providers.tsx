@@ -1,5 +1,6 @@
 import {
   // AiMass,
+  // Ai360,
   Anthropic,
   Baichuan,
   Claude,
@@ -25,6 +26,7 @@ import { Flexbox } from 'react-layout-kit';
 // import urlJoin from 'url-join';
 import Logo from '@/components/Logo';
 import {
+  // Ai360ProviderCard,
   AnthropicProviderCard,
   BaichuanProviderCard,
   DeepSeekProviderCard,
@@ -153,6 +155,10 @@ export const useProviderList = (): ProviderItem[] => {
       // {
       //   ...TaichuProviderCard,
       //   title: <AiMass.Combine size={28} type={'color'} />,
+      // },
+      // {
+      //   ...Ai360ProviderCard,
+      //   title: <Ai360.Combine size={ 20 } type={ 'color' } />,
       // },
       {
         ...ReverseProviderCard,

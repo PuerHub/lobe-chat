@@ -1,6 +1,14 @@
 {
   "about": "Hakkında",
   "advanceSettings": "Gelişmiş Ayarlar",
+  "alert": {
+    "cloud": {
+      "action": "Hemen deneyimleyin",
+      "desc": "Kayıt olunca limit sağlanır, 50+ AI modeli deneyimi açılacaktır! Özel kurulum, özelleştirilmiş ayarlamalar, fatura hizmetleri ve diğer hizmetler için lütfen müşteri hizmetleri ile iletişime geçin.",
+      "descOnMobile": "Kayıt olunca limit sağlanır, 50+ AI modeli deneyimi açılacaktır! Özel kurulum, özelleştirilmiş ayarlamalar, fatura hizmetleri ve diğer hizmetler için lütfen müşteri hizmetleri ile iletişime geçin.",
+      "title": "Hemen PuerHub AI'ye kayıt olun"
+    }
+  },
   "appInitializing": "PuerHub AI başlatılıyor, lütfen bekleyin...",
   "autoGenerate": "Otomatik Oluştur",
   "autoGenerateTooltip": "Auto-generate agent description based on prompts",
@@ -206,6 +214,7 @@
   "userPanel": {
     "anonymousNickName": "Anonim Kullanıcı",
     "billing": "Fatura Yönetimi",
+    "cloud": "PuerHub AI'ye git",
     "data": "Veri Depolama",
     "defaultNickname": "Topluluk Kullanıcısı",
     "discord": "Topluluk Destek",

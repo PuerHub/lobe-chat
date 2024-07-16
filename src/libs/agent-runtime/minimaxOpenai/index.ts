@@ -63,7 +63,7 @@ function parseMinimaxResponse(chunk: string): MinimaxResponse | undefined {
 export class LobeMinimaxOpenAI implements LobeRuntimeAI {
   apiKey: string;
 
-  constructor({ apiKey }: { apiKey?: string }) {
+  constructor({ apiKey }: { apiKey?: string } = {}) {
     if (!apiKey) throw AgentRuntimeError.createError(AgentRuntimeErrorType.InvalidProviderAPIKey);
 
     this.apiKey = apiKey;
