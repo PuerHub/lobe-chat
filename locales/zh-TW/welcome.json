@@ -15,6 +15,7 @@
       "title": "新增助理推薦："
     },
     "defaultMessage": "我是您的私人智能助理 PuerHub AI ，請問現在能幫您做什麼？\n如果需要獲得更加專業或定制的助手，可以點擊 `+` 創建自定義助手",
+    "defaultMessageWithoutCreate": "我是您的私人智能助理 PuerHub AI，請問現在能幫您做什麼？",
     "qa": {
       "q01": "PuerHub 是什麼？",
       "q02": "PuerHub AI 是什麼？",

@@ -9,7 +9,7 @@ import {
   Google,
   Groq,
   Minimax, // Mistral,
-  Moonshot,
+  Moonshot, // Novita,
   OpenRouter, // Perplexity,
   Stepfun,
   Together,
@@ -23,7 +23,6 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-// import urlJoin from 'url-join';
 import Logo from '@/components/Logo';
 import {
   // Ai360ProviderCard,
@@ -33,7 +32,7 @@ import {
   GoogleProviderCard,
   GroqProviderCard,
   MinimaxProviderCard, // MistralProviderCard,
-  MoonshotProviderCard,
+  MoonshotProviderCard, // NovitaProviderCard,
   OpenRouterProviderCard, // PerplexityProviderCard,
   QwenProviderCard,
   ReverseProviderCard,
@@ -108,6 +107,10 @@ export const useProviderList = (): ProviderItem[] => {
         ...OpenRouterProviderCard,
         title: <OpenRouter.Combine iconProps={{ color: OpenRouter.colorPrimary }} size={20} />,
       },
+      // {
+      //   ...NovitaProviderCard,
+      //   title: <Novita.Combine size={20} type={'color'} />,
+      // },
       {
         ...TogetherAIProviderCard,
         title: <Together.Combine size={26} type={'color'} />,

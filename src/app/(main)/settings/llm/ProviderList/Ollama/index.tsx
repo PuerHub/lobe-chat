@@ -21,7 +21,7 @@ export const useOllamaProvider = (): ProviderItem => {
     },
     proxyUrl: {
       desc: t('ollama.endpoint.desc'),
-      placeholder: 'http://127.0.0.1:11434',
+      placeholder: 'http://localhost:11434',
       title: t('ollama.endpoint.title'),
     },
     title: <Ollama.Combine size={28} />,

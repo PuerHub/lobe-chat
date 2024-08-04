@@ -80,6 +80,9 @@ export const getLLMConfig = () => {
       ENABLED_STEPFUN: z.boolean(),
       STEPFUN_API_KEY: z.string().optional(),
 
+      ENABLED_NOVITA: z.boolean(),
+      NOVITA_API_KEY: z.string().optional(),
+
       ENABLED_BAICHUAN: z.boolean(),
       BAICHUAN_API_KEY: z.string().optional(),
 
@@ -179,6 +182,10 @@ export const getLLMConfig = () => {
       // ENABLED_STEPFUN: !!process.env.STEPFUN_API_KEY,
       ENABLED_STEPFUN: true,
       STEPFUN_API_KEY: process.env.STEPFUN_API_KEY,
+
+      // ENABLED_NOVITA: !!process.env.NOVITA_API_KEY,
+      ENABLED_NOVITA: false,
+      NOVITA_API_KEY: process.env.NOVITA_API_KEY,
 
       // ENABLED_BAICHUAN: !!process.env.BAICHUAN_API_KEY,
       ENABLED_BAICHUAN: true,

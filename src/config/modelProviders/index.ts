@@ -11,6 +11,7 @@ import GroqProvider from './groq';
 import MinimaxProvider from './minimax';
 import MistralProvider from './mistral';
 import MoonshotProvider from './moonshot';
+import NovitaProvider from './novita';
 import OllamaProvider from './ollama';
 import OpenAIProvider from './openai';
 import OpenRouterProvider from './openrouter';
@@ -41,8 +42,9 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   AnthropicProvider.chatModels,
   ZeroOneProvider.chatModels,
   ReverseProvider.chatModels,
-  BaichuanProvider.chatModels,
   StepfunProvider.chatModels,
+  NovitaProvider.chatModels,
+  BaichuanProvider.chatModels,
   TaichuProvider.chatModels,
   Ai360Provider.chatModels,
 ].flat();
@@ -66,6 +68,7 @@ export const DEFAULT_MODEL_PROVIDER_LIST = [
   ZeroOneProvider,
   ZhiPuProvider,
   StepfunProvider,
+  NovitaProvider,
   BaichuanProvider,
   ReverseProvider,
   TaichuProvider,
@@ -92,6 +95,7 @@ export { default as GroqProviderCard } from './groq';
 export { default as MinimaxProviderCard } from './minimax';
 export { default as MistralProviderCard } from './mistral';
 export { default as MoonshotProviderCard } from './moonshot';
+export { default as NovitaProviderCard } from './novita';
 export { default as OllamaProviderCard } from './ollama';
 export { default as OpenAIProviderCard } from './openai';
 export { default as OpenRouterProviderCard } from './openrouter';

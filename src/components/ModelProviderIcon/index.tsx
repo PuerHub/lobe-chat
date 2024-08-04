@@ -12,6 +12,7 @@ import {
   Minimax,
   Mistral,
   Moonshot,
+  Novita,
   Ollama,
   OpenAI,
   OpenRouter,
@@ -120,6 +121,10 @@ const ModelProviderIcon = memo<ModelProviderIconProps>(({ provider }) => {
 
     case ModelProvider.Stepfun: {
       return <Stepfun size={20} />;
+    }
+
+    case ModelProvider.Novita: {
+      return <Novita size={20} />;
     }
 
     case ModelProvider.Baichuan: {

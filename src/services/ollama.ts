@@ -7,7 +7,7 @@ import { keyVaultsConfigSelectors } from '@/store/user/selectors';
 import { ChatErrorType } from '@/types/fetch';
 import { getMessageError } from '@/utils/fetch';
 
-const DEFAULT_BASE_URL = 'http://127.0.0.1:11434';
+const DEFAULT_BASE_URL = 'http://localhost:11434';
 
 interface OllamaServiceParams {
   fetch?: typeof fetch;

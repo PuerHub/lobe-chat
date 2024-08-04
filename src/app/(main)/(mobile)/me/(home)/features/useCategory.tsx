@@ -3,7 +3,6 @@ import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
 import { CellProps } from '@/components/Cell';
-import { enableAuth } from '@/const/auth';
 import { DOCUMENTS } from '@/const/url';
 import { isServerMode } from '@/const/version';
 import { usePWAInstall } from '@/hooks/usePWAInstall';
@@ -16,10 +15,11 @@ export const useCategory = () => {
   const router = useRouter();
   const { canInstall, install } = usePWAInstall();
   const { t } = useTranslation(['common', 'setting', 'auth']);
-  const [isLogin, isLoginWithAuth, isLoginWithClerk] = useUserStore((s) => [
+  const [isLogin, isLoginWithAuth, isLoginWithClerk, enableAuth] = useUserStore((s) => [
     authSelectors.isLogin(s),
     authSelectors.isLoginWithAuth(s),
     authSelectors.isLoginWithClerk(s),
+    authSelectors.enabledAuth(s),
   ]);
 
   const profile: CellProps[] = [

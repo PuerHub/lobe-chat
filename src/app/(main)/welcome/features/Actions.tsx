@@ -9,12 +9,14 @@ import { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { useUserStore } from '@/store/user';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
 const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { t } = useTranslation('welcome');
   const router = useRouter();
+  const { showMarket } = useServerConfigStore(featureFlagsSelectors);
 
   const query = useSearchParams();
   const apiKey = useMemo(() => query.get('apiKey'), [query]);
@@ -73,11 +75,13 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
 
   return (
     <Flexbox gap={16} horizontal={!mobile} justify={'center'} width={'100%'} wrap={'wrap'}>
-      <Link href={'/market'}>
-        <Button block={mobile} size={'large'} style={{ minWidth: 160 }} type={'default'}>
-          {t('button.market')}
-        </Button>
-      </Link>
+      {showMarket && (
+        <Link href={'/market'}>
+          <Button block={mobile} size={'large'} style={{ minWidth: 160 }} type={'default'}>
+            {t('button.market')}
+          </Button>
+        </Link>
+      )}
       <Button
         block={mobile}
         onClick={() => router.push('/chat')}
