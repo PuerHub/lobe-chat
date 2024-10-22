@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 
-import { JWTPayload, LOBE_CHAT_AUTH_HEADER } from '@/const/auth';
+import { JWTPayload, PUERHUB_CHAT_AUTH_HEADER } from '@/const/auth';
 import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
 
 export interface AsyncAuthContext {
@@ -29,7 +29,7 @@ export const createAsyncRouteContext = async (request: NextRequest): Promise<Asy
   // for API-response caching see https://trpc.io/docs/v11/caching
 
   const authorization = request.headers.get('Authorization');
-  const lobeChatAuthorization = request.headers.get(LOBE_CHAT_AUTH_HEADER);
+  const lobeChatAuthorization = request.headers.get(PUERHUB_CHAT_AUTH_HEADER);
 
   const secret = authorization?.split(' ')[1];
   const gateKeeper = await KeyVaultsGateKeeper.initWithEnvKey();

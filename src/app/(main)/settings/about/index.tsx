@@ -6,7 +6,7 @@ import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import Logo from '@/components/Logo';
-import { OFFICIAL_SITE, RELEASES_URL } from '@/const/url';
+import { OFFICIAL_SITE } from '@/const/url';
 import { CURRENT_VERSION } from '@/const/version';
 
 // import Follow from '@/features/Follow';
@@ -29,7 +29,7 @@ const Page = memo(({ mobile }: { mobile?: boolean }) => {
       <h1 style={{ fontSize: mobile ? 32 : 36, fontWeight: 900, lineHeight: 1, marginBottom: 0 }}>
         PuerHub AI
       </h1>
-      <Link href={RELEASES_URL} target={'_blank'}>
+      <Link href={OFFICIAL_SITE} target={'_blank'}>
         <Tag>v{CURRENT_VERSION}</Tag>
       </Link>
       {/*<Flexbox gap={24} style={{ marginBlock: 48 }} width={'100%'}>*/}

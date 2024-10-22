@@ -45,13 +45,13 @@ const Actions = memo<{ mobile?: boolean }>(({ mobile }) => {
             'moonshot',
             'groq',
             'zeroone',
-            'openrouter',
+            // 'openrouter',
             'qwen',
-            'togetherai',
+            // 'togetherai',
             'minimax',
-            'stepfun',
-            'baichuan',
-            'reverse',
+            // 'stepfun',
+            // 'baichuan',
+            // 'reverse',
           ];
 
           for (const provider of providers) {

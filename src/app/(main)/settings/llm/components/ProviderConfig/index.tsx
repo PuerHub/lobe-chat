@@ -1,7 +1,7 @@
 'use client';
 
 import { ProviderCombine } from '@lobehub/icons';
-import { Form, type FormItemProps, Icon, type ItemGroup, Tooltip } from '@lobehub/ui';
+import { Form, type FormItemProps, Icon, type ItemGroup } from '@lobehub/ui';
 import { Input, Switch } from 'antd';
 import { createStyles } from 'antd-style';
 import { debounce } from 'lodash-es';
@@ -9,9 +9,9 @@ import { LockIcon } from 'lucide-react';
 import Link from 'next/link';
 import { ReactNode, memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { Center, Flexbox } from 'react-layout-kit';
-import urlJoin from 'url-join';
+import { Flexbox } from 'react-layout-kit';
 
+// import urlJoin from 'url-join';
 import { useSyncSettings } from '@/app/(main)/settings/hooks/useSyncSettings';
 import {
   KeyVaultsConfigKey,
@@ -21,7 +21,7 @@ import {
   LLMProviderModelListKey,
 } from '@/app/(main)/settings/llm/const';
 import { FORM_STYLE } from '@/const/layoutTokens';
-import { AES_GCM_URL, BASE_PROVIDER_DOC_URL } from '@/const/url';
+import { AES_GCM_URL } from '@/const/url';
 import { isServerMode } from '@/const/version';
 import { useUserStore } from '@/store/user';
 import { keyVaultsConfigSelectors, modelConfigSelectors } from '@/store/user/selectors';
@@ -240,17 +240,17 @@ const ProviderConfig = memo<ProviderConfigProps>(
       extra: (
         <Flexbox align={'center'} gap={8} horizontal>
           {extra}
-          <Tooltip title={t('llm.helpDoc')}>
-            <Link
-              href={urlJoin(BASE_PROVIDER_DOC_URL, id)}
-              onClick={(e) => e.stopPropagation()}
-              target={'_blank'}
-            >
-              <Center className={styles.help} height={20} width={20}>
-                ?
-              </Center>
-            </Link>
-          </Tooltip>
+          {/*<Tooltip title={t('llm.helpDoc')}>*/}
+          {/*  <Link*/}
+          {/*    href={urlJoin(BASE_PROVIDER_DOC_URL, id)}*/}
+          {/*    onClick={(e) => e.stopPropagation()}*/}
+          {/*    target={'_blank'}*/}
+          {/*  >*/}
+          {/*    <Center className={styles.help} height={20} width={20}>*/}
+          {/*      ?*/}
+          {/*    </Center>*/}
+          {/*  </Link>*/}
+          {/*</Tooltip>*/}
           {canDeactivate ? (
             <Switch
               onChange={(enabled) => {

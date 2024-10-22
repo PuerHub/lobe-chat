@@ -114,28 +114,28 @@ const ZeroOne: ModelProviderCard = {
       tokens: 16_384,
       vision: true,
     },
-    {
-      description: '初期版本，推荐使用 yi-large（新版本）。',
-      displayName: 'Yi Large Preview',
-      id: 'yi-large-preview',
-      pricing: {
-        currency: 'CNY',
-        input: 20,
-        output: 20,
-      },
-      tokens: 16_384,
-    },
-    {
-      description: '轻量化版本，推荐使用 yi-lightning。',
-      displayName: 'Yi Lightning Lite',
-      id: 'yi-lightning-lite',
-      pricing: {
-        currency: 'CNY',
-        input: 0.99,
-        output: 0.99,
-      },
-      tokens: 16_384,
-    },
+    // {
+    //   description: '初期版本，推荐使用 yi-large（新版本）。',
+    //   displayName: 'Yi Large Preview',
+    //   id: 'yi-large-preview',
+    //   pricing: {
+    //     currency: 'CNY',
+    //     input: 20,
+    //     output: 20,
+    //   },
+    //   tokens: 16_384,
+    // },
+    // {
+    //   description: '轻量化版本，推荐使用 yi-lightning。',
+    //   displayName: 'Yi Lightning Lite',
+    //   id: 'yi-lightning-lite',
+    //   pricing: {
+    //     currency: 'CNY',
+    //     input: 0.99,
+    //     output: 0.99,
+    //   },
+    //   tokens: 16_384,
+    // },
   ],
   checkModel: 'yi-lightning',
   description:

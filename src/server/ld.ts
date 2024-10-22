@@ -1,7 +1,6 @@
 import qs from 'query-string';
 import urlJoin from 'url-join';
 
-import { BRANDING_NAME } from '@/const/branding';
 import { DEFAULT_LANG } from '@/const/locale';
 import { EMAIL_BUSINESS, EMAIL_SUPPORT, OFFICIAL_SITE, OFFICIAL_URL, X } from '@/const/url';
 import { Locales } from '@/locales/resources';

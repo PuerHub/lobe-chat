@@ -1,4 +1,3 @@
-import { WelcomeLogo } from '@/components/Branding';
 import StructuredData from '@/components/StructuredData';
 import { ldModule } from '@/server/ld';
 import { metadataModule } from '@/server/metadata';

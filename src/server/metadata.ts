@@ -118,7 +118,7 @@ export class Meta {
           url: image,
         },
       ],
-      locale: 'en-US',
+      locale,
       siteName: 'PuerHub',
       title,
       type,

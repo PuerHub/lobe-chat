@@ -6,7 +6,7 @@ const Google: ModelProviderCard = {
     {
       description:
         'Gemini 1.5 Flash 是Google最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
-      displayName: 'Gemini 1.5 Flash',
+      displayName: 'Gemini 1.5 Flash (free)',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-flash-latest',
@@ -21,7 +21,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Flash 002 是一款高效的多模态模型，支持广泛应用的扩展。',
-      displayName: 'Gemini 1.5 Flash 002',
+      displayName: 'Gemini 1.5 Flash 002 (free)',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-flash-002',
@@ -37,7 +37,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Flash 001 是一款高效的多模态模型，支持广泛应用的扩展。',
-      displayName: 'Gemini 1.5 Flash 001',
+      displayName: 'Gemini 1.5 Flash 001 (free)',
       functionCall: true,
       id: 'gemini-1.5-flash-001',
       maxOutput: 8192,
@@ -51,7 +51,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Flash 0827 提供了优化后的多模态处理能力，适用多种复杂任务场景。',
-      displayName: 'Gemini 1.5 Flash 0827',
+      displayName: 'Gemini 1.5 Flash 0827 (free)',
       functionCall: true,
       id: 'gemini-1.5-flash-exp-0827',
       maxOutput: 8192,
@@ -68,7 +68,7 @@ const Google: ModelProviderCard = {
     {
       description:
         'Gemini 1.5 Flash 8B 0924 是最新的实验性模型，在文本和多模态用例中都有显著的性能提升。',
-      displayName: 'Gemini 1.5 Flash 8B 0924',
+      displayName: 'Gemini 1.5 Flash 8B 0924 (free)',
       functionCall: true,
       id: 'gemini-1.5-flash-8b-exp-0924',
       maxOutput: 8192,
@@ -84,7 +84,7 @@ const Google: ModelProviderCard = {
     {
       description:
         'Gemini 1.5 Pro 支持高达200万个tokens，是中型多模态模型的理想选择，适用于复杂任务的多方面支持。',
-      displayName: 'Gemini 1.5 Pro',
+      displayName: 'Gemini 1.5 Pro (free)',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-pro-latest',
@@ -101,7 +101,7 @@ const Google: ModelProviderCard = {
     {
       description:
         'Gemini 1.5 Pro 002 是最新的生产就绪模型，提供更高质量的输出，特别在数学、长上下文和视觉任务方面有显著提升。',
-      displayName: 'Gemini 1.5 Pro 002',
+      displayName: 'Gemini 1.5 Pro 002 (free)',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-pro-002',
@@ -117,7 +117,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Pro 001 是可扩展的多模态AI解决方案，支持广泛的复杂任务。',
-      displayName: 'Gemini 1.5 Pro 001',
+      displayName: 'Gemini 1.5 Pro 001 (free)',
       functionCall: true,
       id: 'gemini-1.5-pro-001',
       maxOutput: 8192,
@@ -132,7 +132,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Pro 0827 结合最新优化技术，带来更高效的多模态数据处理能力。',
-      displayName: 'Gemini 1.5 Pro 0827',
+      displayName: 'Gemini 1.5 Pro 0827 (free)',
       functionCall: true,
       id: 'gemini-1.5-pro-exp-0827',
       maxOutput: 8192,
@@ -147,7 +147,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.5 Pro 0801 提供出色的多模态处理能力，为应用开发带来更大灵活性。',
-      displayName: 'Gemini 1.5 Pro 0801',
+      displayName: 'Gemini 1.5 Pro 0801 (free)',
       functionCall: true,
       id: 'gemini-1.5-pro-exp-0801',
       maxOutput: 8192,
@@ -163,7 +163,7 @@ const Google: ModelProviderCard = {
     {
       description: 'Gemini 1.0 Pro 是Google的高性能AI模型，专为广泛任务扩展而设计。',
       displayName: 'Gemini 1.0 Pro',
-      id: 'gemini-1.0-pro-latest',
+      id: 'gemini-1.0-pro-latest (free)',
       maxOutput: 2048,
       pricing: {
         input: 0.5,
@@ -175,7 +175,7 @@ const Google: ModelProviderCard = {
     {
       description:
         'Gemini 1.0 Pro 001 (Tuning) 提供稳定并可调优的性能，是复杂任务解决方案的理想选择。',
-      displayName: 'Gemini 1.0 Pro 001 (Tuning)',
+      displayName: 'Gemini 1.0 Pro 001 (Tuning - free)',
       functionCall: true,
       id: 'gemini-1.0-pro-001',
       maxOutput: 2048,
@@ -188,7 +188,7 @@ const Google: ModelProviderCard = {
     },
     {
       description: 'Gemini 1.0 Pro 002 (Tuning) 提供出色的多模态支持，专注于复杂任务的有效解决。',
-      displayName: 'Gemini 1.0 Pro 002 (Tuning)',
+      displayName: 'Gemini 1.0 Pro 002 (Tuning - free)',
       id: 'gemini-1.0-pro-002',
       maxOutput: 2048,
       pricing: {
@@ -202,6 +202,7 @@ const Google: ModelProviderCard = {
   checkModel: 'gemini-1.5-flash-latest',
   description:
     'Google 的 Gemini 系列是其最先进、通用的 AI模型，由 Google DeepMind 打造，专为多模态设计，支持文本、代码、图像、音频和视频的无缝理解与处理。适用于从数据中心到移动设备的多种环境，极大提升了AI模型的效率与应用广泛性。',
+  enabled: true,
   id: 'google',
   modelsUrl: 'https://ai.google.dev/gemini-api/docs/models/gemini',
   name: 'Google',

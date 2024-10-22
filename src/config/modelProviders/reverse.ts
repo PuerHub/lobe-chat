@@ -53,6 +53,7 @@ const Reverse: ModelProviderCard = {
   ],
   id: 'reverse',
   name: 'Reverse',
+  url: 'https://ai.puerhub.xyz',
 };
 
 export default Reverse;

@@ -35,7 +35,6 @@ const OpenAI: ModelProviderCard = {
       description:
         'GPT-4o mini是OpenAI在GPT-4 Omni之后推出的最新模型，支持图文输入并输出文本。作为他们最先进的小型模型，它比其他近期的前沿模型便宜很多，并且比GPT-3.5 Turbo便宜超过60%。它保持了最先进的智能，同时具有显著的性价比。GPT-4o mini在MMLU测试中获得了 82% 的得分，目前在聊天偏好上排名高于 GPT-4。',
       displayName: 'GPT-4o mini',
-      enabled: true,
       functionCall: true,
       id: 'gpt-4o-mini',
       maxOutput: 16_385,
@@ -103,6 +102,7 @@ const OpenAI: ModelProviderCard = {
       description:
         '最新的 GPT-4 Turbo 模型具备视觉功能。现在，视觉请求可以使用 JSON 模式和函数调用。 GPT-4 Turbo 是一个增强版本，为多模态任务提供成本效益高的支持。它在准确性和效率之间找到平衡，适合需要进行实时交互的应用程序场景。',
       displayName: 'GPT-4 Turbo',
+      enabled: true,
       functionCall: true,
       id: 'gpt-4-turbo',
       pricing: {
@@ -188,6 +188,7 @@ const OpenAI: ModelProviderCard = {
       description:
         'GPT-4 提供了一个更大的上下文窗口，能够处理更长的文本输入，适用于需要广泛信息整合和数据分析的场景。',
       displayName: 'GPT-4',
+      enabled: true,
       functionCall: true,
       id: 'gpt-4',
       pricing: {
@@ -212,6 +213,7 @@ const OpenAI: ModelProviderCard = {
       description:
         'GPT-4 提供了一个更大的上下文窗口，能够处理更长的文本输入，适用于需要广泛信息整合和数据分析的场景。', // Will be discontinued on June 6, 2025
       displayName: 'GPT-4 32K',
+      enabled: true,
       functionCall: true,
       id: 'gpt-4-32k',
       pricing: {

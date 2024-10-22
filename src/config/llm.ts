@@ -182,12 +182,12 @@ export const getLLMConfig = () => {
       MISTRAL_API_KEY: process.env.MISTRAL_API_KEY,
 
       // ENABLED_OPENROUTER: !!process.env.OPENROUTER_API_KEY,
-      ENABLED_OPENROUTER: true,
+      ENABLED_OPENROUTER: false,
       OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
       OPENROUTER_MODEL_LIST: process.env.OPENROUTER_MODEL_LIST,
 
       // ENABLED_TOGETHERAI: !!process.env.TOGETHERAI_API_KEY,
-      ENABLED_TOGETHERAI: true,
+      ENABLED_TOGETHERAI: false,
       TOGETHERAI_API_KEY: process.env.TOGETHERAI_API_KEY,
       TOGETHERAI_MODEL_LIST: process.env.TOGETHERAI_MODEL_LIST,
 
@@ -236,13 +236,13 @@ export const getLLMConfig = () => {
       QWEN_API_KEY: process.env.QWEN_API_KEY,
       QWEN_MODEL_LIST: process.env.QWEN_MODEL_LIST,
 
-      // ENABLED_REVERSE: !!process.env.TOGETHERAI_API_KEY,
-      ENABLED_REVERSE: true,
+      ENABLED_REVERSE: false,
+      // ENABLED_REVERSE: !!process.env.REVERSE_API_KEY,
       REVERSE_API_KEY: process.env.REVERSE_API_KEY,
       REVERSE_MODEL_LIST: process.env.REVERSE_MODEL_LIST,
 
       // ENABLED_STEPFUN: !!process.env.STEPFUN_API_KEY,
-      ENABLED_STEPFUN: true,
+      ENABLED_STEPFUN: false,
       STEPFUN_API_KEY: process.env.STEPFUN_API_KEY,
 
       // ENABLED_NOVITA: !!process.env.NOVITA_API_KEY,
@@ -251,7 +251,7 @@ export const getLLMConfig = () => {
       NOVITA_MODEL_LIST: process.env.NOVITA_MODEL_LIST,
 
       // ENABLED_BAICHUAN: !!process.env.BAICHUAN_API_KEY,
-      ENABLED_BAICHUAN: true,
+      ENABLED_BAICHUAN: false,
       BAICHUAN_API_KEY: process.env.BAICHUAN_API_KEY,
 
       // ENABLED_TAICHU: !!process.env.TAICHU_API_KEY,

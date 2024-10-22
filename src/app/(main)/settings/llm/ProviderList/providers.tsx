@@ -3,20 +3,15 @@ import { useMemo } from 'react';
 import {
   // Ai21ProviderCard,
   // Ai360ProviderCard,
-  AnthropicProviderCard,
-  // BaichuanProviderCard,
-  DeepSeekProviderCard,
-  // FireworksAIProviderCard,
+  AnthropicProviderCard, // BaichuanProviderCard,
+  DeepSeekProviderCard, // FireworksAIProviderCard,
   GoogleProviderCard,
-  GroqProviderCard,
-  // HunyuanProviderCard,
-  MinimaxProviderCard,
-  // MistralProviderCard,
-  MoonshotProviderCard,
-  // NovitaProviderCard,
+  GroqProviderCard, // HunyuanProviderCard,
+  MinimaxProviderCard, // MistralProviderCard,
+  MoonshotProviderCard, // NovitaProviderCard,
   // OpenRouterProviderCard,
   // PerplexityProviderCard,
-  QwenProviderCard,
+  QwenProviderCard, // ReverseProviderCard,
   // SiliconCloudProviderCard,
   // SparkProviderCard,
   // StepfunProviderCard,
@@ -34,6 +29,7 @@ import { ProviderItem } from '../type';
 // import { useHuggingFaceProvider } from './HuggingFace';
 import { useOllamaProvider } from './Ollama';
 import { useOpenAIProvider } from './OpenAI';
+
 // import { useWenxinProvider } from './Wenxin';
 
 export const useProviderList = (): ProviderItem[] => {
@@ -49,7 +45,6 @@ export const useProviderList = (): ProviderItem[] => {
     () => [
       OpenAIProvider,
       // AzureProvider,
-      OllamaProvider,
       AnthropicProviderCard,
       // BedrockProvider,
       GoogleProviderCard,
@@ -78,6 +73,8 @@ export const useProviderList = (): ProviderItem[] => {
       // Ai360ProviderCard,
       // TaichuProviderCard,
       // SiliconCloudProviderCard,
+      // ReverseProviderCard,
+      OllamaProvider,
     ],
     [
       // AzureProvider,

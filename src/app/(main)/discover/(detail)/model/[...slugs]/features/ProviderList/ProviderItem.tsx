@@ -2,7 +2,7 @@ import { ModelTag, ProviderCombine } from '@lobehub/icons';
 import { ActionIcon, Grid, Icon, Tooltip } from '@lobehub/ui';
 import { Tag } from 'antd';
 import { createStyles, useResponsive } from 'antd-style';
-import { BadgeCheck, BookIcon, ChevronRightIcon, KeyIcon } from 'lucide-react';
+import { BadgeCheck, ChevronRightIcon, KeyIcon } from 'lucide-react';
 import Link from 'next/link';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +10,7 @@ import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
 import { DEFAULT_MODEL_PROVIDER_LIST } from '@/config/modelProviders';
-import { BASE_PROVIDER_DOC_URL } from '@/const/url';
+// import { BASE_PROVIDER_DOC_URL } from '@/const/url';
 import { DiscoverProviderItem } from '@/types/discover';
 import { formatPriceByCurrency, formatTokenNumber } from '@/utils/format';
 
@@ -93,11 +93,11 @@ const ProviderItem = memo<ProviderItemProps>(({ mobile, modelId, identifier }) =
             <Tag bordered={false} icon={<Icon icon={KeyIcon} />} style={{ margin: 0 }} />
           </Tooltip>
         )}
-        <Tooltip title={t('models.guide')}>
-          <Link href={urlJoin(BASE_PROVIDER_DOC_URL, identifier)} target={'_blank'}>
-            <Tag bordered={false} icon={<Icon icon={BookIcon} />} style={{ margin: 0 }} />
-          </Link>
-        </Tooltip>
+        {/*<Tooltip title={t('models.guide')}>*/}
+        {/*  <Link href={urlJoin(BASE_PROVIDER_DOC_URL, identifier)} target={'_blank'}>*/}
+        {/*    <Tag bordered={false} icon={<Icon icon={BookIcon} />} style={{ margin: 0 }} />*/}
+        {/*  </Link>*/}
+        {/*</Tooltip>*/}
       </Flexbox>
     </Flexbox>
   );

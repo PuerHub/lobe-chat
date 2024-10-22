@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import Logo from '@/components/Logo';
-import ModelTag from '@/components/ModelTag';
 import ChatList from '@/features/Conversation/components/ChatList';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';

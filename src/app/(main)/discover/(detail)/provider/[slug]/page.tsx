@@ -2,12 +2,12 @@ import { notFound } from 'next/navigation';
 import urlJoin from 'url-join';
 
 import StructuredData from '@/components/StructuredData';
-import { CustomMDX } from '@/components/mdx';
+// import { CustomMDX } from '@/components/mdx';
 import { Locales } from '@/locales/resources';
 import { ldModule } from '@/server/ld';
 import { metadataModule } from '@/server/metadata';
 import { DiscoverService } from '@/server/services/discover';
-import { DocService } from '@/server/services/doc';
+// import { DocService } from '@/server/services/doc';
 import { translation } from '@/server/translation';
 import { DiscoverModelItem } from '@/types/discover';
 import { isMobileDevice } from '@/utils/responsive';
@@ -65,7 +65,7 @@ const Page = async ({ params, searchParams }: Props) => {
   const data = await discoverService.getProviderById(locale, identifier);
   if (!data) return notFound();
 
-  const docService = new DocService();
+  // const docService = new DocService();
 
   const { meta, createdAt, models } = data;
 
@@ -74,7 +74,7 @@ const Page = async ({ params, searchParams }: Props) => {
     modelData = await discoverService.getModelByIds(locale, models);
   }
 
-  const doc = await docService.getDocByPath(locale, `usage/providers/${identifier}`);
+  // const doc = await docService.getDocByPath(locale, `usage/providers/${identifier}`);
 
   const ld = ldModule.generate({
     article: {
@@ -106,7 +106,7 @@ const Page = async ({ params, searchParams }: Props) => {
         /* ↑ cloud slot ↑ */
       >
         <ModelList identifier={identifier} mobile={mobile} modelData={modelData} />
-        {doc && <CustomMDX mobile={mobile} source={doc.content} />}
+        {/*{doc && <CustomMDX mobile={mobile} source={doc.content} />}*/}
       </DetailLayout>
     </>
   );

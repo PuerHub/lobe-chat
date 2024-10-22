@@ -1,8 +1,8 @@
 export const PLUGIN_SCHEMA_SEPARATOR = '____';
 export const PLUGIN_SCHEMA_API_MD5_PREFIX = 'MD5HASH_';
 
-export const ARTIFACT_TAG = 'lobeArtifact';
-export const ARTIFACT_THINKING_TAG = 'lobeThinking';
+export const ARTIFACT_TAG = 'puerhubArtifact';
+export const ARTIFACT_THINKING_TAG = 'puerhubThinking';
 
 // https://regex101.com/r/TwzTkf/2
 export const ARTIFACT_TAG_REGEX = /<lobeArtifact\b[^>]*>(?<content>[\S\s]*?)(?:<\/lobeArtifact>|$)/;

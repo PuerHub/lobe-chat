@@ -22,6 +22,7 @@ const DeepSeek: ModelProviderCard = {
   checkModel: 'deepseek-chat',
   description:
     'DeepSeek 是一家专注于人工智能技术研究和应用的公司，其最新模型 DeepSeek-V2.5 融合了通用对话和代码处理能力，并在人类偏好对齐、写作任务和指令跟随等方面实现了显著提升。',
+  enabled: true,
   id: 'deepseek',
   // modelList: { showModelFetcher: true },
   modelsUrl: 'https://platform.deepseek.com/api-docs/zh-cn/quick_start/pricing',

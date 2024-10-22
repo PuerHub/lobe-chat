@@ -20,9 +20,9 @@ import {
   OpenRouterProviderCard,
   PerplexityProviderCard,
   QwenProviderCard,
+  ReverseProviderCard,
   SiliconCloudProviderCard,
   SparkProviderCard,
-  ReverseProviderCard,
   StepfunProviderCard,
   TaichuProviderCard,
   TogetherAIProviderCard,
@@ -124,6 +124,10 @@ export const DEFAULT_LLM_CONFIG: UserModelProviderConfig = {
     enabled: false,
     enabledModels: filterEnabledModels(QwenProviderCard),
   },
+  reverse: {
+    enabled: false,
+    enabledModels: filterEnabledModels(ReverseProviderCard),
+  },
   siliconcloud: {
     enabled: false,
     enabledModels: filterEnabledModels(SiliconCloudProviderCard),
@@ -131,10 +135,6 @@ export const DEFAULT_LLM_CONFIG: UserModelProviderConfig = {
   spark: {
     enabled: false,
     enabledModels: filterEnabledModels(SparkProviderCard),
-  },
-  reverse: {
-    enabled: false,
-    enabledModels: filterEnabledModels(ReverseProviderCard),
   },
   stepfun: {
     enabled: false,

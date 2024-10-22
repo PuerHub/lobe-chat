@@ -7,6 +7,8 @@ import { isDev } from '@/utils/env';
 import pkg from '../../package.json';
 import { INBOX_SESSION_ID } from './session';
 
+export const UTM_SOURCE = 'puerhub_chat';
+
 export const OFFICIAL_URL = 'https://puerhub.xyz/';
 export const OFFICIAL_SITE = 'https://ai.puerhub.xyz/';
 export const OFFICIAL_PREVIEW_URL = 'https://puerhub.xyz/';

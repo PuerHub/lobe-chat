@@ -16,8 +16,8 @@ import {
   OpenAIProviderCard,
   OpenRouterProviderCard,
   QwenProviderCard,
-  SiliconCloudProviderCard,
   ReverseProviderCard,
+  SiliconCloudProviderCard,
   TogetherAIProviderCard,
   ZeroOneProviderCard,
   ZhiPuProviderCard,
@@ -236,17 +236,6 @@ export const getServerGlobalConfig = () => {
           modelString: QWEN_MODEL_LIST,
         }),
       },
-      siliconcloud: {
-        enabled: ENABLED_SILICONCLOUD,
-        enabledModels: extractEnabledModels(SILICONCLOUD_MODEL_LIST),
-        serverModelCards: transformToChatModelCards({
-          defaultChatModels: SiliconCloudProviderCard.chatModels,
-          modelString: SILICONCLOUD_MODEL_LIST,
-        }),
-      },
-      spark: { enabled: ENABLED_SPARK },
-      qwen: { enabled: ENABLED_QWEN },
-
       reverse: {
         enabled: ENABLED_REVERSE,
         enabledModels: extractEnabledModels(REVERSE_MODEL_LIST),
@@ -255,6 +244,16 @@ export const getServerGlobalConfig = () => {
           modelString: REVERSE_MODEL_LIST,
         }),
       },
+      siliconcloud: {
+        enabled: ENABLED_SILICONCLOUD,
+        enabledModels: extractEnabledModels(SILICONCLOUD_MODEL_LIST),
+        serverModelCards: transformToChatModelCards({
+          defaultChatModels: SiliconCloudProviderCard.chatModels,
+          modelString: SILICONCLOUD_MODEL_LIST,
+        }),
+      },
+
+      spark: { enabled: ENABLED_SPARK },
 
       stepfun: { enabled: ENABLED_STEPFUN },
 
