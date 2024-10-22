@@ -13,6 +13,8 @@
   "autoGenerate": "自动补全",
   "autoGenerateTooltip": "基于提示词自动补全助手描述",
   "autoGenerateTooltipDisabled": "请填写提示词后使用自动补全功能",
+  "back": "返回",
+  "batchDelete": "批量删除",
   "blog": "产品博客",
   "cancel": "取消",
   "changelog": "更新日志",
@@ -31,6 +33,7 @@
   "defaultSession": "自定义助手",
   "delete": "删除",
   "document": "使用文档",
+  "download": "下载",
   "duplicate": "创建副本",
   "edit": "编辑",
   "export": "导出配置",
@@ -195,7 +198,8 @@
   },
   "tab": {
     "chat": "会话",
-    "market": "发现",
+    "discover": "发现",
+    "files": "文件",
     "me": "我",
     "setting": "设置"
   },

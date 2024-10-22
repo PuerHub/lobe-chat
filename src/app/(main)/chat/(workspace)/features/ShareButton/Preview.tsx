@@ -1,3 +1,4 @@
+import { ModelTag } from '@lobehub/icons';
 import { Avatar, ChatHeaderTitle, Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

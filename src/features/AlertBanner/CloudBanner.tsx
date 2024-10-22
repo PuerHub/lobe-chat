@@ -11,7 +11,8 @@ import Marquee from 'react-fast-marquee';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import { OFFICIAL_SITE } from '@/const/url';
+import { LOBE_CHAT_CLOUD } from '@/const/branding';
+import { OFFICIAL_URL, UTM_SOURCE } from '@/const/url';
 import { isOnServerSide } from '@/utils/env';
 
 export const BANNER_HEIGHT = 40;
@@ -57,8 +58,13 @@ const CloudBanner = memo<{ mobile?: boolean }>(({ mobile }) => {
 
   const content = (
     <Flexbox align={'center'} flex={'none'} gap={8} horizontal ref={contentRef}>
-      <b>{t('alert.cloud.title')}:</b>
-      <span>{t(mobile ? 'alert.cloud.descOnMobile' : 'alert.cloud.desc')}</span>
+      <b>{t('alert.cloud.title', { name: LOBE_CHAT_CLOUD })}:</b>
+      <span>
+        {t(mobile ? 'alert.cloud.descOnMobile' : 'alert.cloud.desc', {
+          credit: new Intl.NumberFormat('en-US').format(450_000),
+          name: LOBE_CHAT_CLOUD,
+        })}
+      </span>
     </Flexbox>
   );
   return (
@@ -73,7 +79,7 @@ const CloudBanner = memo<{ mobile?: boolean }>(({ mobile }) => {
       <div className={styles.background} />
       <Center className={styles.wrapper} gap={16} horizontal width={'100%'}>
         {isTruncated ? <Marquee pauseOnHover>{content}</Marquee> : content}
-        <Link href={OFFICIAL_SITE} target={'_blank'}>
+        <Link href={`${OFFICIAL_URL}?utm_source=${UTM_SOURCE}&utm_medium=banner`} target={'_blank'}>
           <Button size={'small'} type="primary">
             {t('alert.cloud.action')} <Icon icon={ArrowRightIcon} />
           </Button>

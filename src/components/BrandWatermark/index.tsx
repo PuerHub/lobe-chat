@@ -6,10 +6,11 @@ import { memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import Logo from '@/components/Logo';
+import { UTM_SOURCE } from '@/const/url';
 
 const useStyles = createStyles(({ token, css }) => ({
   logoLink: css`
-    height: 20px;
+    line-height: 1;
     color: inherit;
 
     &:hover {
@@ -30,7 +31,7 @@ const BrandWatermark = memo<Omit<FlexboxProps, 'children'>>(({ style, ...rest })
       {...rest}
     >
       {/*<span>Powered by</span>*/}
-      <Link className={styles.logoLink} href={'https://puerhub.xyz'} target={'_blank'}>
+      <Link className={styles.logoLink} href={`https://puerhub.xyz?utm_source=${UTM_SOURCE}&utm_content=brand_watermark`} target={'_blank'}>
         <Logo size={20} type={'text'} />
       </Link>
       <span>base on LobeHub</span>
